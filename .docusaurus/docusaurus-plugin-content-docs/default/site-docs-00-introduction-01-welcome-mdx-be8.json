@@ -1,0 +1,21 @@
+{
+  "id": "introduction/welcome",
+  "title": "Welcome to AI-Native Robotics",
+  "description": "",
+  "source": "@site/docs/00-introduction/01-welcome.mdx",
+  "sourceDirName": "00-introduction",
+  "slug": "/introduction/welcome",
+  "permalink": "/ai-humanoid-robotics-book/docs/introduction/welcome",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/00-introduction/01-welcome.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "How to Use This Book",
+    "permalink": "/ai-humanoid-robotics-book/docs/introduction/how-to-use-this-book"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation",
+  "title": "7.3 Synthetic Data Generation (SDG)",
+  "description": "One of the most compelling reasons to use a photorealistic simulator like Isaac Sim is for Synthetic Data Generation (SDG). Training modern perception models, especially for object detection and segmentation, requires enormous, hand-labeled datasets. SDG automates this process, allowing you to generate perfectly labeled data at a massive scale.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/03-synthetic-data-generation.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/03-synthetic-data-generation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "7.2 The Isaac Sim Pipeline",
+    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/isaac-sim-pipeline"
+  },
+  "next": {
+    "title": "7.4 Domain Randomization",
+    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization"
+  }
+}

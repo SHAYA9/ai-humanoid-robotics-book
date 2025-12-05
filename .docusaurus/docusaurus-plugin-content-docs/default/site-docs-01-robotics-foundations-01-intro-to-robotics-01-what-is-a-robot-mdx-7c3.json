@@ -1,0 +1,25 @@
+{
+  "id": "robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "title": "What is a Robot?",
+  "description": "",
+  "source": "@site/docs/01-robotics-foundations/01-intro-to-robotics/01-what-is-a-robot.mdx",
+  "sourceDirName": "01-robotics-foundations/01-intro-to-robotics",
+  "slug": "/robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/01-intro-to-robotics/01-what-is-a-robot.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Safety First: A Robotics Primer",
+    "permalink": "/ai-humanoid-robotics-book/docs/introduction/safety-primer"
+  },
+  "next": {
+    "title": "7.1 What is ROS 2?",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2"
+  }
+}

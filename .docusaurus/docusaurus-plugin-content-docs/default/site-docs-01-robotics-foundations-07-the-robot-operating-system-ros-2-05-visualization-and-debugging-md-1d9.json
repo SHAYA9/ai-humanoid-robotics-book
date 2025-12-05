@@ -1,0 +1,27 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging",
+  "title": "7.5 Visualization and Debugging",
+  "description": "A running ROS 2 system is a complex, distributed network of nodes passing messages. Without the right tools, understanding what's happening can be nearly impossible. Fortunately, ROS 2 comes with a powerful suite of command-line and graphical tools for introspection, debugging, and visualization.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/05-visualization-and-debugging.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/05-visualization-and-debugging.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "7.4 Managing Complexity: Launch Files and Parameters",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/managing-complexity"
+  },
+  "next": {
+    "title": "7.6 Building a ROS 2 Package",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package"
+  }
+}

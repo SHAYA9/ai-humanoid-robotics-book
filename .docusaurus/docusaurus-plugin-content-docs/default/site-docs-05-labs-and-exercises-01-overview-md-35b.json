@@ -1,0 +1,27 @@
+{
+  "id": "labs-and-exercises/overview",
+  "title": "Module 5: Labs and Exercises",
+  "description": "Welcome to the hands-on portion of this book! The following labs and exercises are designed to solidify your understanding of the concepts we've discussed. Each lab will provide you with a practical problem to solve, leveraging the tools and techniques covered in the previous modules.",
+  "source": "@site/docs/05-labs-and-exercises/01-overview.md",
+  "sourceDirName": "05-labs-and-exercises",
+  "slug": "/labs-and-exercises/overview",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "7.7 Labs and Benchmarks",
+    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/labs-and-benchmarks"
+  },
+  "next": {
+    "title": "8.1 The VLA Capstone Project",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction"
+  }
+}

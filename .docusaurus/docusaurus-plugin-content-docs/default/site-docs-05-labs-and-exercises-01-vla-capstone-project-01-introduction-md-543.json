@@ -1,0 +1,27 @@
+{
+  "id": "labs-and-exercises/vla-capstone-project/introduction",
+  "title": "8.1 The VLA Capstone Project",
+  "description": "Welcome to the final capstone project. This module integrates the key concepts from the entire book—robotics foundations, hardware, AI control, and simulation—into a single, ambitious project: building a Vision-Language-Action (VLA) system.",
+  "source": "@site/docs/05-labs-and-exercises/01-vla-capstone-project/01-introduction.md",
+  "sourceDirName": "05-labs-and-exercises/01-vla-capstone-project",
+  "slug": "/labs-and-exercises/vla-capstone-project/introduction",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/01-introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 5: Labs and Exercises",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview"
+  },
+  "next": {
+    "title": "8.2 The Whisper → LLM → ROS 2 Pipeline",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline"
+  }
+}

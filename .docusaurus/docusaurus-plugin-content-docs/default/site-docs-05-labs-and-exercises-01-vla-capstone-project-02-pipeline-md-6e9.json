@@ -1,0 +1,27 @@
+{
+  "id": "labs-and-exercises/vla-capstone-project/pipeline",
+  "title": "8.2 The Whisper → LLM → ROS 2 Pipeline",
+  "description": "The core of our VLA system is the data flow that converts human speech into a series of executable robot commands. This pipeline consists of three main stages, each handled by a dedicated ROS 2 node.",
+  "source": "@site/docs/05-labs-and-exercises/01-vla-capstone-project/02-pipeline.md",
+  "sourceDirName": "05-labs-and-exercises/01-vla-capstone-project",
+  "slug": "/labs-and-exercises/vla-capstone-project/pipeline",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/02-pipeline.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "8.1 The VLA Capstone Project",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction"
+  },
+  "next": {
+    "title": "8.3 Cognitive Planning: Natural Language to Actions",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning"
+  }
+}

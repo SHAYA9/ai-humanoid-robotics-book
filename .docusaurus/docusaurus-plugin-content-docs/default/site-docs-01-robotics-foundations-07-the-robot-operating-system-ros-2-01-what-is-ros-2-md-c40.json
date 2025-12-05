@@ -1,0 +1,27 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2",
+  "title": "7.1 What is ROS 2?",
+  "description": "Welcome to the Robot Operating System (ROS 2), the communication backbone of modern robotics. While not a traditional operating system like Windows or Linux, ROS 2 provides a powerful framework of libraries and tools to help you build complex robot applications. Think of it less as an OS and more as a robotic nervous system—a standardized way for different parts of your robot to communicate and work together.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/01-what-is-ros-2.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/01-what-is-ros-2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "What is a Robot?",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/intro-to-robotics/what-is-a-robot"
+  },
+  "next": {
+    "title": "7.2 Core Concepts: Nodes, Topics, and Messages",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/core-concepts"
+  }
+}

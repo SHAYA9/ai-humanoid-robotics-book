@@ -1,0 +1,27 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/importance-of-simulation",
+  "title": "7.1 The Importance of Simulation",
+  "description": "In robotics, the cost of a mistake can be high. A software bug that might crash a web server could cause a physical robot to collide with an obstacle, damage itself, or pose a safety risk. This is why simulation is one of the most critical tools in the modern robotics development lifecycle.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments/01-importance-of-simulation.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/importance-of-simulation",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/importance-of-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments/01-importance-of-simulation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/ai-humanoid-robotics-book/docs/tutorial-extras/translate-your-site"
+  },
+  "next": {
+    "title": "7.2 Physics Simulation Concepts",
+    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/physics-simulation-concepts"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "labs-and-exercises/vla-capstone-project/object-detection-and-manipulation",
+  "title": "8.4 Object Detection and Manipulation",
+  "description": "For our robot to act on the world, it needs two key capabilities: perception to understand its environment and manipulation to interact with it. In our VLA system, these are handled by dedicated ROS 2 nodes that provide their functionality as services to the main planner.",
+  "source": "@site/docs/05-labs-and-exercises/01-vla-capstone-project/04-object-detection-and-manipulation.md",
+  "sourceDirName": "05-labs-and-exercises/01-vla-capstone-project",
+  "slug": "/labs-and-exercises/vla-capstone-project/object-detection-and-manipulation",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/object-detection-and-manipulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/04-object-detection-and-manipulation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "8.3 Cognitive Planning: Natural Language to Actions",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning"
+  },
+  "next": {
+    "title": "Lab 1: Isaac Sim - Hello World",
+    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-01-isaac-sim-hello-world"
+  }
+}

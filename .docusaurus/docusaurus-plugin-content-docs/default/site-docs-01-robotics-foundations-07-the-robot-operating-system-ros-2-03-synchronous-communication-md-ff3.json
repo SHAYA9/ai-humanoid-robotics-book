@@ -1,0 +1,27 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "title": "7.3 Synchronous Communication: Services and Actions",
+  "description": "While topics are perfect for continuous data streams, sometimes you need a more direct, synchronous form of communication. For this, ROS 2 provides two powerful mechanisms: Services for quick request/response interactions, and Actions for long-running tasks that require feedback.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/03-synchronous-communication.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/03-synchronous-communication.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "7.2 Core Concepts: Nodes, Topics, and Messages",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/core-concepts"
+  },
+  "next": {
+    "title": "7.4 Managing Complexity: Launch Files and Parameters",
+    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/managing-complexity"
+  }
+}

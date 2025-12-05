@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-docusaurus@latest . classic)",
+      "WebSearch",
+      "Bash(git add .)",
+      "Bash(git commit -m \"feat: initialize docusaurus project\")",
+      "Bash(git push)",
+      "Bash(git init)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

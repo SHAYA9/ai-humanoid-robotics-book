@@ -28,7 +28,7 @@ export default {
     },
     "experimental_router": "browser"
   },
-  "url": "https://SHAYA9.github.io",
+  "url": "https://shaya9.github.io",
   "baseUrl": "/ai-humanoid-robotics-book/",
   "organizationName": "SHAYA9",
   "projectName": "ai-humanoid-robotics-book",

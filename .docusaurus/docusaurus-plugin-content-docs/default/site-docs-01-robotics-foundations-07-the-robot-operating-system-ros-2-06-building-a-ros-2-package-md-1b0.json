@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/06-building-a-ros-2-package.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
   "frontMatter": {
     "sidebar_position": 6
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.5 Visualization and Debugging",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging"
-  },
-  "next": {
-    "title": "7.7 Labs",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/labs"
   }
 }

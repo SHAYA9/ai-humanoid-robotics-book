@@ -1,0 +1,17 @@
+{
+  "id": "introduction/safety-primer",
+  "title": "Safety First: A Robotics Primer",
+  "description": "Working with robots can be an incredibly rewarding experience, but it's essential to prioritize safety at all times. This primer provides a set of guidelines to help you work safely and responsibly with the hardware and software you'll be building.",
+  "source": "@site/docs/introduction/03-safety-primer.mdx",
+  "sourceDirName": "introduction",
+  "slug": "/introduction/safety-primer",
+  "permalink": "/ai-humanoid-robotics-book/docs/introduction/safety-primer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  }
+}

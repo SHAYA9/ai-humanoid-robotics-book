@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/unity-visualization-plan",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments/04-unity-visualization-plan.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
   "frontMatter": {
     "sidebar_position": 4
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.3 Sensor Simulation",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/sensor-simulation"
-  },
-  "next": {
-    "title": "7.5 Labs: From URDF to a Simulated Robot",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs"
   }
 }

@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/01-introduction.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Module 5: Labs and Exercises",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview"
-  },
-  "next": {
-    "title": "8.2 The Whisper → LLM → ROS 2 Pipeline",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline"
   }
 }

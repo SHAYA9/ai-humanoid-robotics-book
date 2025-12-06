@@ -1,0 +1,61 @@
+{
+  "id": "resources/assessments",
+  "title": "Assessments & Grading",
+  "description": "Complete assessment structure, rubrics, and evaluation criteria for Physical AI course",
+  "source": "@site/docs/resources/assessments.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/assessments",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/assessments",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "assessments",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/assessments"
+    },
+    {
+      "inline": true,
+      "label": "grading",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/grading"
+    },
+    {
+      "inline": true,
+      "label": "rubrics",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/rubrics"
+    },
+    {
+      "inline": true,
+      "label": "projects",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/projects"
+    },
+    {
+      "inline": true,
+      "label": "evaluation",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/evaluation"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "assessments",
+    "title": "Assessments & Grading",
+    "sidebar_label": "Assessments",
+    "description": "Complete assessment structure, rubrics, and evaluation criteria for Physical AI course",
+    "tags": [
+      "assessments",
+      "grading",
+      "rubrics",
+      "projects",
+      "evaluation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cloud Lab",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/cloud-lab"
+  },
+  "next": {
+    "title": "References",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/references"
+  }
+}

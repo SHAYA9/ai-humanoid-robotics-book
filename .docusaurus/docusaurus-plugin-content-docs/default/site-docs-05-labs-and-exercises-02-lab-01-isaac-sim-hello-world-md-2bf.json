@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-01-isaac-sim-hello-world",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/02-lab-01-isaac-sim-hello-world.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {
     "sidebar_position": 2
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "8.4 Object Detection and Manipulation",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/object-detection-and-manipulation"
-  },
-  "next": {
-    "title": "Lab 2: Controlling a Robot",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-02-controlling-a-robot"
   }
 }

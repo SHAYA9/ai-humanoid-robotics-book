@@ -1,27 +1,23 @@
 {
   "id": "intro",
-  "title": "Tutorial Intro",
-  "description": "Let's discover Docusaurus in less than 5 minutes.",
+  "title": "Introduction to Physical AI & Humanoid Robotics",
+  "description": "Bridging the gap between digital brain and physical body.",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
   "permalink": "/ai-humanoid-robotics-book/docs/intro",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/intro.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
-    "sidebar_position": 1
+    "sidebar_position": 1,
+    "title": "Introduction to Physical AI & Humanoid Robotics"
   },
   "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.7 Labs",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/labs"
-  },
   "next": {
-    "title": "Tutorial - Basics",
-    "permalink": "/ai-humanoid-robotics-book/docs/category/tutorial---basics"
+    "title": "Prerequisites",
+    "permalink": "/ai-humanoid-robotics-book/docs/prerequisites"
   }
 }

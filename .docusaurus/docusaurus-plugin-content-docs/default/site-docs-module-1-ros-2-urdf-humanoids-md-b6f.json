@@ -1,0 +1,27 @@
+{
+  "id": "module-1-ros2/urdf-humanoids",
+  "title": "URDF for Humanoids",
+  "description": "The Unified Robot Description Format (URDF) is an XML format for representing a robot model. In ROS 2, URDF is the standard way to describe the physical structure of a robot, including its links, joints, sensors, and visual appearance.",
+  "source": "@site/docs/module-1-ros2/urdf-humanoids.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/urdf-humanoids",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/urdf-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "URDF for Humanoids"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "rclpy - Python Agents for ROS 2",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/rclpy-python-agents"
+  },
+  "next": {
+    "title": "Practical 1: ROS 2 Setup",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/practical-1-ros2-setup"
+  }
+}

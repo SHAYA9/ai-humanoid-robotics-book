@@ -1,0 +1,23 @@
+{
+  "id": "advanced-topics/ai-ethics",
+  "title": "ai-ethics",
+  "description": "",
+  "source": "@site/docs/advanced-topics/ai-ethics.md",
+  "sourceDirName": "advanced-topics",
+  "slug": "/advanced-topics/ai-ethics",
+  "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/ai-ethics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "edge-ai",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/edge-ai"
+  },
+  "next": {
+    "title": "hardware-acceleration",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/hardware-acceleration"
+  }
+}

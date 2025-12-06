@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/labs-and-benchmarks",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/07-labs-and-benchmarks.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 7,
   "frontMatter": {
     "sidebar_position": 7
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.6 Sim2Real: From Simulation to the Real World",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real"
-  },
-  "next": {
-    "title": "Module 5: Labs and Exercises",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview"
   }
 }

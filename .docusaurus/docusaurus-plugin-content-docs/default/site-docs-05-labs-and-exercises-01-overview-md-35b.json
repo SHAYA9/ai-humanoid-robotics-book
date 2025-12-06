@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-overview.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.7 Labs and Benchmarks",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/labs-and-benchmarks"
-  },
-  "next": {
-    "title": "8.1 The VLA Capstone Project",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction"
   }
 }

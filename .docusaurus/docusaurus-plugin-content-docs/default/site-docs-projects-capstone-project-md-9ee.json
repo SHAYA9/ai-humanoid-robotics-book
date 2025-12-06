@@ -1,0 +1,23 @@
+{
+  "id": "projects/capstone-project",
+  "title": "capstone-project",
+  "description": "",
+  "source": "@site/docs/projects/capstone-project.md",
+  "sourceDirName": "projects",
+  "slug": "/projects/capstone-project",
+  "permalink": "/ai-humanoid-robotics-book/docs/projects/capstone-project",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "human-robot-interaction",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/human-robot-interaction"
+  },
+  "next": {
+    "title": "📝 Resources",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/resources"
+  }
+}

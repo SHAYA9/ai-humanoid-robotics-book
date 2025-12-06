@@ -1,0 +1,23 @@
+{
+  "id": "resources/tools-software",
+  "title": "tools-software",
+  "description": "",
+  "source": "@site/docs/resources/tools-software.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/tools-software",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/tools-software",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "cheat-sheets",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/cheat-sheets"
+  },
+  "next": {
+    "title": "books-references",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/books-references"
+  }
+}

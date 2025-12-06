@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/04-domain-randomization.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
   "frontMatter": {
     "sidebar_position": 4
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.3 Synthetic Data Generation (SDG)",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation"
-  },
-  "next": {
-    "title": "7.4 VSLAM using Isaac ROS",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/vslam-with-isaac-ros"
   }
 }

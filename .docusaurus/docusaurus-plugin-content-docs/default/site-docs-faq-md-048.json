@@ -1,0 +1,23 @@
+{
+  "id": "faq",
+  "title": "FAQ",
+  "description": "",
+  "source": "@site/docs/faq.md",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/ai-humanoid-robotics-book/docs/faq",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "contributing",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/contributing"
+  },
+  "next": {
+    "title": "📖 Glossary",
+    "permalink": "/ai-humanoid-robotics-book/docs/glossary"
+  }
+}

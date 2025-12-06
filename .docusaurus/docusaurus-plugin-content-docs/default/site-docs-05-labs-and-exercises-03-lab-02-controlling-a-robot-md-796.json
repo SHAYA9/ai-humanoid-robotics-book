@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-02-controlling-a-robot",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/03-lab-02-controlling-a-robot.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
   "frontMatter": {
     "sidebar_position": 3
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Lab 1: Isaac Sim - Hello World",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-01-isaac-sim-hello-world"
-  },
-  "next": {
-    "title": "Lab 3: Reinforcement Learning - Reach Task",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-03-reinforcement-learning-reach-task"
   }
 }

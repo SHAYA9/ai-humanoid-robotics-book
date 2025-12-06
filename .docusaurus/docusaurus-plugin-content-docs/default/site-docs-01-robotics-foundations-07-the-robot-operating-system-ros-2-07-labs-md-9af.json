@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/labs",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/07-labs.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 7,
   "frontMatter": {
     "sidebar_position": 7
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.6 Building a ROS 2 Package",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package"
-  },
-  "next": {
-    "title": "Tutorial Intro",
-    "permalink": "/ai-humanoid-robotics-book/docs/intro"
   }
 }

@@ -1,35 +1,17 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+// docusaurus.config.js
+const {themes} = require('prism-react-renderer');
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-const config: Config = {
-  title: 'AI-Native Humanoid Robotics',
-  tagline: 'An Engineering-Oriented Curriculum',
-  favicon: 'img/favicon.ico',
-
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-  // Set the production url of your site here
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'AI Humanoid Robotics',
+  tagline: 'Learn AI and Robotics',
   url: 'https://shaya9.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/ai-humanoid-robotics-book/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'SHAYA9', // Usually your GitHub org/user name.
-  projectName: 'ai-humanoid-robotics-book', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  organizationName: 'SHAYA9',
+  projectName: 'ai-humanoid-robotics-book',
+  
+  onBrokenLinks: 'warn',
+  
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,58 +19,112 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/docs',
         },
-        blog: false, // Disabled blog feature
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
-      } satisfies Preset.Options,
+      },
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    colorMode: {
-      respectPrefersColorScheme: true,
-    },
     navbar: {
-      title: 'AI Humanoid Robotics Book',
+      title: 'AI Humanoid Robotics',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'AI Humanoid Robotics Logo',
+        src: 'img/logo.png',
+        srcDark: 'img/logo.png',
+        href: '/',
+        target: '_self',
+        width: 35,
+        height: 35,
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Modules',
+          label: '📚 Curriculum',
         },
         {
           href: 'https://github.com/SHAYA9/ai-humanoid-robotics-book',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
+    
+    // FOOTER SECTION
     footer: {
       style: 'dark',
+      
+      // Logo in footer (optional)
+      logo: {
+        alt: 'AI Humanoid Robotics Logo',
+        src: 'img/logo.png',
+        width: 60,
+        height: 60,
+        href: 'https://xpertsphere.vercel.app',
+      },
+      
+      // Copyright notice
+      copyright: `Copyright © ${new Date().getFullYear()} AI Humanoid Robotics Book. by Xpertsphere`,
+      
+      // Footer links organized in columns
       links: [
         {
           title: 'Curriculum',
           items: [
             {
-              label: 'Modules',
+              label: 'Getting Started',
               to: '/docs/intro',
+            },
+            {
+              label: 'Module 1: ROS 2',
+              to: '/docs/module-1-ros2/overview',
+            },
+            {
+              label: 'Module 2: Simulation',
+              to: '/docs/module-2-simulation/overview',
+            },
+            {
+              label: 'Module 3: NVIDIA Isaac',
+              to: '/docs/module-3-isaac/overview',
+            },
+            {
+              label: 'Module 4: VLA Integration',
+              to: '/docs/module-4-vla/overview',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Hardware Setup',
+              to: '/docs/resources/hardware-setup',
+            },
+            {
+              label: 'Cloud Lab',
+              to: '/docs/resources/cloud-lab',
+            },
+            {
+              label: 'Assessments',
+              to: '/docs/resources/assessments',
+            },
+            {
+              label: 'References',
+              to: '/docs/resources/references',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/resources/faq',
             },
           ],
         },
@@ -96,32 +132,55 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/SHAYA9/ai-humanoid-robotics-book',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Discord',
+              href: 'https://discord.gg/robotics',
+            },
+            {
+              label: 'Twitter / X',
+              href: 'https://twitter.com/airoboticsbook',
+            },
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/ros2',
+            },
+            {
+              label: 'ROS Discourse',
+              href: 'https://discourse.ros.org/',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Legal',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/SHAYA9/ai-humanoid-robotics-book',
+              label: 'Privacy Policy',
+              to: '/docs/legal/privacy',
+            },
+            {
+              label: 'Terms of Use',
+              to: '/docs/legal/terms',
+            },
+            {
+              label: 'License',
+              to: '/docs/legal/license',
+            },
+            {
+              label: 'Code of Conduct',
+              to: '/docs/legal/code-of-conduct',
+            },
+            {
+              label: 'Contact',
+              to: '/docs/legal/contact',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} AI Humanoid Robotics Book. Built with Docusaurus.`,
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+  },
 };
 
-export default config;
+module.exports = config;

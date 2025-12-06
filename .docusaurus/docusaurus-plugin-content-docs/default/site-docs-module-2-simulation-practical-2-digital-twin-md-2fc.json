@@ -1,0 +1,27 @@
+{
+  "id": "module-2-simulation/practical-2-digital-twin",
+  "title": "Practical 2: Digital Twin",
+  "description": "In this practical exercise, we'll bring together the concepts from this module to create a digital twin of a simple robot in a simulated environment. A digital twin is a virtual model of a physical object, used to simulate its behavior and monitor its state.",
+  "source": "@site/docs/module-2-simulation/practical-2-digital-twin.md",
+  "sourceDirName": "module-2-simulation",
+  "slug": "/module-2-simulation/practical-2-digital-twin",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/practical-2-digital-twin",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Practical 2: Digital Twin"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Environment Building",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/environment-building"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/overview"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ai-foundations/overview",
+  "title": "AI Foundations Overview",
+  "description": "",
+  "source": "@site/docs/ai-foundations/overview.md",
+  "sourceDirName": "ai-foundations",
+  "slug": "/ai-foundations/overview",
+  "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📚 AI Foundations",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/ai-foundations"
+  },
+  "next": {
+    "title": "machine-learning",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/machine-learning"
+  }
+}

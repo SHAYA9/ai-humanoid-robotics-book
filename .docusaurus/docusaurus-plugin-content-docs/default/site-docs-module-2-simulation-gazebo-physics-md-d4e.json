@@ -1,0 +1,27 @@
+{
+  "id": "module-2-simulation/gazebo-physics",
+  "title": "Gazebo Physics",
+  "description": "Gazebo is a powerful, open-source 3D robotics simulator. At its core is a robust physics engine that allows you to simulate the dynamics of robots and their interactions with the environment with a high degree of realism.",
+  "source": "@site/docs/module-2-simulation/gazebo-physics.md",
+  "sourceDirName": "module-2-simulation",
+  "slug": "/module-2-simulation/gazebo-physics",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/gazebo-physics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Gazebo Physics"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/overview"
+  },
+  "next": {
+    "title": "Unity Rendering",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/unity-rendering"
+  }
+}

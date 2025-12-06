@@ -1,25 +1,17 @@
 {
   "id": "introduction/safety-primer",
   "title": "Safety First: A Robotics Primer",
-  "description": "",
+  "description": "Working with robots can be an incredibly rewarding experience, but it's essential to prioritize safety at all times. This primer provides a set of guidelines to help you work safely and responsibly with the hardware and software you'll be building.",
   "source": "@site/docs/00-introduction/03-safety-primer.mdx",
   "sourceDirName": "00-introduction",
   "slug": "/introduction/safety-primer",
   "permalink": "/ai-humanoid-robotics-book/docs/introduction/safety-primer",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/00-introduction/03-safety-primer.mdx",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
-  "frontMatter": {},
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "How to Use This Book",
-    "permalink": "/ai-humanoid-robotics-book/docs/introduction/how-to-use-this-book"
-  },
-  "next": {
-    "title": "What is a Robot?",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/intro-to-robotics/what-is-a-robot"
+  "frontMatter": {
+    "sidebar_position": 3
   }
 }

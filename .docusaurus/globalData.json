@@ -8,81 +8,11 @@
           "label": "Next",
           "isLast": true,
           "path": "/ai-humanoid-robotics-book/docs",
-          "mainDocId": "introduction/welcome",
+          "mainDocId": "intro",
           "docs": [
             {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/gpu-requirements",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/gpu-requirements",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/introduction-to-nvidia-isaac",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/introduction-to-nvidia-isaac",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/isaac-sim-pipeline",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/isaac-sim-pipeline",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/labs-and-benchmarks",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/labs-and-benchmarks",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/reinforcement-learning",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/reinforcement-learning",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/synthetic-data-generation",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/vslam-with-isaac-ros",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/vslam-with-isaac-ros",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/importance-of-simulation",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/importance-of-simulation",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/physics-simulation-concepts",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/physics-simulation-concepts",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/sensor-simulation",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/sensor-simulation",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/unity-visualization-plan",
-              "path": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/unity-visualization-plan",
+              "id": "hardware-guide",
+              "path": "/ai-humanoid-robotics-book/docs/hardware-guide",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -91,148 +21,163 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "introduction/how-to-use-this-book",
-              "path": "/ai-humanoid-robotics-book/docs/introduction/how-to-use-this-book",
+              "id": "learning-path",
+              "path": "/ai-humanoid-robotics-book/docs/learning-path",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "introduction/safety-primer",
-              "path": "/ai-humanoid-robotics-book/docs/introduction/safety-primer",
+              "id": "module-1-ros2/nodes-topics-services",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/nodes-topics-services",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "introduction/welcome",
-              "path": "/ai-humanoid-robotics-book/docs/introduction/welcome",
+              "id": "module-1-ros2/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/lab-01-isaac-sim-hello-world",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-01-isaac-sim-hello-world",
+              "id": "module-1-ros2/practical-1-ros2-setup",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/practical-1-ros2-setup",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/lab-02-controlling-a-robot",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-02-controlling-a-robot",
+              "id": "module-1-ros2/rclpy-python-agents",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/rclpy-python-agents",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/lab-03-reinforcement-learning-reach-task",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-03-reinforcement-learning-reach-task",
+              "id": "module-1-ros2/ros2-architecture",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/ros2-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/overview",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview",
+              "id": "module-1-ros2/urdf-humanoids",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/urdf-humanoids",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/vla-capstone-project/cognitive-planning",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning",
+              "id": "module-2-simulation/environment-building",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/environment-building",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/vla-capstone-project/introduction",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction",
+              "id": "module-2-simulation/gazebo-physics",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/gazebo-physics",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/vla-capstone-project/object-detection-and-manipulation",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/object-detection-and-manipulation",
+              "id": "module-2-simulation/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "labs-and-exercises/vla-capstone-project/pipeline",
-              "path": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline",
+              "id": "module-2-simulation/practical-2-digital-twin",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/practical-2-digital-twin",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/intro-to-robotics/what-is-a-robot",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/intro-to-robotics/what-is-a-robot",
+              "id": "module-2-simulation/sensor-simulation",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/sensor-simulation",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
+              "id": "module-2-simulation/unity-rendering",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/unity-rendering",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/core-concepts",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/core-concepts",
+              "id": "module-3-isaac/isaac-ros",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-ros",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/labs",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/labs",
+              "id": "module-3-isaac/isaac-sim",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-sim",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/managing-complexity",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/managing-complexity",
+              "id": "module-3-isaac/nav2-bipedal",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/nav2-bipedal",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+              "id": "module-3-isaac/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/visualization-and-debugging",
+              "id": "module-3-isaac/practical-3-perception",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/practical-3-perception",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2",
-              "path": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2",
+              "id": "module-3-isaac/vslam-navigation",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/vslam-navigation",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/congratulations",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/congratulations",
+              "id": "module-4-vla/capstone-project",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/capstone-project",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/create-a-blog-post",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/create-a-blog-post",
+              "id": "module-4-vla/llm-planning",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/llm-planning",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/create-a-document",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/create-a-document",
+              "id": "module-4-vla/multimodal-integration",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/multimodal-integration",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/create-a-page",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/create-a-page",
+              "id": "module-4-vla/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/deploy-your-site",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/deploy-your-site",
+              "id": "module-4-vla/practical-4-autonomous-humanoid",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/practical-4-autonomous-humanoid",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/markdown-features",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-basics/markdown-features",
+              "id": "module-4-vla/whisper-voice",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/whisper-voice",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-extras/manage-docs-versions",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-extras/manage-docs-versions",
+              "id": "prerequisites",
+              "path": "/ai-humanoid-robotics-book/docs/prerequisites",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-extras/translate-your-site",
-              "path": "/ai-humanoid-robotics-book/docs/tutorial-extras/translate-your-site",
+              "id": "resources/assessments",
+              "path": "/ai-humanoid-robotics-book/docs/resources/assessments",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "/category/tutorial---basics",
-              "path": "/ai-humanoid-robotics-book/docs/category/tutorial---basics",
+              "id": "resources/cloud-lab",
+              "path": "/ai-humanoid-robotics-book/docs/resources/cloud-lab",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "/category/tutorial---extras",
-              "path": "/ai-humanoid-robotics-book/docs/category/tutorial---extras",
+              "id": "resources/faq",
+              "path": "/ai-humanoid-robotics-book/docs/resources/faq",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/glossary",
+              "path": "/ai-humanoid-robotics-book/docs/resources/glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/hardware-setup",
+              "path": "/ai-humanoid-robotics-book/docs/resources/hardware-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/references",
+              "path": "/ai-humanoid-robotics-book/docs/resources/references",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -240,8 +185,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/ai-humanoid-robotics-book/docs/introduction/welcome",
-                "label": "introduction/welcome"
+                "path": "/ai-humanoid-robotics-book/docs/intro",
+                "label": "Introduction"
               }
             }
           }

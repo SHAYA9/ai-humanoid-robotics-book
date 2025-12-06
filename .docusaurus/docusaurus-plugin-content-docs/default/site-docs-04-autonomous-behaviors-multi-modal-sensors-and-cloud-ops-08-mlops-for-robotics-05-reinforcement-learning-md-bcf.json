@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/reinforcement-learning",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/05-reinforcement-learning.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
   "frontMatter": {
     "sidebar_position": 5
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.5 Nav2 Path Planning Solutions",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning"
-  },
-  "next": {
-    "title": "7.6 GPU Requirements",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/gpu-requirements"
   }
 }

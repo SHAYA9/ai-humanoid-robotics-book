@@ -1,0 +1,23 @@
+{
+  "id": "ai-foundations/nlp",
+  "title": "nlp",
+  "description": "",
+  "source": "@site/docs/ai-foundations/nlp.md",
+  "sourceDirName": "ai-foundations",
+  "slug": "/ai-foundations/nlp",
+  "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/nlp",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "computer-vision",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/computer-vision"
+  },
+  "next": {
+    "title": "reinforcement-learning",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/reinforcement-learning"
+  }
+}

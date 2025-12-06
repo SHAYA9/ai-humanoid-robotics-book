@@ -1,0 +1,23 @@
+{
+  "id": "ai-foundations/computer-vision",
+  "title": "computer-vision",
+  "description": "",
+  "source": "@site/docs/ai-foundations/computer-vision.md",
+  "sourceDirName": "ai-foundations",
+  "slug": "/ai-foundations/computer-vision",
+  "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/computer-vision",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "deep-learning",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/deep-learning"
+  },
+  "next": {
+    "title": "nlp",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/nlp"
+  }
+}

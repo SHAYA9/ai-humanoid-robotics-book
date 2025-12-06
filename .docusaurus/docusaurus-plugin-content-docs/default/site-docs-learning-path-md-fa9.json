@@ -1,0 +1,27 @@
+{
+  "id": "learning-path",
+  "title": "Learning Path",
+  "description": "This course is structured as a 13-week program. Each week builds on the previous one, so it is recommended to follow the schedule in order.",
+  "source": "@site/docs/learning-path.md",
+  "sourceDirName": ".",
+  "slug": "/learning-path",
+  "permalink": "/ai-humanoid-robotics-book/docs/learning-path",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Learning Path"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Prerequisites",
+    "permalink": "/ai-humanoid-robotics-book/docs/prerequisites"
+  },
+  "next": {
+    "title": "Hardware Guide",
+    "permalink": "/ai-humanoid-robotics-book/docs/hardware-guide"
+  }
+}

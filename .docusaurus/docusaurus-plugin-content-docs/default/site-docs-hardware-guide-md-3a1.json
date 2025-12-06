@@ -1,0 +1,27 @@
+{
+  "id": "hardware-guide",
+  "title": "Hardware Guide",
+  "description": "This guide provides detailed specifications and recommendations for the hardware used in this course. While we provide a cloud alternative, having access to physical hardware will provide the best learning experience.",
+  "source": "@site/docs/hardware-guide.md",
+  "sourceDirName": ".",
+  "slug": "/hardware-guide",
+  "permalink": "/ai-humanoid-robotics-book/docs/hardware-guide",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Hardware Guide"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Learning Path",
+    "permalink": "/ai-humanoid-robotics-book/docs/learning-path"
+  },
+  "next": {
+    "title": "Module 1: The Robotic Nervous System (ROS 2)",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/overview"
+  }
+}

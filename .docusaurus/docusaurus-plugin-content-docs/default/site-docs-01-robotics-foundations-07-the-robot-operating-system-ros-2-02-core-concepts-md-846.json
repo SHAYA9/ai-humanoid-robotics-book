@@ -1,6 +1,6 @@
 {
   "id": "robotics-foundations/the-robot-operating-system-ros-2/core-concepts",
-  "title": "7.2 Core Concepts: Nodes, Topics, and Messages",
+  "title": "Core Concepts: Nodes, Topics, and Messages",
   "description": "At the heart of ROS 2 is a communication graph where independent programs exchange information. Understanding the three fundamental components of this graph—Nodes, Topics, and Messages—is the key to mastering ROS 2.",
   "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/02-core-concepts.md",
   "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/core-concepts",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/02-core-concepts.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {
     "sidebar_position": 2
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.1 What is ROS 2?",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/what-is-ros-2"
-  },
-  "next": {
-    "title": "7.3 Synchronous Communication: Services and Actions",
-    "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication"
   }
 }

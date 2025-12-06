@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/03-cognitive-planning.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
   "frontMatter": {
     "sidebar_position": 3
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "8.2 The Whisper → LLM → ROS 2 Pipeline",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline"
-  },
-  "next": {
-    "title": "8.4 Object Detection and Manipulation",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/object-detection-and-manipulation"
   }
 }

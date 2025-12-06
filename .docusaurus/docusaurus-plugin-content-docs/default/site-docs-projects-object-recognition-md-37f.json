@@ -1,0 +1,23 @@
+{
+  "id": "projects/object-recognition",
+  "title": "object-recognition",
+  "description": "",
+  "source": "@site/docs/projects/object-recognition.md",
+  "sourceDirName": "projects",
+  "slug": "/projects/object-recognition",
+  "permalink": "/ai-humanoid-robotics-book/docs/projects/object-recognition",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "walking-robot",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/walking-robot"
+  },
+  "next": {
+    "title": "autonomous-navigation",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/autonomous-navigation"
+  }
+}

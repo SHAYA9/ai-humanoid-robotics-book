@@ -4,13 +4,346 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "AI-Native Humanoid Robotics",
-  "tagline": "An Engineering-Oriented Curriculum",
-  "favicon": "img/favicon.ico",
+  "title": "AI Humanoid Robotics",
+  "tagline": "Learn AI and Robotics",
+  "url": "https://shaya9.github.io",
+  "baseUrl": "/ai-humanoid-robotics-book/",
+  "organizationName": "SHAYA9",
+  "projectName": "ai-humanoid-robotics-book",
+  "onBrokenLinks": "warn",
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": [
+      "en"
+    ],
+    "path": "i18n",
+    "localeConfigs": {}
+  },
+  "presets": [
+    [
+      "@docusaurus/preset-classic",
+      {
+        "docs": {
+          "sidebarPath": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\sidebars.ts",
+          "routeBasePath": "/docs"
+        },
+        "theme": {
+          "customCss": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\src\\css\\custom.css"
+        }
+      }
+    ]
+  ],
+  "themeConfig": {
+    "navbar": {
+      "title": "AI Humanoid Robotics",
+      "logo": {
+        "alt": "AI Humanoid Robotics Logo",
+        "src": "img/logo.png",
+        "srcDark": "img/logo.png",
+        "href": "/",
+        "target": "_self",
+        "width": 35,
+        "height": 35
+      },
+      "items": [
+        {
+          "type": "docSidebar",
+          "sidebarId": "tutorialSidebar",
+          "position": "left",
+          "label": "📚 Curriculum"
+        },
+        {
+          "href": "https://github.com/SHAYA9/ai-humanoid-robotics-book",
+          "position": "right",
+          "className": "header-github-link",
+          "aria-label": "GitHub repository"
+        }
+      ],
+      "hideOnScroll": false
+    },
+    "footer": {
+      "style": "dark",
+      "logo": {
+        "alt": "AI Humanoid Robotics Logo",
+        "src": "img/logo.png",
+        "width": 60,
+        "height": 60,
+        "href": "https://xpertsphere.vercel.app"
+      },
+      "copyright": "Copyright © 2025 AI Humanoid Robotics Book. by Xpertsphere",
+      "links": [
+        {
+          "title": "Curriculum",
+          "items": [
+            {
+              "label": "Getting Started",
+              "to": "/docs/intro"
+            },
+            {
+              "label": "Module 1: ROS 2",
+              "to": "/docs/module-1-ros2/overview"
+            },
+            {
+              "label": "Module 2: Simulation",
+              "to": "/docs/module-2-simulation/overview"
+            },
+            {
+              "label": "Module 3: NVIDIA Isaac",
+              "to": "/docs/module-3-isaac/overview"
+            },
+            {
+              "label": "Module 4: VLA Integration",
+              "to": "/docs/module-4-vla/overview"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "items": [
+            {
+              "label": "Hardware Setup",
+              "to": "/docs/resources/hardware-setup"
+            },
+            {
+              "label": "Cloud Lab",
+              "to": "/docs/resources/cloud-lab"
+            },
+            {
+              "label": "Assessments",
+              "to": "/docs/resources/assessments"
+            },
+            {
+              "label": "References",
+              "to": "/docs/resources/references"
+            },
+            {
+              "label": "FAQ",
+              "to": "/docs/resources/faq"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "items": [
+            {
+              "label": "GitHub",
+              "href": "https://github.com/SHAYA9/ai-humanoid-robotics-book"
+            },
+            {
+              "label": "Discord",
+              "href": "https://discord.gg/robotics"
+            },
+            {
+              "label": "Twitter / X",
+              "href": "https://twitter.com/airoboticsbook"
+            },
+            {
+              "label": "Stack Overflow",
+              "href": "https://stackoverflow.com/questions/tagged/ros2"
+            },
+            {
+              "label": "ROS Discourse",
+              "href": "https://discourse.ros.org/"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "items": [
+            {
+              "label": "Privacy Policy",
+              "to": "/docs/legal/privacy"
+            },
+            {
+              "label": "Terms of Use",
+              "to": "/docs/legal/terms"
+            },
+            {
+              "label": "License",
+              "to": "/docs/legal/license"
+            },
+            {
+              "label": "Code of Conduct",
+              "to": "/docs/legal/code-of-conduct"
+            },
+            {
+              "label": "Contact",
+              "to": "/docs/legal/contact"
+            }
+          ]
+        }
+      ]
+    },
+    "colorMode": {
+      "defaultMode": "light",
+      "disableSwitch": false,
+      "respectPrefersColorScheme": false
+    },
+    "docs": {
+      "versionPersistence": "localStorage",
+      "sidebar": {
+        "hideable": false,
+        "autoCollapseCategories": false
+      }
+    },
+    "blog": {
+      "sidebar": {
+        "groupByYear": true
+      }
+    },
+    "metadata": [],
+    "prism": {
+      "additionalLanguages": [],
+      "theme": {
+        "plain": {
+          "color": "#bfc7d5",
+          "backgroundColor": "#292d3e"
+        },
+        "styles": [
+          {
+            "types": [
+              "comment"
+            ],
+            "style": {
+              "color": "rgb(105, 112, 152)",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "types": [
+              "string",
+              "inserted"
+            ],
+            "style": {
+              "color": "rgb(195, 232, 141)"
+            }
+          },
+          {
+            "types": [
+              "number"
+            ],
+            "style": {
+              "color": "rgb(247, 140, 108)"
+            }
+          },
+          {
+            "types": [
+              "builtin",
+              "char",
+              "constant",
+              "function"
+            ],
+            "style": {
+              "color": "rgb(130, 170, 255)"
+            }
+          },
+          {
+            "types": [
+              "punctuation",
+              "selector"
+            ],
+            "style": {
+              "color": "rgb(199, 146, 234)"
+            }
+          },
+          {
+            "types": [
+              "variable"
+            ],
+            "style": {
+              "color": "rgb(191, 199, 213)"
+            }
+          },
+          {
+            "types": [
+              "class-name",
+              "attr-name"
+            ],
+            "style": {
+              "color": "rgb(255, 203, 107)"
+            }
+          },
+          {
+            "types": [
+              "tag",
+              "deleted"
+            ],
+            "style": {
+              "color": "rgb(255, 85, 114)"
+            }
+          },
+          {
+            "types": [
+              "operator"
+            ],
+            "style": {
+              "color": "rgb(137, 221, 255)"
+            }
+          },
+          {
+            "types": [
+              "boolean"
+            ],
+            "style": {
+              "color": "rgb(255, 88, 116)"
+            }
+          },
+          {
+            "types": [
+              "keyword"
+            ],
+            "style": {
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "types": [
+              "doctype"
+            ],
+            "style": {
+              "color": "rgb(199, 146, 234)",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "types": [
+              "namespace"
+            ],
+            "style": {
+              "color": "rgb(178, 204, 214)"
+            }
+          },
+          {
+            "types": [
+              "url"
+            ],
+            "style": {
+              "color": "rgb(221, 221, 221)"
+            }
+          }
+        ]
+      },
+      "magicComments": [
+        {
+          "className": "theme-code-block-highlighted-line",
+          "line": "highlight-next-line",
+          "block": {
+            "start": "highlight-start",
+            "end": "highlight-end"
+          }
+        }
+      ]
+    },
+    "tableOfContents": {
+      "minHeadingLevel": 2,
+      "maxHeadingLevel": 3
+    }
+  },
+  "baseUrlIssueBanner": true,
   "future": {
     "v4": {
-      "removeLegacyPostBuildHeadAttribute": true,
-      "useCssCascadeLayers": true
+      "removeLegacyPostBuildHeadAttribute": false,
+      "useCssCascadeLayers": false
     },
     "experimental_faster": {
       "swcJsLoader": false,
@@ -28,322 +361,6 @@ export default {
     },
     "experimental_router": "browser"
   },
-  "url": "https://shaya9.github.io",
-  "baseUrl": "/ai-humanoid-robotics-book/",
-  "organizationName": "SHAYA9",
-  "projectName": "ai-humanoid-robotics-book",
-  "onBrokenLinks": "throw",
-  "i18n": {
-    "defaultLocale": "en",
-    "locales": [
-      "en"
-    ],
-    "path": "i18n",
-    "localeConfigs": {}
-  },
-  "presets": [
-    [
-      "classic",
-      {
-        "docs": {
-          "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/"
-        },
-        "blog": false,
-        "theme": {
-          "customCss": "./src/css/custom.css"
-        }
-      }
-    ]
-  ],
-  "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
-    "colorMode": {
-      "respectPrefersColorScheme": true,
-      "defaultMode": "light",
-      "disableSwitch": false
-    },
-    "navbar": {
-      "title": "AI Humanoid Robotics Book",
-      "logo": {
-        "alt": "My Site Logo",
-        "src": "img/logo.svg"
-      },
-      "items": [
-        {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
-          "position": "left",
-          "label": "Modules"
-        },
-        {
-          "href": "https://github.com/SHAYA9/ai-humanoid-robotics-book",
-          "label": "GitHub",
-          "position": "right"
-        }
-      ],
-      "hideOnScroll": false
-    },
-    "footer": {
-      "style": "dark",
-      "links": [
-        {
-          "title": "Curriculum",
-          "items": [
-            {
-              "label": "Modules",
-              "to": "/docs/intro"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "X",
-              "href": "https://x.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "GitHub",
-              "href": "https://github.com/SHAYA9/ai-humanoid-robotics-book"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2025 AI Humanoid Robotics Book. Built with Docusaurus."
-    },
-    "prism": {
-      "theme": {
-        "plain": {
-          "color": "#393A34",
-          "backgroundColor": "#f6f8fa"
-        },
-        "styles": [
-          {
-            "types": [
-              "comment",
-              "prolog",
-              "doctype",
-              "cdata"
-            ],
-            "style": {
-              "color": "#999988",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "types": [
-              "namespace"
-            ],
-            "style": {
-              "opacity": 0.7
-            }
-          },
-          {
-            "types": [
-              "string",
-              "attr-value"
-            ],
-            "style": {
-              "color": "#e3116c"
-            }
-          },
-          {
-            "types": [
-              "punctuation",
-              "operator"
-            ],
-            "style": {
-              "color": "#393A34"
-            }
-          },
-          {
-            "types": [
-              "entity",
-              "url",
-              "symbol",
-              "number",
-              "boolean",
-              "variable",
-              "constant",
-              "property",
-              "regex",
-              "inserted"
-            ],
-            "style": {
-              "color": "#36acaa"
-            }
-          },
-          {
-            "types": [
-              "atrule",
-              "keyword",
-              "attr-name",
-              "selector"
-            ],
-            "style": {
-              "color": "#00a4db"
-            }
-          },
-          {
-            "types": [
-              "function",
-              "deleted",
-              "tag"
-            ],
-            "style": {
-              "color": "#d73a49"
-            }
-          },
-          {
-            "types": [
-              "function-variable"
-            ],
-            "style": {
-              "color": "#6f42c1"
-            }
-          },
-          {
-            "types": [
-              "tag",
-              "selector",
-              "keyword"
-            ],
-            "style": {
-              "color": "#00009f"
-            }
-          }
-        ]
-      },
-      "darkTheme": {
-        "plain": {
-          "color": "#F8F8F2",
-          "backgroundColor": "#282A36"
-        },
-        "styles": [
-          {
-            "types": [
-              "prolog",
-              "constant",
-              "builtin"
-            ],
-            "style": {
-              "color": "rgb(189, 147, 249)"
-            }
-          },
-          {
-            "types": [
-              "inserted",
-              "function"
-            ],
-            "style": {
-              "color": "rgb(80, 250, 123)"
-            }
-          },
-          {
-            "types": [
-              "deleted"
-            ],
-            "style": {
-              "color": "rgb(255, 85, 85)"
-            }
-          },
-          {
-            "types": [
-              "changed"
-            ],
-            "style": {
-              "color": "rgb(255, 184, 108)"
-            }
-          },
-          {
-            "types": [
-              "punctuation",
-              "symbol"
-            ],
-            "style": {
-              "color": "rgb(248, 248, 242)"
-            }
-          },
-          {
-            "types": [
-              "string",
-              "char",
-              "tag",
-              "selector"
-            ],
-            "style": {
-              "color": "rgb(255, 121, 198)"
-            }
-          },
-          {
-            "types": [
-              "keyword",
-              "variable"
-            ],
-            "style": {
-              "color": "rgb(189, 147, 249)",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "types": [
-              "comment"
-            ],
-            "style": {
-              "color": "rgb(98, 114, 164)"
-            }
-          },
-          {
-            "types": [
-              "attr-name"
-            ],
-            "style": {
-              "color": "rgb(241, 250, 140)"
-            }
-          }
-        ]
-      },
-      "additionalLanguages": [],
-      "magicComments": [
-        {
-          "className": "theme-code-block-highlighted-line",
-          "line": "highlight-next-line",
-          "block": {
-            "start": "highlight-start",
-            "end": "highlight-end"
-          }
-        }
-      ]
-    },
-    "docs": {
-      "versionPersistence": "localStorage",
-      "sidebar": {
-        "hideable": false,
-        "autoCollapseCategories": false
-      }
-    },
-    "blog": {
-      "sidebar": {
-        "groupByYear": true
-      }
-    },
-    "metadata": [],
-    "tableOfContents": {
-      "minHeadingLevel": 2,
-      "maxHeadingLevel": 3
-    }
-  },
-  "baseUrlIssueBanner": true,
   "onBrokenAnchors": "warn",
   "onDuplicateRoutes": "warn",
   "staticDirectories": [

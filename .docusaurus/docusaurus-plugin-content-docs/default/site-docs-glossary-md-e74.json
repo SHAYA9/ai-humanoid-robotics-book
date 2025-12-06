@@ -1,0 +1,19 @@
+{
+  "id": "glossary",
+  "title": "Glossary",
+  "description": "",
+  "source": "@site/docs/glossary.md",
+  "sourceDirName": ".",
+  "slug": "/glossary",
+  "permalink": "/ai-humanoid-robotics-book/docs/glossary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "❓ FAQ",
+    "permalink": "/ai-humanoid-robotics-book/docs/faq"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "module-4-vla/llm-planning",
+  "title": "LLM Planning",
+  "description": "Large Language Models (LLMs) like GPT-4 have demonstrated remarkable abilities in reasoning and planning. This has opened up exciting new possibilities for using LLMs as the \"brain\" of a robot, responsible for high-level planning and decision-making.",
+  "source": "@site/docs/module-4-vla/llm-planning.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/llm-planning",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/llm-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "LLM Planning"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Whisper Voice Control",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/whisper-voice"
+  },
+  "next": {
+    "title": "Multimodal Integration",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/multimodal-integration"
+  }
+}

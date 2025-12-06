@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/sensor-simulation",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments/03-sensor-simulation.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
   "frontMatter": {
     "sidebar_position": 3
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.2 Physics Simulation Concepts",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/physics-simulation-concepts"
-  },
-  "next": {
-    "title": "7.4 Unity Visualization Plan",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/unity-visualization-plan"
   }
 }

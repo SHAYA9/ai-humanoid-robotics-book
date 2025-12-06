@@ -2,14 +2,14 @@
   "docusaurusVersion": "3.9.2",
   "siteVersion": "0.0.0",
   "pluginVersions": {
-    "docusaurus-plugin-css-cascade-layers": {
-      "type": "package",
-      "name": "@docusaurus/plugin-css-cascade-layers",
-      "version": "3.9.2"
-    },
     "docusaurus-plugin-content-docs": {
       "type": "package",
       "name": "@docusaurus/plugin-content-docs",
+      "version": "3.9.2"
+    },
+    "docusaurus-plugin-content-blog": {
+      "type": "package",
+      "name": "@docusaurus/plugin-content-blog",
       "version": "3.9.2"
     },
     "docusaurus-plugin-content-pages": {
@@ -17,9 +17,9 @@
       "name": "@docusaurus/plugin-content-pages",
       "version": "3.9.2"
     },
-    "docusaurus-plugin-sitemap": {
+    "docusaurus-plugin-debug": {
       "type": "package",
-      "name": "@docusaurus/plugin-sitemap",
+      "name": "@docusaurus/plugin-debug",
       "version": "3.9.2"
     },
     "docusaurus-plugin-svgr": {

@@ -1,0 +1,23 @@
+{
+  "id": "humanoid-robotics/balance-control",
+  "title": "balance-control",
+  "description": "",
+  "source": "@site/docs/humanoid-robotics/balance-control.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/balance-control",
+  "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/balance-control",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "motion-planning",
+    "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/motion-planning"
+  },
+  "next": {
+    "title": "Walking Gait",
+    "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/walking-gait"
+  }
+}

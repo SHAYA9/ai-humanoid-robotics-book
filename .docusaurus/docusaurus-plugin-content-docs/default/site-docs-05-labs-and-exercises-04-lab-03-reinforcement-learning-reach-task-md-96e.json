@@ -8,16 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-03-reinforcement-learning-reach-task",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/04-lab-03-reinforcement-learning-reach-task.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
   "frontMatter": {
     "sidebar_position": 4
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Lab 2: Controlling a Robot",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-02-controlling-a-robot"
   }
 }

@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/pipeline",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/05-labs-and-exercises/01-vla-capstone-project/02-pipeline.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
   "frontMatter": {
     "sidebar_position": 2
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "8.1 The VLA Capstone Project",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/introduction"
-  },
-  "next": {
-    "title": "8.3 Cognitive Planning: Natural Language to Actions",
-    "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning"
   }
 }

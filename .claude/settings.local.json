@@ -26,7 +26,8 @@
       "Bash(npm install --save-dev cross-env)",
       "Bash(git add README.md)",
       "Bash(git commit -m \"docs: update README with deployment instructions\")",
-      "Bash(git push origin main)"
+      "Bash(git push origin main)",
+      "Bash(npm start)"
     ],
     "deny": [],
     "ask": []

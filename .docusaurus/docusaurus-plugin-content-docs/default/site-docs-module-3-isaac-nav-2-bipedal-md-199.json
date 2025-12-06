@@ -1,0 +1,27 @@
+{
+  "id": "module-3-isaac/nav2-bipedal",
+  "title": "Nav2 for Bipedal Robots",
+  "description": "The ROS 2 Navigation Stack (Nav2) is a powerful and flexible framework for autonomous navigation. While it was originally designed for wheeled robots, it can be adapted to work with more complex platforms like bipedal robots (humanoids).",
+  "source": "@site/docs/module-3-isaac/nav2-bipedal.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/nav2-bipedal",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/nav2-bipedal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Nav2 for Bipedal Robots"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "vSLAM Navigation",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/vslam-navigation"
+  },
+  "next": {
+    "title": "Practical 3: Perception",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/practical-3-perception"
+  }
+}

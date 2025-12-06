@@ -1,47 +1,25 @@
 ---
 sidebar_position: 1
+title: Introduction to Physical AI & Humanoid Robotics
 ---
 
-# Tutorial Intro
+# Welcome to Physical AI & Humanoid Robotics: Embodied Intelligence
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Bridging the gap between digital brain and physical body.**
 
-## Getting Started
+This course is a deep dive into the exciting world of **Physical AI**, where the boundaries between digital intelligence and physical embodiment blur. We will explore how to build and program intelligent systems that can perceive, reason, and act in the real world, with a focus on **humanoid robotics**.
 
-Get started by **creating a new site**.
+This is not just a theoretical course. You will get hands-on experience with cutting-edge technologies, including:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+-   **ROS 2:** The open-source standard for robotics middleware.
+-   **Gazebo & Unity:** Powerful physics simulators for creating and testing digital twins.
+-   **NVIDIA Isaac™:** A state-of-the-art platform for AI-powered robotics.
+-   **Vision-Language-Action (VLA) Models:** The next generation of AI that combines vision, language, and action.
 
-### What you'll need
+By the end of this course, you will have the skills to design, build, and program your own autonomous humanoid robots, capable of performing complex tasks in dynamic environments.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Who is This For?
 
-## Generate a new site
+This course is designed for university students, robotics engineers, and AI researchers who are passionate about the future of embodied intelligence. It is an advanced undergraduate to graduate-level course, and a strong foundation in programming and mathematics is recommended.
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Let's begin the journey into the future of robotics.

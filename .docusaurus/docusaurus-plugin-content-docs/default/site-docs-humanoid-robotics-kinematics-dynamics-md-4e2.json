@@ -1,0 +1,23 @@
+{
+  "id": "humanoid-robotics/kinematics-dynamics",
+  "title": "kinematics-dynamics",
+  "description": "",
+  "source": "@site/docs/humanoid-robotics/kinematics-dynamics.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/kinematics-dynamics",
+  "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/kinematics-dynamics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "design-principles",
+    "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/design-principles"
+  },
+  "next": {
+    "title": "motion-planning",
+    "permalink": "/ai-humanoid-robotics-book/docs/humanoid-robotics/motion-planning"
+  }
+}

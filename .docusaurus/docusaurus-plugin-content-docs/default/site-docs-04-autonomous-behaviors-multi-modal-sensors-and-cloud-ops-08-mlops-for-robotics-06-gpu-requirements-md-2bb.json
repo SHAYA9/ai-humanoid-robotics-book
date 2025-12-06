@@ -8,20 +8,10 @@
   "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/gpu-requirements",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/SHAYA9/ai-humanoid-robotics-book/tree/main/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/06-gpu-requirements.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
   "frontMatter": {
     "sidebar_position": 6
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "7.5 Reinforcement Learning in Isaac Sim",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/reinforcement-learning"
-  },
-  "next": {
-    "title": "7.6 Sim2Real: From Simulation to the Real World",
-    "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real"
   }
 }

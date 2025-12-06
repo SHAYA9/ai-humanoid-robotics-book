@@ -1,0 +1,27 @@
+{
+  "id": "module-2-simulation/unity-rendering",
+  "title": "Unity Rendering",
+  "description": "While Gazebo is prized for its physics simulation, Unity stands out for its cutting-edge graphics and rendering capabilities. This makes it an excellent choice for tasks where visual realism is paramount, such as generating synthetic data for training computer vision models or creating compelling user interfaces for robot control.",
+  "source": "@site/docs/module-2-simulation/unity-rendering.md",
+  "sourceDirName": "module-2-simulation",
+  "slug": "/module-2-simulation/unity-rendering",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/unity-rendering",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Unity Rendering"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Gazebo Physics",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/gazebo-physics"
+  },
+  "next": {
+    "title": "Sensor Simulation",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/sensor-simulation"
+  }
+}

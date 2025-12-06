@@ -1,0 +1,23 @@
+{
+  "id": "projects/autonomous-navigation",
+  "title": "autonomous-navigation",
+  "description": "",
+  "source": "@site/docs/projects/autonomous-navigation.md",
+  "sourceDirName": "projects",
+  "slug": "/projects/autonomous-navigation",
+  "permalink": "/ai-humanoid-robotics-book/docs/projects/autonomous-navigation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "object-recognition",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/object-recognition"
+  },
+  "next": {
+    "title": "human-robot-interaction",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/human-robot-interaction"
+  }
+}

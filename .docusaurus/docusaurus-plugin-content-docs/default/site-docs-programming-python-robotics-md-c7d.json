@@ -1,0 +1,23 @@
+{
+  "id": "programming/python-robotics",
+  "title": "python-robotics",
+  "description": "",
+  "source": "@site/docs/programming/python-robotics.md",
+  "sourceDirName": "programming",
+  "slug": "/programming/python-robotics",
+  "permalink": "/ai-humanoid-robotics-book/docs/programming/python-robotics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ros-2",
+    "permalink": "/ai-humanoid-robotics-book/docs/programming/ros-2"
+  },
+  "next": {
+    "title": "cpp-robotics",
+    "permalink": "/ai-humanoid-robotics-book/docs/programming/cpp-robotics"
+  }
+}

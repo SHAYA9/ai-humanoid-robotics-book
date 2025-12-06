@@ -1,0 +1,61 @@
+{
+  "id": "module-4-vla/capstone-project",
+  "title": "Capstone Project: The Autonomous Humanoid",
+  "description": "Final project integrating all modules: Voice-controlled humanoid with vision, planning, and autonomous navigation",
+  "source": "@site/docs/module-4-vla/capstone-project.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/capstone-project",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/capstone-project",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "capstone",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/capstone"
+    },
+    {
+      "inline": true,
+      "label": "vla",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/vla"
+    },
+    {
+      "inline": true,
+      "label": "autonomous",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/autonomous"
+    },
+    {
+      "inline": true,
+      "label": "humanoid",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/humanoid"
+    },
+    {
+      "inline": true,
+      "label": "integration",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/integration"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "capstone-project",
+    "title": "Capstone Project: The Autonomous Humanoid",
+    "sidebar_label": "Capstone: Autonomous Humanoid",
+    "description": "Final project integrating all modules: Voice-controlled humanoid with vision, planning, and autonomous navigation",
+    "tags": [
+      "capstone",
+      "vla",
+      "autonomous",
+      "humanoid",
+      "integration"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Multimodal Integration",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/multimodal-integration"
+  },
+  "next": {
+    "title": "Practical: Autonomous Humanoid",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/practical-4-autonomous-humanoid"
+  }
+}

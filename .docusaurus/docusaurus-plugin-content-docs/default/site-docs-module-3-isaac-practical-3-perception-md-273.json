@@ -1,0 +1,27 @@
+{
+  "id": "module-3-isaac/practical-3-perception",
+  "title": "Practical 3: Perception",
+  "description": "In this practical exercise, you'll get hands-on experience with the Isaac ROS perception packages. You'll set up a simple perception pipeline in Isaac Sim and visualize the results in RViz.",
+  "source": "@site/docs/module-3-isaac/practical-3-perception.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/practical-3-perception",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/practical-3-perception",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Practical 3: Perception"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Nav2 for Bipedal Robots",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/nav2-bipedal"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/overview"
+  }
+}

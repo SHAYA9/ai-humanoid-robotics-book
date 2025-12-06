@@ -1,0 +1,23 @@
+{
+  "id": "ai-foundations/reinforcement-learning",
+  "title": "reinforcement-learning",
+  "description": "",
+  "source": "@site/docs/ai-foundations/reinforcement-learning.md",
+  "sourceDirName": "ai-foundations",
+  "slug": "/ai-foundations/reinforcement-learning",
+  "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/reinforcement-learning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "nlp",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/nlp"
+  },
+  "next": {
+    "title": "🤖 Humanoid Robotics",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/humanoid-robotics"
+  }
+}

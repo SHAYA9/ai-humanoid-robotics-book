@@ -1,0 +1,27 @@
+{
+  "id": "module-3-isaac/isaac-ros",
+  "title": "Isaac ROS",
+  "description": "Isaac ROS is a collection of ROS 2 packages that are optimized to run on NVIDIA's Jetson and GPU platforms. These packages provide hardware acceleration for common robotics tasks, enabling real-time performance that would be difficult to achieve with a CPU alone.",
+  "source": "@site/docs/module-3-isaac/isaac-ros.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/isaac-ros",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-ros",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Isaac ROS"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac Sim",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-sim"
+  },
+  "next": {
+    "title": "vSLAM Navigation",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/vslam-navigation"
+  }
+}

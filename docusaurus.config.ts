@@ -52,11 +52,7 @@ const config = {
           position: 'left',
           label: '📚 Curriculum',
         },
-        {
-          to: '/chatbot',
-          label: '🤖 Chatbot',
-          position: 'left',
-        },
+        
         {
           href: 'https://github.com/SHAYA9/ai-humanoid-robotics-book',
           position: 'right',

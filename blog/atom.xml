@@ -6,6 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shaya9.github.io/ai-humanoid-robotics-book/blog"/>
     <subtitle>AI Humanoid Robotics Blog</subtitle>
+    <icon>https://shaya9.github.io/ai-humanoid-robotics-book/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://shaya9.github.io/ai-humanoid-robotics-book/blog/welcome</id>

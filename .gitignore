@@ -2,7 +2,7 @@ temp-folder/
 # Dependencies
 node_modules/
 .DS_Store
-
+.env
 # Build output
 .build/
 .docusaurus/

@@ -108,6 +108,11 @@ export default [
     exact: true
   },
   {
+    path: '/ai-humanoid-robotics-book/chatbot',
+    component: ComponentCreator('/ai-humanoid-robotics-book/chatbot', 'fc2'),
+    exact: true
+  },
+  {
     path: '/ai-humanoid-robotics-book/markdown-page',
     component: ComponentCreator('/ai-humanoid-robotics-book/markdown-page', '420'),
     exact: true

@@ -242,10 +242,17 @@
     "sidebar": "sidebar---ai-humanoid-robotics-book-blog-814-569",
     "content": "content---ai-humanoid-robotics-book-blog-welcomed-9-f-c33"
   },
+  "/ai-humanoid-robotics-book/chatbot-fc2": {
+    "__comp": "__comp---site-src-pages-chatbot-jsb-34-5a2",
+    "__context": {
+      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
+    },
+    "config": "config---ai-humanoid-robotics-book-chatbot-5-e-9-6e1"
+  },
   "/ai-humanoid-robotics-book/markdown-page-420": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---ai-humanoid-robotics-book-markdown-pagea-74-d13"
+      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
     },
     "content": "content---ai-humanoid-robotics-book-markdown-page-393-df5"
   },
@@ -557,8 +564,8 @@
   "/ai-humanoid-robotics-book/-262": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---ai-humanoid-robotics-book-markdown-pagea-74-d13"
+      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
     },
-    "config": "config---ai-humanoid-robotics-book-5-e-9-353"
+    "config": "config---ai-humanoid-robotics-book-chatbot-5-e-9-6e1"
   }
 }

@@ -27,7 +27,13 @@
       "Bash(git add README.md)",
       "Bash(git commit -m \"docs: update README with deployment instructions\")",
       "Bash(git push origin main)",
-      "Bash(npm start)"
+      "Bash(npm start)",
+      "Bash(mkdir -p src/components/Chatbot)",
+      "Bash(mkdir -p supabase/migrations)",
+      "Bash(mkdir -p supabase/functions/rag-chatbot)",
+      "Bash(mkdir backend)",
+      "Bash(mkdir srccomponentsChatbot)",
+      "Bash(npm install @google/generative-ai)"
     ],
     "deny": [],
     "ask": []

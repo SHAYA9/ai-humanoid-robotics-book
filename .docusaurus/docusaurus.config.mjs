@@ -8,6 +8,7 @@ export default {
   "tagline": "Learn AI and Robotics",
   "url": "https://shaya9.github.io",
   "baseUrl": "/ai-humanoid-robotics-book/",
+  "favicon": "img/favicon.ico",
   "organizationName": "SHAYA9",
   "projectName": "ai-humanoid-robotics-book",
   "onBrokenLinks": "warn",

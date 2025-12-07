@@ -37,6 +37,6 @@ Question: ${question}`;
 
   } catch (error) {
     console.error("Error generating response from Gemini:", error);
-    return "Sorry, I encountered an error while trying to connect to the AI model. Please check the console for details.";
+    return "Sorry, I encountered an error while trying to connect to the AI model.";
   }
 };

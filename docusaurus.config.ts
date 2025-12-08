@@ -10,14 +10,11 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'SHAYA9',
   projectName: 'ai-humanoid-robotics-book',
-  
   onBrokenLinks: 'warn',
-  
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -32,7 +29,29 @@ const config = {
       },
     ],
   ],
-
+  plugins: [
+    function (context, options) {
+      return {
+        name: 'docusaurus-plugin-dotenv',
+        configureWebpack(config, isServer) {
+          const dotenv = require('dotenv');
+          const path = require('path');
+          const envPath = path.resolve(__dirname, '.env');
+          const env = dotenv.config({ path: envPath }).parsed || {};
+          const envKeys = Object.keys(env).reduce((prev, next) => {
+            prev[`process.env.${next}`] = JSON.stringify(env[next]);
+            return prev;
+          }, {});
+          return {
+            mergeStrategy: { 'plugins': 'append' },
+            plugins: [
+              new (require('webpack').DefinePlugin)(envKeys)
+            ]
+          };
+        },
+      };
+    },
+  ],
   themeConfig: {
     navbar: {
       title: 'AI Humanoid Robotics',
@@ -52,7 +71,6 @@ const config = {
           position: 'left',
           label: '📚 Curriculum',
         },
-        
         {
           href: 'https://github.com/SHAYA9/ai-humanoid-robotics-book',
           position: 'right',

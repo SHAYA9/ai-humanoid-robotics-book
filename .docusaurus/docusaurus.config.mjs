@@ -34,6 +34,9 @@ export default {
       }
     ]
   ],
+  "plugins": [
+    null
+  ],
   "themeConfig": {
     "navbar": {
       "title": "AI Humanoid Robotics",
@@ -368,7 +371,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],

@@ -179,6 +179,70 @@
               "id": "resources/references",
               "path": "/ai-humanoid-robotics-book/docs/resources/references",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specifyplus/api/authentication",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/authentication"
+            },
+            {
+              "id": "specifyplus/api/endpoints",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/endpoints"
+            },
+            {
+              "id": "specifyplus/api/rate-limiting",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/rate-limiting"
+            },
+            {
+              "id": "specifyplus/architecture",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/architecture"
+            },
+            {
+              "id": "specifyplus/deployment/cloud-deployment",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/cloud-deployment"
+            },
+            {
+              "id": "specifyplus/deployment/local-setup",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/local-setup"
+            },
+            {
+              "id": "specifyplus/deployment/monitoring",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/monitoring"
+            },
+            {
+              "id": "specifyplus/getting-started",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/getting-started"
+            },
+            {
+              "id": "specifyplus/integration/customization",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/customization"
+            },
+            {
+              "id": "specifyplus/integration/docusaurus",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/docusaurus"
+            },
+            {
+              "id": "specifyplus/integration/existing-projects",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects"
+            },
+            {
+              "id": "specifyplus/modules/ai-frameworks",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks"
+            },
+            {
+              "id": "specifyplus/modules/ros2-integration",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/ros2-integration"
+            },
+            {
+              "id": "specifyplus/modules/simulation-tools",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/simulation-tools"
+            },
+            {
+              "id": "specifyplus/modules/vla-systems",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/vla-systems"
+            },
+            {
+              "id": "specifyplus/overview",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/overview"
             }
           ],
           "draftIds": [],

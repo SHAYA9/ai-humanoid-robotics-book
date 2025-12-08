@@ -38,6 +38,11 @@ export default [
     exact: true
   },
   {
+    path: '/ai-humanoid-robotics-book/background-assessment',
+    component: ComponentCreator('/ai-humanoid-robotics-book/background-assessment', '699'),
+    exact: true
+  },
+  {
     path: '/ai-humanoid-robotics-book/blog',
     component: ComponentCreator('/ai-humanoid-robotics-book/blog', '28c'),
     exact: true
@@ -113,17 +118,32 @@ export default [
     exact: true
   },
   {
+    path: '/ai-humanoid-robotics-book/dashboard',
+    component: ComponentCreator('/ai-humanoid-robotics-book/dashboard', 'd3b'),
+    exact: true
+  },
+  {
+    path: '/ai-humanoid-robotics-book/login',
+    component: ComponentCreator('/ai-humanoid-robotics-book/login', 'c91'),
+    exact: true
+  },
+  {
     path: '/ai-humanoid-robotics-book/markdown-page',
     component: ComponentCreator('/ai-humanoid-robotics-book/markdown-page', '420'),
     exact: true
   },
   {
+    path: '/ai-humanoid-robotics-book/signup',
+    component: ComponentCreator('/ai-humanoid-robotics-book/signup', '3b1'),
+    exact: true
+  },
+  {
     path: '/ai-humanoid-robotics-book/docs',
-    component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'c42'),
+    component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'bed'),
     routes: [
       {
         path: '/ai-humanoid-robotics-book/docs',
-        component: ComponentCreator('/ai-humanoid-robotics-book/docs', '523'),
+        component: ComponentCreator('/ai-humanoid-robotics-book/docs', '53c'),
         routes: [
           {
             path: '/ai-humanoid-robotics-book/docs/tags',
@@ -322,7 +342,7 @@ export default [
           },
           {
             path: '/ai-humanoid-robotics-book/docs',
-            component: ComponentCreator('/ai-humanoid-robotics-book/docs', '4e7'),
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs', '931'),
             routes: [
               {
                 path: '/ai-humanoid-robotics-book/docs/hardware-guide',
@@ -527,6 +547,86 @@ export default [
                 component: ComponentCreator('/ai-humanoid-robotics-book/docs/resources/references', 'd25'),
                 exact: true,
                 sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/api/authentication',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/api/authentication', 'a0b'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/api/endpoints',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/api/endpoints', 'ad3'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/api/rate-limiting',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/api/rate-limiting', '964'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/architecture',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/architecture', '7d4'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/deployment/cloud-deployment',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/deployment/cloud-deployment', '0e9'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/deployment/local-setup',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/deployment/local-setup', 'cd6'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/deployment/monitoring',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/deployment/monitoring', '423'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/getting-started',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/getting-started', '1ca'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/integration/customization',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/integration/customization', 'c49'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/integration/docusaurus',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/integration/docusaurus', 'b20'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects', '852'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks', '59c'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/modules/ros2-integration',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/modules/ros2-integration', '95e'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/modules/simulation-tools',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/modules/simulation-tools', '376'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/modules/vla-systems',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/modules/vla-systems', 'c05'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/overview',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/overview', 'b87'),
+                exact: true
               }
             ]
           }

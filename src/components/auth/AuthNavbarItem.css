@@ -1,0 +1,27 @@
+.auth-navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+.auth-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.signup-link {
+  background-color: var(--ifm-color-primary);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ifm-global-radius);
+  margin-left: 0.5rem;
+}
+
+.signup-link:hover {
+  background-color: var(--ifm-color-primary-dark);
+}

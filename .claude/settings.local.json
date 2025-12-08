@@ -33,7 +33,12 @@
       "Bash(mkdir -p supabase/functions/rag-chatbot)",
       "Bash(mkdir backend)",
       "Bash(mkdir srccomponentsChatbot)",
-      "Bash(npm install @google/generative-ai)"
+      "Bash(npm install @google/generative-ai)",
+      "Bash(mkdir -p docs/specifyplus/modules docs/specifyplus/api docs/specifyplus/deployment docs/specifyplus/integration)",
+      "WebFetch(domain:better-auth.com)",
+      "Bash(npx kill-port 3000)",
+      "Bash(npm install dotenv)",
+      "Bash(npm run swizzle @docusaurus/theme-classic Navbar/Content -- --wrap)"
     ],
     "deny": [],
     "ask": []

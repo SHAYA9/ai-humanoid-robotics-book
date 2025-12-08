@@ -42,6 +42,13 @@
       "plugin": "plugin---ai-humanoid-robotics-book-docusaurus-debugb-38-dd7"
     }
   },
+  "/ai-humanoid-robotics-book/background-assessment-699": {
+    "__comp": "__comp---site-src-pages-background-assessment-jsced-8a8",
+    "__context": {
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
+    },
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
+  },
   "/ai-humanoid-robotics-book/blog-28c": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
@@ -245,24 +252,45 @@
   "/ai-humanoid-robotics-book/chatbot-fc2": {
     "__comp": "__comp---site-src-pages-chatbot-jsb-34-5a2",
     "__context": {
-      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
     },
-    "config": "config---ai-humanoid-robotics-book-chatbot-5-e-9-6e1"
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
+  },
+  "/ai-humanoid-robotics-book/dashboard-d3b": {
+    "__comp": "__comp---site-src-pages-dashboard-jsde-3-f66",
+    "__context": {
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
+    },
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
+  },
+  "/ai-humanoid-robotics-book/login-c91": {
+    "__comp": "__comp---site-src-pages-login-js-380-710",
+    "__context": {
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
+    },
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
   },
   "/ai-humanoid-robotics-book/markdown-page-420": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
     },
     "content": "content---ai-humanoid-robotics-book-markdown-page-393-df5"
   },
-  "/ai-humanoid-robotics-book/docs-c42": {
+  "/ai-humanoid-robotics-book/signup-3b1": {
+    "__comp": "__comp---site-src-pages-signup-js-83-a-147",
+    "__context": {
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
+    },
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
+  },
+  "/ai-humanoid-robotics-book/docs-bed": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---ai-humanoid-robotics-book-docsaba-0ca"
     }
   },
-  "/ai-humanoid-robotics-book/docs-523": {
+  "/ai-humanoid-robotics-book/docs-53c": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---ai-humanoid-robotics-book-docs-287-add"
   },
@@ -422,7 +450,7 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---ai-humanoid-robotics-book-docs-tags-vla-0-a-6-506"
   },
-  "/ai-humanoid-robotics-book/docs-4e7": {
+  "/ai-humanoid-robotics-book/docs-931": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/ai-humanoid-robotics-book/docs/hardware-guide-c3b": {
@@ -561,11 +589,75 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---ai-humanoid-robotics-book-docs-resources-referencesb-6-e-a69"
   },
+  "/ai-humanoid-robotics-book/docs/specifyplus/api/authentication-a0b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-api-authentication-631-eae"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/api/endpoints-ad3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-api-endpoints-668-13f"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/api/rate-limiting-964": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-api-rate-limiting-170-d21"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/architecture-7d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-architecture-707-ffd"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/deployment/cloud-deployment-0e9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-deployment-cloud-deployment-2-c-3-f7e"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/deployment/local-setup-cd6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-deployment-local-setupb-83-34f"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/deployment/monitoring-423": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-deployment-monitoringf-7-b-718"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/getting-started-1ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-getting-startedc-91-75a"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/integration/customization-c49": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-integration-customization-638-605"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/integration/docusaurus-b20": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-integration-docusaurus-09-f-354"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects-852": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-integration-existing-projects-350-eb5"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks-59c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-modules-ai-frameworkse-1-e-2ea"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/modules/ros2-integration-95e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-modules-ros-2-integration-570-7a1"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/modules/simulation-tools-376": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-modules-simulation-toolsa-89-009"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/modules/vla-systems-c05": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-modules-vla-systems-1-bf-78f"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/overview-b87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-overviewbde-4e8"
+  },
   "/ai-humanoid-robotics-book/-262": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---ai-humanoid-robotics-book-chatbota-74-b32"
+      "plugin": "plugin---ai-humanoid-robotics-book-background-assessmenta-74-11e"
     },
-    "config": "config---ai-humanoid-robotics-book-chatbot-5-e-9-6e1"
+    "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
   }
 }

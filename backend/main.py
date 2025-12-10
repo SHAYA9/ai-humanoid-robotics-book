@@ -11,14 +11,20 @@ load_dotenv()
 # Import backend modules
 from . import qdrant_client, gemini_client
 
-# --- FastAPI App Initialization ---
+# -------------------------------------------------------------------
+# FastAPI App Initialization
+# -------------------------------------------------------------------
+
 app = FastAPI(
     title="AI Humanoid Robotics Book - RAG Chatbot API",
     description="A RAG chatbot backend using FastAPI with Gemini API, Qdrant, and Neon Postgres.",
     version="1.0.0"
 )
 
-# --- CORS Configuration ---
+# -------------------------------------------------------------------
+# CORS Configuration
+# -------------------------------------------------------------------
+
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
@@ -27,7 +33,7 @@ ALLOWED_ORIGINS = [
     os.getenv("FRONTEND_URL", "").strip() or None
 ]
 
-# Filter out None values
+# Remove None if FRONTEND_URL is empty
 ALLOWED_ORIGINS = [origin for origin in ALLOWED_ORIGINS if origin]
 
 app.add_middleware(
@@ -38,7 +44,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Pydantic Models ---
+# -------------------------------------------------------------------
+# Pydantic Models
+# -------------------------------------------------------------------
+
 class ChatRequest(BaseModel):
     question: str
     context: str  # The user-selected text from the frontend
@@ -50,11 +59,12 @@ class ChatResponse(BaseModel):
     answer: str
     sources: str
 
-# --- API Endpoints ---
+# -------------------------------------------------------------------
+# API Endpoints
+# -------------------------------------------------------------------
 
 @app.get("/")
 def read_root():
-    """Health check endpoint."""
     return {
         "status": "ok",
         "message": "Welcome to the RAG Chatbot API!",
@@ -63,25 +73,20 @@ def read_root():
 
 @app.get("/health")
 def health_check():
-    """Health check endpoint for monitoring."""
     return {"status": "healthy"}
 
 @app.post("/api/chat/general", response_model=ChatResponse)
 async def chat_general(request: GeneralChatRequest):
-    """
-    Endpoint for general, non-RAG chat.
-    Forwards the question directly to the Gemini model.
-    """
+    """General non-RAG chat using Gemini."""
     try:
-        # Generate an answer directly from Gemini
-        prompt = f"""You are a helpful AI assistant for the AI Humanoid Robotics Book.
-        
+        prompt = f"""
+You are a helpful AI assistant for the AI Humanoid Robotics Book.
+
 Question: {request.question}
 
-Please provide a helpful and accurate answer based on your knowledge of AI and robotics."""
-        
+Provide a clear and accurate answer based on your knowledge of AI and robotics.
+"""
         answer = await gemini_client.generate_answer(prompt, request.question)
-
         return ChatResponse(answer=answer, sources="General Knowledge")
 
     except Exception as e:
@@ -91,10 +96,7 @@ Please provide a helpful and accurate answer based on your knowledge of AI and r
 
 @app.post("/api/chat/selected", response_model=ChatResponse)
 async def chat_selected_text(request: ChatRequest):
-    """
-    This is the main RAG endpoint. It uses the user-selected text
-    to find similar passages and generate a focused answer.
-    """
+    """RAG Chat based ONLY on selected text + nearest passages from Qdrant."""
     try:
         if not request.context:
             raise ValueError("Context (selected text) is required for RAG chat")
@@ -102,7 +104,7 @@ async def chat_selected_text(request: ChatRequest):
         # Search for similar passages in Qdrant
         similar_passages = await qdrant_client.search_similar_passages(request.context)
 
-        # Build context from original text and search results
+        # Build context
         context_for_llm = f"Selected Text:\n{request.context}\n\n"
         citations = set()
 
@@ -113,12 +115,13 @@ async def chat_selected_text(request: ChatRequest):
                 if 'source' in passage.payload:
                     citations.add(passage.payload['source'])
 
-        # Generate answer based on context
-        prompt = f"""You are a helpful assistant for the AI Humanoid Robotics Book.
-        
-Based ONLY on the following text from the book, answer the user's question.
-If the answer is not in the text, say you don't have enough information.
-Keep your answer concise and directly related to the provided text.
+        # RAG Prompt
+        prompt = f"""
+You are an assistant for the AI Humanoid Robotics Book.
+
+Based ONLY on the following provided text, answer the user's question.
+If the answer is not found in this text, respond with:
+"I do not have enough information in the provided text."
 
 Context:
 ---
@@ -127,16 +130,21 @@ Context:
 
 Question: {request.question}
 
-Answer:"""
-        
+Answer:
+"""
+
         answer = await gemini_client.generate_answer(prompt, request.question)
 
-        # Format sources
         sources_str = ", ".join(list(citations)) if citations else "From selected text"
-
         return ChatResponse(answer=answer, sources=sources_str)
 
     except Exception as e:
         print(f"Error in /api/chat/selected: {e}")
         raise HTTPException(status_code=500, detail=f"Error processing selected text: {str(e)}")
 
+
+# -------------------------------------------------------------------
+# ASGI to WSGI Adapter (required for PythonAnywhere)
+# -------------------------------------------------------------------
+from fastapi.middleware.wsgi import WSGIMiddleware
+application = WSGIMiddleware(app)

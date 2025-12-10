@@ -1,0 +1,23 @@
+.navbar-content-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Reorder items using flexbox order */
+.navbar-content-wrapper > div:first-child {
+  order: 1;
+  flex: 1;
+}
+
+.navbar-content-wrapper > div:last-child {
+  order: 2;
+}
+
+/* Move dark mode toggle to the end */
+.navbar-content-wrapper [class*="toggle"] {
+  order: 3 !important;
+}
+
+

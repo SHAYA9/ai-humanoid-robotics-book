@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkai_humanoid_robotics_book_new=globalThis.webpackChunkai_humanoid_robotics_book_new||[]).push([[5290],{1975:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/ai-humanoid-robotics-book/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

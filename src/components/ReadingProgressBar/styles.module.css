@@ -1,0 +1,16 @@
+.progressBarContainer {
+  position: fixed;
+  top: var(--ifm-navbar-height);
+  left: 0;
+  width: 100%;
+  height: 4px; /* Adjust height as needed */
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--ifm-color-primary);
+  width: 0%;
+  transition: width 0.1s ease-out;
+}

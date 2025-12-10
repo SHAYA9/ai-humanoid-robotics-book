@@ -1,0 +1,87 @@
+/* src/components/auth/AuthForms.css */
+
+.auth-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem 0;
+}
+
+.auth-form-wrapper {
+  max-width: 450px;
+  width: 100%;
+  padding: 2.5rem;
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-card-shadow);
+  border: 1px solid var(--ifm-card-border-color);
+}
+
+.auth-form-wrapper h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--ifm-heading-color);
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form .input-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-border-color);
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-color-content);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.auth-form .auth-button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.auth-error {
+  background-color: var(--ifm-alert-danger-background-color);
+  color: var(--ifm-alert-danger-color);
+  border: 1px solid var(--ifm-alert-danger-border-color);
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-switch-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.auth-switch-link a {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-switch-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+name: ai-humanoid-robotics-book/rag-chatbot
+type: webservice
+git:
+  branch: main
+  repository: https://github.com/SHAYA9/ai-humanoid-robotics-book.git
+docker:
+  dockerfile: backend/Dockerfile
+instance:
+  type: free
+ports:
+- port: 8000
+  protocol: TCP
+regions:
+- fra
+health_checks:
+- path: /
+  port: 8000
+  type: http
+env:
+- key: QDRANT_URL
+  scope: secret
+  value: QDRANT_URL
+- key: QDRANT_API_KEY
+  scope: secret
+  value: QDRANT_API_KEY
+- key: NEON_DATABASE_URL
+  scope: secret
+  value: NEON_DATABASE_URL
+- key: GEMINI_API_KEY
+  scope: secret
+  value: GEMINI_API_KEY
+- key: ALLOWED_ORIGINS
+  value: "https://shaya9.github.io"

@@ -291,13 +291,13 @@
     },
     "config": "config---ai-humanoid-robotics-book-background-assessment-5-e-9-8cf"
   },
-  "/ai-humanoid-robotics-book/docs-bed": {
+  "/ai-humanoid-robotics-book/docs-3c3": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---ai-humanoid-robotics-book-docsaba-0ca"
     }
   },
-  "/ai-humanoid-robotics-book/docs-53c": {
+  "/ai-humanoid-robotics-book/docs-551": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---ai-humanoid-robotics-book-docs-287-add"
   },
@@ -457,7 +457,7 @@
     "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__props": "__props---ai-humanoid-robotics-book-docs-tags-vla-0-a-6-506"
   },
-  "/ai-humanoid-robotics-book/docs-931": {
+  "/ai-humanoid-robotics-book/docs-06d": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/ai-humanoid-robotics-book/docs/hardware-guide-c3b": {
@@ -639,6 +639,10 @@
   "/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects-852": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---ai-humanoid-robotics-book-docs-specifyplus-integration-existing-projects-350-eb5"
+  },
+  "/ai-humanoid-robotics-book/docs/specifyplus/memory/constitution-8a1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---ai-humanoid-robotics-book-docs-specifyplus-memory-constitutiond-5-c-003"
   },
   "/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks-59c": {
     "__comp": "__comp---theme-doc-item-178-a40",

@@ -225,6 +225,10 @@
               "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects"
             },
             {
+              "id": "specifyplus/memory/constitution",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/memory/constitution"
+            },
+            {
               "id": "specifyplus/modules/ai-frameworks",
               "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks"
             },

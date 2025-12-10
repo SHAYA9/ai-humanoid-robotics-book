@@ -144,11 +144,11 @@ export default [
   },
   {
     path: '/ai-humanoid-robotics-book/docs',
-    component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'bed'),
+    component: ComponentCreator('/ai-humanoid-robotics-book/docs', '3c3'),
     routes: [
       {
         path: '/ai-humanoid-robotics-book/docs',
-        component: ComponentCreator('/ai-humanoid-robotics-book/docs', '53c'),
+        component: ComponentCreator('/ai-humanoid-robotics-book/docs', '551'),
         routes: [
           {
             path: '/ai-humanoid-robotics-book/docs/tags',
@@ -347,7 +347,7 @@ export default [
           },
           {
             path: '/ai-humanoid-robotics-book/docs',
-            component: ComponentCreator('/ai-humanoid-robotics-book/docs', '931'),
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs', '06d'),
             routes: [
               {
                 path: '/ai-humanoid-robotics-book/docs/hardware-guide',
@@ -606,6 +606,11 @@ export default [
               {
                 path: '/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects',
                 component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects', '852'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/memory/constitution',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/memory/constitution', '8a1'),
                 exact: true
               },
               {

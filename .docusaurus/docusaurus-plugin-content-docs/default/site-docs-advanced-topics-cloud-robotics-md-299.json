@@ -1,0 +1,23 @@
+{
+  "id": "advanced-topics/cloud-robotics",
+  "title": "cloud-robotics",
+  "description": "",
+  "source": "@site/docs/advanced-topics/cloud-robotics.md",
+  "sourceDirName": "advanced-topics",
+  "slug": "/advanced-topics/cloud-robotics",
+  "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/cloud-robotics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "hardware-acceleration",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/hardware-acceleration"
+  },
+  "next": {
+    "title": "🏆 Projects",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/projects"
+  }
+}

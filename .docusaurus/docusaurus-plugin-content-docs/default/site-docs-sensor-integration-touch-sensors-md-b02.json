@@ -1,0 +1,23 @@
+{
+  "id": "sensor-integration/touch-sensors",
+  "title": "touch-sensors",
+  "description": "",
+  "source": "@site/docs/sensor-integration/touch-sensors.md",
+  "sourceDirName": "sensor-integration",
+  "slug": "/sensor-integration/touch-sensors",
+  "permalink": "/ai-humanoid-robotics-book/docs/sensor-integration/touch-sensors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "computer-vision",
+    "permalink": "/ai-humanoid-robotics-book/docs/sensor-integration/computer-vision"
+  },
+  "next": {
+    "title": "sensor-fusion",
+    "permalink": "/ai-humanoid-robotics-book/docs/sensor-integration/sensor-fusion"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/ai-humanoid-robotics-book/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/ai-humanoid-robotics-book/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "hardware-guide",
+              "path": "/ai-humanoid-robotics-book/docs/hardware-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/ai-humanoid-robotics-book/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-path",
+              "path": "/ai-humanoid-robotics-book/docs/learning-path",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/nodes-topics-services",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/nodes-topics-services",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/practical-1-ros2-setup",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/practical-1-ros2-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/rclpy-python-agents",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/rclpy-python-agents",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/ros2-architecture",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/ros2-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-1-ros2/urdf-humanoids",
+              "path": "/ai-humanoid-robotics-book/docs/module-1-ros2/urdf-humanoids",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/environment-building",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/environment-building",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/gazebo-physics",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/gazebo-physics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/practical-2-digital-twin",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/practical-2-digital-twin",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/sensor-simulation",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/sensor-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-2-simulation/unity-rendering",
+              "path": "/ai-humanoid-robotics-book/docs/module-2-simulation/unity-rendering",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/isaac-ros",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-ros",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/isaac-sim",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-sim",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/nav2-bipedal",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/nav2-bipedal",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/practical-3-perception",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/practical-3-perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-3-isaac/vslam-navigation",
+              "path": "/ai-humanoid-robotics-book/docs/module-3-isaac/vslam-navigation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/capstone-project",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/capstone-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/llm-planning",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/llm-planning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/multimodal-integration",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/multimodal-integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/overview",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/practical-4-autonomous-humanoid",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/practical-4-autonomous-humanoid",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "module-4-vla/whisper-voice",
+              "path": "/ai-humanoid-robotics-book/docs/module-4-vla/whisper-voice",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "prerequisites",
+              "path": "/ai-humanoid-robotics-book/docs/prerequisites",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/assessments",
+              "path": "/ai-humanoid-robotics-book/docs/resources/assessments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/cloud-lab",
+              "path": "/ai-humanoid-robotics-book/docs/resources/cloud-lab",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/faq",
+              "path": "/ai-humanoid-robotics-book/docs/resources/faq",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/glossary",
+              "path": "/ai-humanoid-robotics-book/docs/resources/glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/hardware-setup",
+              "path": "/ai-humanoid-robotics-book/docs/resources/hardware-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/references",
+              "path": "/ai-humanoid-robotics-book/docs/resources/references",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "specifyplus/api/authentication",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/authentication"
+            },
+            {
+              "id": "specifyplus/api/endpoints",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/endpoints"
+            },
+            {
+              "id": "specifyplus/api/rate-limiting",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/api/rate-limiting"
+            },
+            {
+              "id": "specifyplus/architecture",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/architecture"
+            },
+            {
+              "id": "specifyplus/deployment/cloud-deployment",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/cloud-deployment"
+            },
+            {
+              "id": "specifyplus/deployment/local-setup",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/local-setup"
+            },
+            {
+              "id": "specifyplus/deployment/monitoring",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/deployment/monitoring"
+            },
+            {
+              "id": "specifyplus/getting-started",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/getting-started"
+            },
+            {
+              "id": "specifyplus/integration/customization",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/customization"
+            },
+            {
+              "id": "specifyplus/integration/docusaurus",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/docusaurus"
+            },
+            {
+              "id": "specifyplus/integration/existing-projects",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/integration/existing-projects"
+            },
+            {
+              "id": "specifyplus/modules/ai-frameworks",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/ai-frameworks"
+            },
+            {
+              "id": "specifyplus/modules/ros2-integration",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/ros2-integration"
+            },
+            {
+              "id": "specifyplus/modules/simulation-tools",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/simulation-tools"
+            },
+            {
+              "id": "specifyplus/modules/vla-systems",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/modules/vla-systems"
+            },
+            {
+              "id": "specifyplus/overview",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/overview"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/ai-humanoid-robotics-book/docs/intro",
+                "label": "Introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "resources/glossary",
+  "title": "Glossary of Terms",
+  "description": "Comprehensive glossary of terms used in Physical AI and Humanoid Robotics",
+  "source": "@site/docs/resources/glossary.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/glossary",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/glossary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "glossary",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/glossary"
+    },
+    {
+      "inline": true,
+      "label": "terminology",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/terminology"
+    },
+    {
+      "inline": true,
+      "label": "definitions",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/definitions"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "ai",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/ai"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "glossary",
+    "title": "Glossary of Terms",
+    "sidebar_label": "Glossary",
+    "description": "Comprehensive glossary of terms used in Physical AI and Humanoid Robotics",
+    "tags": [
+      "glossary",
+      "terminology",
+      "definitions",
+      "robotics",
+      "ai"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FAQ",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/faq"
+  }
+}

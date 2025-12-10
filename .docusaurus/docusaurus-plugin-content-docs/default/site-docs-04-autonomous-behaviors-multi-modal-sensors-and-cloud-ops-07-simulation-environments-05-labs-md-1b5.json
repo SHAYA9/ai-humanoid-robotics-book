@@ -1,0 +1,17 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs",
+  "title": "7.5 Labs: From URDF to a Simulated Robot",
+  "description": "These labs will guide you through the process of creating a robot model, adding dynamics to it, and controlling it in the Gazebo simulator.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments/05-labs.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/07-simulation-environments",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/simulation-environments/labs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  }
+}

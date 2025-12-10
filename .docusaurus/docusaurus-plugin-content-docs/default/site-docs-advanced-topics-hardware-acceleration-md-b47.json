@@ -1,0 +1,23 @@
+{
+  "id": "advanced-topics/hardware-acceleration",
+  "title": "hardware-acceleration",
+  "description": "",
+  "source": "@site/docs/advanced-topics/hardware-acceleration.md",
+  "sourceDirName": "advanced-topics",
+  "slug": "/advanced-topics/hardware-acceleration",
+  "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/hardware-acceleration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ai-ethics",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/ai-ethics"
+  },
+  "next": {
+    "title": "cloud-robotics",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/cloud-robotics"
+  }
+}

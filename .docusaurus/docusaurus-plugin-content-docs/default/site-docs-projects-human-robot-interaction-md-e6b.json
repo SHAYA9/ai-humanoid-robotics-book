@@ -1,0 +1,23 @@
+{
+  "id": "projects/human-robot-interaction",
+  "title": "human-robot-interaction",
+  "description": "",
+  "source": "@site/docs/projects/human-robot-interaction.md",
+  "sourceDirName": "projects",
+  "slug": "/projects/human-robot-interaction",
+  "permalink": "/ai-humanoid-robotics-book/docs/projects/human-robot-interaction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "autonomous-navigation",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/autonomous-navigation"
+  },
+  "next": {
+    "title": "capstone-project",
+    "permalink": "/ai-humanoid-robotics-book/docs/projects/capstone-project"
+  }
+}

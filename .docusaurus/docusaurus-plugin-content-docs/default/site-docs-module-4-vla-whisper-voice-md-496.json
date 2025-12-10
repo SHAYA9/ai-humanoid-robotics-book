@@ -1,0 +1,27 @@
+{
+  "id": "module-4-vla/whisper-voice",
+  "title": "Whisper Voice Control",
+  "description": "Whisper is a state-of-the-art automatic speech recognition (ASR) system developed by OpenAI. It's incredibly versatile and can transcribe spoken language from a wide range of audio inputs, making it an excellent choice for adding voice control to a robot.",
+  "source": "@site/docs/module-4-vla/whisper-voice.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/whisper-voice",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/whisper-voice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Whisper Voice Control"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/overview"
+  },
+  "next": {
+    "title": "LLM Planning",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/llm-planning"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "module-4-vla/overview",
+  "title": "Overview",
+  "description": "Welcome to Module 4! This is where we bring everything together to explore the exciting frontier of Vision-Language-Action (VLA) models in robotics. VLAs are AI models that can understand and respond to natural language commands, perceive the world through vision, and take actions to accomplish tasks.",
+  "source": "@site/docs/module-4-vla/overview.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/overview",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Practical 3: Perception",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/practical-3-perception"
+  },
+  "next": {
+    "title": "Whisper Voice Control",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/whisper-voice"
+  }
+}

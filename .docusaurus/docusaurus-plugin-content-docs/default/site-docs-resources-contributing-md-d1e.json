@@ -1,0 +1,23 @@
+{
+  "id": "resources/contributing",
+  "title": "contributing",
+  "description": "",
+  "source": "@site/docs/resources/contributing.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/contributing",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/contributing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "research-papers",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/research-papers"
+  },
+  "next": {
+    "title": "❓ FAQ",
+    "permalink": "/ai-humanoid-robotics-book/docs/faq"
+  }
+}

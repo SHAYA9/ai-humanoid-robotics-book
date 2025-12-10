@@ -1,0 +1,17 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "title": "Synchronous Communication: Services and Actions",
+  "description": "While topics are perfect for continuous data streams, sometimes you need a more direct, synchronous form of communication. For this, ROS 2 provides two powerful mechanisms: Services for quick request/response interactions, and Actions for long-running tasks that require feedback.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/03-synchronous-communication.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/synchronous-communication",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  }
+}

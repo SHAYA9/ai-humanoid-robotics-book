@@ -1,0 +1,17 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning",
+  "title": "7.5 Nav2 Path Planning Solutions",
+  "description": "The ultimate goal of simulation is to develop and test autonomous behaviors that can be deployed on a physical robot. The standard tool for robot navigation in the ROS 2 ecosystem is the Nav2 stack. A key advantage of the Isaac Sim platform is its seamless integration with Nav2, enabling a true sim-to-real workflow.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/05-nav2-path-planning.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/nav2-path-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "labs-and-exercises/lab-01-isaac-sim-hello-world",
+  "title": "Lab 1: Isaac Sim - Hello World",
+  "description": "Goal: Create a simple \"Hello World\" scene in Isaac Sim to get familiar with the interface and basic concepts.",
+  "source": "@site/docs/05-labs-and-exercises/02-lab-01-isaac-sim-hello-world.md",
+  "sourceDirName": "05-labs-and-exercises",
+  "slug": "/labs-and-exercises/lab-01-isaac-sim-hello-world",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-01-isaac-sim-hello-world",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  }
+}

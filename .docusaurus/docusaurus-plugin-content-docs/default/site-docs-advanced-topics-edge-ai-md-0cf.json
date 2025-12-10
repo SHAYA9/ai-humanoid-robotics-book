@@ -1,0 +1,23 @@
+{
+  "id": "advanced-topics/edge-ai",
+  "title": "edge-ai",
+  "description": "",
+  "source": "@site/docs/advanced-topics/edge-ai.md",
+  "sourceDirName": "advanced-topics",
+  "slug": "/advanced-topics/edge-ai",
+  "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/edge-ai",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "autonomous-navigation",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/autonomous-navigation"
+  },
+  "next": {
+    "title": "ai-ethics",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/ai-ethics"
+  }
+}

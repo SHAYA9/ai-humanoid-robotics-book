@@ -1,0 +1,17 @@
+{
+  "id": "labs-and-exercises/lab-02-controlling-a-robot",
+  "title": "Lab 2: Controlling a Robot",
+  "description": "Goal: Add a Franka Emika Panda robot to the scene and control its joints.",
+  "source": "@site/docs/05-labs-and-exercises/03-lab-02-controlling-a-robot.md",
+  "sourceDirName": "05-labs-and-exercises",
+  "slug": "/labs-and-exercises/lab-02-controlling-a-robot",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/lab-02-controlling-a-robot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  }
+}

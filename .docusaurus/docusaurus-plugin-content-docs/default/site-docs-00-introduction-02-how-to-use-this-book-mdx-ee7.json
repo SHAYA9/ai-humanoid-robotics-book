@@ -1,0 +1,17 @@
+{
+  "id": "introduction/how-to-use-this-book",
+  "title": "How to Use This Book",
+  "description": "To get the most out of this book, we recommend following the structure below. While you can jump to any section that interests you, the content is designed to be read sequentially to build a strong foundational knowledge of AI-native robotics.",
+  "source": "@site/docs/00-introduction/02-how-to-use-this-book.mdx",
+  "sourceDirName": "00-introduction",
+  "slug": "/introduction/how-to-use-this-book",
+  "permalink": "/ai-humanoid-robotics-book/docs/introduction/how-to-use-this-book",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  }
+}

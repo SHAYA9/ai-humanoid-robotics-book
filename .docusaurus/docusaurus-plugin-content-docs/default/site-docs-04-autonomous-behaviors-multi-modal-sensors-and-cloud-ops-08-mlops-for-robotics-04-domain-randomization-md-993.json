@@ -1,0 +1,17 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
+  "title": "7.4 Domain Randomization",
+  "description": "One of the most powerful techniques for training robust models with synthetic data is Domain Randomization. The goal is to expose the model to a wide variety of scenarios during training so that it can generalize well to the real world, which is inherently unpredictable.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/04-domain-randomization.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/domain-randomization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  }
+}

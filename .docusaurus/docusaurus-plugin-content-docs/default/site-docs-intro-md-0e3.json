@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Introduction to Physical AI & Humanoid Robotics",
+  "description": "Bridging the gap between digital brain and physical body.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/ai-humanoid-robotics-book/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction to Physical AI & Humanoid Robotics"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Prerequisites",
+    "permalink": "/ai-humanoid-robotics-book/docs/prerequisites"
+  }
+}

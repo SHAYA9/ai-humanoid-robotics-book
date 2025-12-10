@@ -1,0 +1,67 @@
+{
+  "id": "resources/hardware-setup",
+  "title": "Hardware Setup Guide: Building Your Physical AI Lab",
+  "description": "Complete hardware guide for Physical AI & Humanoid Robotics - From budget to premium setups",
+  "source": "@site/docs/resources/hardware-setup.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/hardware-setup",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/hardware-setup",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "hardware",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/hardware"
+    },
+    {
+      "inline": true,
+      "label": "setup",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/setup"
+    },
+    {
+      "inline": true,
+      "label": "guide",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/guide"
+    },
+    {
+      "inline": true,
+      "label": "robotics",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/robotics"
+    },
+    {
+      "inline": true,
+      "label": "nvidia",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/nvidia"
+    },
+    {
+      "inline": true,
+      "label": "jetson",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/jetson"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "hardware-setup",
+    "title": "Hardware Setup Guide: Building Your Physical AI Lab",
+    "sidebar_label": "Hardware Setup",
+    "description": "Complete hardware guide for Physical AI & Humanoid Robotics - From budget to premium setups",
+    "tags": [
+      "hardware",
+      "setup",
+      "guide",
+      "robotics",
+      "nvidia",
+      "jetson"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Practical: Autonomous Humanoid",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/practical-4-autonomous-humanoid"
+  },
+  "next": {
+    "title": "Cloud Lab",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/cloud-lab"
+  }
+}

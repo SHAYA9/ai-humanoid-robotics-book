@@ -1,0 +1,67 @@
+{
+  "id": "resources/cloud-lab",
+  "title": "Cloud Lab Setup: The Virtual Robotics Lab",
+  "description": "Complete guide to setting up your cloud-based robotics development environment",
+  "source": "@site/docs/resources/cloud-lab.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/cloud-lab",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/cloud-lab",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "cloud",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/cloud"
+    },
+    {
+      "inline": true,
+      "label": "aws",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/aws"
+    },
+    {
+      "inline": true,
+      "label": "azure",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/azure"
+    },
+    {
+      "inline": true,
+      "label": "gpu",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/gpu"
+    },
+    {
+      "inline": true,
+      "label": "remote",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/remote"
+    },
+    {
+      "inline": true,
+      "label": "simulation",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/simulation"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "cloud-lab",
+    "title": "Cloud Lab Setup: The Virtual Robotics Lab",
+    "sidebar_label": "Cloud Lab",
+    "description": "Complete guide to setting up your cloud-based robotics development environment",
+    "tags": [
+      "cloud",
+      "aws",
+      "azure",
+      "gpu",
+      "remote",
+      "simulation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hardware Setup",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/hardware-setup"
+  },
+  "next": {
+    "title": "Assessments",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/assessments"
+  }
+}

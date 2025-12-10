@@ -1,0 +1,17 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/managing-complexity",
+  "title": "Managing Complexity: Launch Files and Parameters",
+  "description": "As your robotics application grows from two nodes to ten, twenty, or even a hundred, starting and configuring each one manually becomes impossible. This is where ROS 2's launch system comes in. Launch files are powerful scripts that allow you to start, configure, and connect a complex system of nodes with a single command.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/04-managing-complexity.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/managing-complexity",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/managing-complexity",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  }
+}

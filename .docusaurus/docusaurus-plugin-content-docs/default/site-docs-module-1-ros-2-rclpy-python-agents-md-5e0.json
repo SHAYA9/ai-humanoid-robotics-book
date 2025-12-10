@@ -1,0 +1,27 @@
+{
+  "id": "module-1-ros2/rclpy-python-agents",
+  "title": "rclpy - Python Agents for ROS 2",
+  "description": "rclpy is the official Python client library for ROS 2. It provides a high-level, Pythonic interface to the ROS 2 ecosystem, allowing you to write your own ROS 2 nodes, publishers, subscribers, and more.",
+  "source": "@site/docs/module-1-ros2/rclpy-python-agents.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/rclpy-python-agents",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/rclpy-python-agents",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "rclpy - Python Agents for ROS 2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Nodes, Topics, and Services",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/nodes-topics-services"
+  },
+  "next": {
+    "title": "URDF for Humanoids",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/urdf-humanoids"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/introduction-to-nvidia-isaac",
+  "title": "7.1 Introduction to the NVIDIA Isaac Platform",
+  "description": "While Gazebo provides a powerful, open-source foundation for robotics simulation, NVIDIA Isaac is a comprehensive, enterprise-grade platform designed to accelerate the development and deployment of AI-powered robots. It's an ecosystem of tools that leverages NVIDIA's expertise in GPU technology to tackle the most demanding tasks in robotics, from photorealistic simulation to hardware-accelerated AI perception.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/01-introduction-to-nvidia-isaac.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/introduction-to-nvidia-isaac",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/introduction-to-nvidia-isaac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

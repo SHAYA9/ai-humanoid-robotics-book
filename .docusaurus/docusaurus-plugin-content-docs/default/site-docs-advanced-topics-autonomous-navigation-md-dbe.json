@@ -1,0 +1,23 @@
+{
+  "id": "advanced-topics/autonomous-navigation",
+  "title": "autonomous-navigation",
+  "description": "",
+  "source": "@site/docs/advanced-topics/autonomous-navigation.md",
+  "sourceDirName": "advanced-topics",
+  "slug": "/advanced-topics/autonomous-navigation",
+  "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/autonomous-navigation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🚀 Advanced Topics",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/advanced-topics"
+  },
+  "next": {
+    "title": "edge-ai",
+    "permalink": "/ai-humanoid-robotics-book/docs/advanced-topics/edge-ai"
+  }
+}

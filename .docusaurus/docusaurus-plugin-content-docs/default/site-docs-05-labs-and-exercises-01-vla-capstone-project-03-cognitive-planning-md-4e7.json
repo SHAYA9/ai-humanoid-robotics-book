@@ -1,0 +1,17 @@
+{
+  "id": "labs-and-exercises/vla-capstone-project/cognitive-planning",
+  "title": "8.3 Cognitive Planning: Natural Language to Actions",
+  "description": "The most innovative part of our VLA architecture is the use of a Large Language Model (LLM) as a high-level task planner. The LLM's vast knowledge of language and reasoning allows it to bridge the ambiguous, flexible world of human commands with the structured, precise world of robot operations.",
+  "source": "@site/docs/05-labs-and-exercises/01-vla-capstone-project/03-cognitive-planning.md",
+  "sourceDirName": "05-labs-and-exercises/01-vla-capstone-project",
+  "slug": "/labs-and-exercises/vla-capstone-project/cognitive-planning",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/vla-capstone-project/cognitive-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  }
+}

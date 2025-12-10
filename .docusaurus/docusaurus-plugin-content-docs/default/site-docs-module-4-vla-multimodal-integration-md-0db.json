@@ -1,0 +1,27 @@
+{
+  "id": "module-4-vla/multimodal-integration",
+  "title": "Multimodal Integration",
+  "description": "The real power of Vision-Language-Action (VLA) models comes from their ability to process and understand information from multiple modalities simultaneously. This is known as multimodal integration.",
+  "source": "@site/docs/module-4-vla/multimodal-integration.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/multimodal-integration",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/multimodal-integration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Multimodal Integration"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "LLM Planning",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/llm-planning"
+  },
+  "next": {
+    "title": "Capstone: Autonomous Humanoid",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/capstone-project"
+  }
+}

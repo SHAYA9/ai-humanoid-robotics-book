@@ -1,0 +1,61 @@
+{
+  "id": "module-4-vla/practical-4-autonomous-humanoid",
+  "title": "Practical 4: Building Your Autonomous Humanoid",
+  "description": "Step-by-step implementation guide for the capstone autonomous humanoid robot",
+  "source": "@site/docs/module-4-vla/practical-4-autonomous-humanoid.md",
+  "sourceDirName": "module-4-vla",
+  "slug": "/module-4-vla/practical-4-autonomous-humanoid",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/practical-4-autonomous-humanoid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "practical",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/practical"
+    },
+    {
+      "inline": true,
+      "label": "implementation",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/implementation"
+    },
+    {
+      "inline": true,
+      "label": "autonomous",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/autonomous"
+    },
+    {
+      "inline": true,
+      "label": "humanoid",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/humanoid"
+    },
+    {
+      "inline": true,
+      "label": "ros2",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/ros-2"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "practical-4-autonomous-humanoid",
+    "title": "Practical 4: Building Your Autonomous Humanoid",
+    "sidebar_label": "Practical: Autonomous Humanoid",
+    "description": "Step-by-step implementation guide for the capstone autonomous humanoid robot",
+    "tags": [
+      "practical",
+      "implementation",
+      "autonomous",
+      "humanoid",
+      "ros2"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone: Autonomous Humanoid",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-4-vla/capstone-project"
+  },
+  "next": {
+    "title": "Hardware Setup",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/hardware-setup"
+  }
+}

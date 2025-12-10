@@ -1,0 +1,27 @@
+{
+  "id": "module-2-simulation/environment-building",
+  "title": "Environment Building",
+  "description": "The environment is just as important as the robot itself in a simulation. A well-crafted environment allows for testing a wide range of scenarios and ensures that the simulation is a meaningful representation of the real world.",
+  "source": "@site/docs/module-2-simulation/environment-building.md",
+  "sourceDirName": "module-2-simulation",
+  "slug": "/module-2-simulation/environment-building",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/environment-building",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Environment Building"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sensor Simulation",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/sensor-simulation"
+  },
+  "next": {
+    "title": "Practical 2: Digital Twin",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/practical-2-digital-twin"
+  }
+}

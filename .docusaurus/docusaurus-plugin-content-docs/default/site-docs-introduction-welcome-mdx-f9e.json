@@ -1,0 +1,17 @@
+{
+  "id": "introduction/welcome",
+  "title": "Welcome to the AI Humanoid Robotics Book",
+  "description": "Welcome! This book is a comprehensive, hands-on guide to designing, building, and programming AI-powered humanoid robots. Whether you're a student, hobbyist, or professional, you'll find everything you need to start your journey in the exciting field of robotics.",
+  "source": "@site/docs/introduction/welcome.mdx",
+  "sourceDirName": "introduction",
+  "slug": "/introduction/welcome",
+  "permalink": "/ai-humanoid-robotics-book/docs/introduction/welcome",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

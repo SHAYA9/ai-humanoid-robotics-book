@@ -1,0 +1,17 @@
+{
+  "id": "robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "title": "What is a Robot?",
+  "description": "At its core, a robot is a machine designed to execute one or more tasks automatically with speed and precision. The term \"robot\" was first introduced by Czech writer Karel Čapek in his 1920 play \"Rossum's Universal Robots,\" but the concept of automated machines dates back to antiquity.",
+  "source": "@site/docs/01-robotics-foundations/01-intro-to-robotics/01-what-is-a-robot.mdx",
+  "sourceDirName": "01-robotics-foundations/01-intro-to-robotics",
+  "slug": "/robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/intro-to-robotics/what-is-a-robot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "resources/references",
+  "title": "References & Further Reading",
+  "description": "Comprehensive bibliography of research papers, books, and resources for Physical AI and Humanoid Robotics",
+  "source": "@site/docs/resources/references.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/references",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/references",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "references",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/references"
+    },
+    {
+      "inline": true,
+      "label": "bibliography",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/bibliography"
+    },
+    {
+      "inline": true,
+      "label": "research",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/research"
+    },
+    {
+      "inline": true,
+      "label": "papers",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/papers"
+    },
+    {
+      "inline": true,
+      "label": "books",
+      "permalink": "/ai-humanoid-robotics-book/docs/tags/books"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "references",
+    "title": "References & Further Reading",
+    "sidebar_label": "References",
+    "description": "Comprehensive bibliography of research papers, books, and resources for Physical AI and Humanoid Robotics",
+    "tags": [
+      "references",
+      "bibliography",
+      "research",
+      "papers",
+      "books"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Assessments",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/assessments"
+  },
+  "next": {
+    "title": "FAQ",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/faq"
+  }
+}

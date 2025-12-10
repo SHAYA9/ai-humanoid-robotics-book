@@ -1,0 +1,27 @@
+{
+  "id": "prerequisites",
+  "title": "Prerequisites",
+  "description": "To successfully complete this course, you will need a combination of hardware and software. We have designed the curriculum to be as accessible as possible, with a cloud-based lab alternative for those who do not have access to the recommended hardware.",
+  "source": "@site/docs/prerequisites.md",
+  "sourceDirName": ".",
+  "slug": "/prerequisites",
+  "permalink": "/ai-humanoid-robotics-book/docs/prerequisites",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Prerequisites"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/ai-humanoid-robotics-book/docs/intro"
+  },
+  "next": {
+    "title": "Learning Path",
+    "permalink": "/ai-humanoid-robotics-book/docs/learning-path"
+  }
+}

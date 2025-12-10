@@ -1,0 +1,23 @@
+{
+  "id": "programming/cpp-robotics",
+  "title": "cpp-robotics",
+  "description": "",
+  "source": "@site/docs/programming/cpp-robotics.md",
+  "sourceDirName": "programming",
+  "slug": "/programming/cpp-robotics",
+  "permalink": "/ai-humanoid-robotics-book/docs/programming/cpp-robotics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "python-robotics",
+    "permalink": "/ai-humanoid-robotics-book/docs/programming/python-robotics"
+  },
+  "next": {
+    "title": "real-time-systems",
+    "permalink": "/ai-humanoid-robotics-book/docs/programming/real-time-systems"
+  }
+}

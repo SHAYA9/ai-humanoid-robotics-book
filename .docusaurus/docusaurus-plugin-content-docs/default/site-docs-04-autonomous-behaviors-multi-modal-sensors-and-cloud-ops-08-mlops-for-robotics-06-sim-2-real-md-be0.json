@@ -1,0 +1,17 @@
+{
+  "id": "autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real",
+  "title": "7.6 Sim2Real: From Simulation to the Real World",
+  "description": "The ultimate goal of training in simulation is to deploy the learned policy on a physical robot. This process is known as Sim2Real transfer. A successful Sim2Real transfer is the holy grail of robotics simulation, and Isaac Sim is designed to make this process as smooth as possible.",
+  "source": "@site/docs/04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics/06-sim2real.md",
+  "sourceDirName": "04-autonomous-behaviors-multi-modal-sensors-and-cloud-ops/08-mlops-for-robotics",
+  "slug": "/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real",
+  "permalink": "/ai-humanoid-robotics-book/docs/autonomous-behaviors-multi-modal-sensors-and-cloud-ops/mlops-for-robotics/sim2real",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  }
+}

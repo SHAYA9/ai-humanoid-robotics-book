@@ -1,0 +1,17 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
+  "title": "7.6 Building a ROS 2 Package",
+  "description": "So far, we've focused on writing and running individual nodes. However, the real power of ROS 2 comes from organizing your code into reusable, shareable units called packages. A package is a directory containing your nodes, launch files, custom message definitions, and a set of files that describe its contents and dependencies.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/06-building-a-ros-2-package.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/building-a-ros-2-package",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  }
+}

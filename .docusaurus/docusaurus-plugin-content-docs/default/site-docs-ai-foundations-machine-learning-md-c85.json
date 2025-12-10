@@ -1,0 +1,23 @@
+{
+  "id": "ai-foundations/machine-learning",
+  "title": "machine-learning",
+  "description": "",
+  "source": "@site/docs/ai-foundations/machine-learning.md",
+  "sourceDirName": "ai-foundations",
+  "slug": "/ai-foundations/machine-learning",
+  "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/machine-learning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Foundations Overview",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/overview"
+  },
+  "next": {
+    "title": "deep-learning",
+    "permalink": "/ai-humanoid-robotics-book/docs/ai-foundations/deep-learning"
+  }
+}

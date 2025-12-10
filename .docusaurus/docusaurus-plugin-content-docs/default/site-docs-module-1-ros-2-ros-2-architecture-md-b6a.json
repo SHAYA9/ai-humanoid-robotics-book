@@ -1,0 +1,27 @@
+{
+  "id": "module-1-ros2/ros2-architecture",
+  "title": "ROS 2 Architecture",
+  "description": "The architecture of ROS 2 is designed to be a flexible, scalable, and robust platform for robotics. It is a significant evolution from ROS 1, built to support a wider range of applications, from small, single-board computers to large, multi-robot systems.",
+  "source": "@site/docs/module-1-ros2/ros2-architecture.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/ros2-architecture",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/ros2-architecture",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "ROS 2 Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Module 1: The Robotic Nervous System (ROS 2)",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/overview"
+  },
+  "next": {
+    "title": "Nodes, Topics, and Services",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/nodes-topics-services"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "module-1-ros2/practical-1-ros2-setup",
+  "title": "Practical 1: ROS 2 Setup",
+  "description": "In this practical, we will set up a ROS 2 workspace, create a package, and build the talker and listener nodes we wrote in the rclpy section.",
+  "source": "@site/docs/module-1-ros2/practical-1-ros2-setup.md",
+  "sourceDirName": "module-1-ros2",
+  "slug": "/module-1-ros2/practical-1-ros2-setup",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/practical-1-ros2-setup",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Practical 1: ROS 2 Setup"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "URDF for Humanoids",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-1-ros2/urdf-humanoids"
+  },
+  "next": {
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-2-simulation/overview"
+  }
+}

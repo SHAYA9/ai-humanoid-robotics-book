@@ -1,0 +1,27 @@
+{
+  "id": "module-3-isaac/vslam-navigation",
+  "title": "vSLAM Navigation",
+  "description": "Visual SLAM (vSLAM) is a technique for Simultaneous Localization and Mapping that uses camera data as its primary input. The Isaac ROS vSLAM package is a powerful, GPU-accelerated implementation that can provide robust and accurate real-time localization and mapping for robots.",
+  "source": "@site/docs/module-3-isaac/vslam-navigation.md",
+  "sourceDirName": "module-3-isaac",
+  "slug": "/module-3-isaac/vslam-navigation",
+  "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/vslam-navigation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "vSLAM Navigation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Isaac ROS",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/isaac-ros"
+  },
+  "next": {
+    "title": "Nav2 for Bipedal Robots",
+    "permalink": "/ai-humanoid-robotics-book/docs/module-3-isaac/nav2-bipedal"
+  }
+}

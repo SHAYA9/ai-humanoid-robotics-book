@@ -1,0 +1,23 @@
+{
+  "id": "resources/cheat-sheets",
+  "title": "cheat-sheets",
+  "description": "",
+  "source": "@site/docs/resources/cheat-sheets.md",
+  "sourceDirName": "resources",
+  "slug": "/resources/cheat-sheets",
+  "permalink": "/ai-humanoid-robotics-book/docs/resources/cheat-sheets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📝 Resources",
+    "permalink": "/ai-humanoid-robotics-book/docs/category/resources"
+  },
+  "next": {
+    "title": "tools-software",
+    "permalink": "/ai-humanoid-robotics-book/docs/resources/tools-software"
+  }
+}

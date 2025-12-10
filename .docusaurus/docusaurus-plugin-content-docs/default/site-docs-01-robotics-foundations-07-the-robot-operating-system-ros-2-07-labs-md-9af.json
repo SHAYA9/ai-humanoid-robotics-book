@@ -1,0 +1,17 @@
+{
+  "id": "robotics-foundations/the-robot-operating-system-ros-2/labs",
+  "title": "7.7 Labs",
+  "description": "These labs will guide you through the practical steps of creating, building, and running a multi-node ROS 2 application. Following these exercises will solidify the core concepts discussed in this chapter.",
+  "source": "@site/docs/01-robotics-foundations/07-the-robot-operating-system-ros-2/07-labs.md",
+  "sourceDirName": "01-robotics-foundations/07-the-robot-operating-system-ros-2",
+  "slug": "/robotics-foundations/the-robot-operating-system-ros-2/labs",
+  "permalink": "/ai-humanoid-robotics-book/docs/robotics-foundations/the-robot-operating-system-ros-2/labs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  }
+}

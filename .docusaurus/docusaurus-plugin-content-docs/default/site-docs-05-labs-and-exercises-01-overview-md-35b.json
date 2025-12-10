@@ -1,0 +1,17 @@
+{
+  "id": "labs-and-exercises/overview",
+  "title": "Module 5: Labs and Exercises",
+  "description": "Welcome to the hands-on portion of this book! The following labs and exercises are designed to solidify your understanding of the concepts we've discussed. Each lab will provide you with a practical problem to solve, leveraging the tools and techniques covered in the previous modules.",
+  "source": "@site/docs/05-labs-and-exercises/01-overview.md",
+  "sourceDirName": "05-labs-and-exercises",
+  "slug": "/labs-and-exercises/overview",
+  "permalink": "/ai-humanoid-robotics-book/docs/labs-and-exercises/overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  }
+}

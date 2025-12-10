@@ -25,11 +25,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\sidebars.ts",
+          "sidebarPath": "C:\\Users\\SHAYAN\\Desktop\\New folder\\ai-humanoid-robotics-book\\sidebars.ts",
           "routeBasePath": "/docs"
         },
         "theme": {
-          "customCss": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\src\\css\\custom.css"
+          "customCss": "C:\\Users\\SHAYAN\\Desktop\\New folder\\ai-humanoid-robotics-book\\src\\css\\custom.css"
         }
       }
     ]
@@ -55,12 +55,6 @@ export default {
           "sidebarId": "tutorialSidebar",
           "position": "left",
           "label": "📚 Curriculum"
-        },
-        {
-          "href": "https://github.com/SHAYA9/ai-humanoid-robotics-book",
-          "position": "right",
-          "className": "header-github-link",
-          "aria-label": "GitHub repository"
         }
       ],
       "hideOnScroll": false

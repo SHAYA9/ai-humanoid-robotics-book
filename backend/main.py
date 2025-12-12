@@ -9,8 +9,8 @@ import asyncio
 load_dotenv()
 
 # Import backend modules
-from . import qdrant_client as qc
-from . import gemini_client as gc
+import qdrant_client as qc
+import gemini_client as gc
 
 # -----------------------------------------------------------------------
 # FastAPI App Initialization
@@ -66,11 +66,16 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def read_root():
+    # Try to reinitialize Qdrant if it failed on startup
+    if not qc.qdrant:
+        qc.initialize_qdrant()
+    
     return {
         "status": "ok",
         "message": "Welcome to the RAG Chatbot API!",
-        "version": "1.0.1",
-        "qdrant_status": "initialized" if qc.qdrant else "not_initialized"
+        "version": "1.0.2",
+        "qdrant_status": "initialized" if qc.qdrant else "not_initialized",
+        "gemini_status": "initialized" if gc.generative_model else "not_initialized"
     }
 
 @app.get("/health")
@@ -100,6 +105,12 @@ Provide a clear and accurate answer based on your knowledge of AI and robotics.
 async def chat_selected_text(request: ChatRequest):
     """RAG Chat based ONLY on selected text + nearest passages from Qdrant."""
     try:
+        # Try to reinitialize Qdrant if not available
+        if not qc.qdrant:
+            print("Qdrant not initialized, attempting to reinitialize...")
+            if not qc.initialize_qdrant():
+                raise RuntimeError("Qdrant client could not be initialized. Please check environment variables.")
+        
         if not request.context:
             raise ValueError("Context (selected text) is required for RAG chat")
 

@@ -1,7 +1,7 @@
 import os
 import qdrant_client
 from dotenv import load_dotenv
-from . import gemini_client
+import gemini_client
 
 load_dotenv()
 

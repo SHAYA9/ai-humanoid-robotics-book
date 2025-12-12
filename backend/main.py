@@ -8,9 +8,16 @@ import asyncio
 # Load environment variables
 load_dotenv()
 
-# Import backend modules
-import qdrant_client as qc
-import gemini_client as gc
+# Import backend modules with error handling
+try:
+    import qdrant_client as qc
+    import gemini_client as gc
+    print("✓ Successfully imported backend modules")
+except ImportError as e:
+    print(f"✗ Error importing backend modules: {e}")
+    import traceback
+    traceback.print_exc()
+    raise
 
 # -----------------------------------------------------------------------
 # FastAPI App Initialization

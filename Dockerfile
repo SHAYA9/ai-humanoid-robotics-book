@@ -13,8 +13,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend code
 COPY backend/ .
 
+# Make start script executable
+RUN chmod +x start.sh
+
 # Expose port (Railway will set this via $PORT)
 EXPOSE 8080
 
-# Start command - use shell form to allow $PORT variable
-CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
+# Start command
+CMD ["bash", "start.sh"]

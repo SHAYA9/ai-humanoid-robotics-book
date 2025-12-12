@@ -16,5 +16,5 @@ COPY backend/ .
 # Expose port (Railway will set this via $PORT)
 EXPOSE 8080
 
-# Start command
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Start command - use shell form to allow $PORT variable
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}

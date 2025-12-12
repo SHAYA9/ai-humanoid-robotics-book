@@ -8,10 +8,22 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function getSession() {
-      const { data: { session } } = await supabase.auth.getSession();
-      setUser(session?.user ?? null);
+    // If supabase is not configured, skip auth initialization
+    if (!supabase) {
       setLoading(false);
+      return;
+    }
+
+    async function getSession() {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        setUser(session?.user ?? null);
+      } catch (error) {
+        console.warn('Supabase auth error:', error);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
     }
 
     getSession();
@@ -29,11 +41,12 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const value = {
-    signUp: (data) => supabase.auth.signUp(data),
-    signIn: (data) => supabase.auth.signInWithPassword(data),
-    signOut: () => supabase.auth.signOut(),
+    signUp: (data) => supabase ? supabase.auth.signUp(data) : Promise.reject(new Error('Supabase not configured')),
+    signIn: (data) => supabase ? supabase.auth.signInWithPassword(data) : Promise.reject(new Error('Supabase not configured')),
+    signOut: () => supabase ? supabase.auth.signOut() : Promise.reject(new Error('Supabase not configured')),
     user,
     loading,
+    isConfigured: !!supabase,
   };
 
   return (

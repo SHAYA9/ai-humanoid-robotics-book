@@ -4,21 +4,17 @@ import './styles.css';
 
 // --- Configuration ---
 const getApiUrl = () => {
-  // For production, use live API URL
+  // Priority 1: Check window environment (for runtime config)
   if (typeof window !== 'undefined') {
-    // Check environment variable first
-    if (window.__ENV__?.VITE_API_URL) {
-      return window.__ENV__.VITE_API_URL;
-    }
-    
-    // Use live API for GitHub Pages (production)
+    // Check if running on GitHub Pages (production)
     if (window.location.hostname === 'shaya9.github.io') {
-      return 'https://ai-humanoid-robotics-book-production.up.railway.app/'; // TODO: Update with your Railway URL after deployment
+      return 'https://ai-humanoid-robotics-book-production.up.railway.app';
     }
   }
   
-  // Default to localhost for development
-  return 'http://localhost:8000';
+  // Priority 2: Default to Railway URL for all environments
+  // This ensures the chatbot works in development without local backend
+  return 'https://ai-humanoid-robotics-book-production.up.railway.app';
 };
 
 // --- Assets and Icons ---
@@ -198,7 +194,10 @@ const Chatbot = () => {
         };
       }
 
-      const response = await fetch(`${getApiUrl()}${endpoint}`, {
+      const apiUrl = getApiUrl();
+      console.log('🔗 Connecting to:', `${apiUrl}${endpoint}`);
+
+      const response = await fetch(`${apiUrl}${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -207,7 +206,8 @@ const Chatbot = () => {
       });
 
       if (!response.ok) {
-        throw new Error(`API error: ${response.statusText}`);
+        const errorText = await response.text();
+        throw new Error(`API error (${response.status}): ${errorText || response.statusText}`);
       }
 
       const data = await response.json();
@@ -222,10 +222,14 @@ const Chatbot = () => {
 
     } catch (err) {
       console.error('Chatbot error:', err);
-      setError(err.message);
+      const errorMsg = err.message.includes('Failed to fetch') 
+        ? 'Unable to connect to the backend server. Please check if the Railway backend is running.'
+        : err.message;
+      
+      setError(errorMsg);
       const errorMessage = {
         type: 'bot',
-        text: `⚠️ Error: ${err.message || 'Failed to get response. Please try again.'}`
+        text: `⚠️ Error: ${errorMsg}`
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {

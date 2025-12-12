@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // WARNING: This is NOT safe for production. Your API key will be visible in the browser.
 // This is for hackathon/demonstration purposes only.
-const API_KEY = "AIzaSyCCzexuXm86VHOJXjSpUzWh6ljKZdsrE9x"
+const API_KEY = ""
 if (!API_KEY) {
   console.error("Gemini API key is missing. Please set DOCUSAURUS_GEMINI_API_KEY in your .env file.");
 }

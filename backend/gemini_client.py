@@ -15,7 +15,7 @@ try:
 
     # Updated model names for Gemini API v1
     embedding_model = "models/text-embedding-004"
-    generative_model = genai.GenerativeModel("gemini-2.0-flash-exp")
+    generative_model = genai.GenerativeModel("gemini-2.0-flash")
     print("✓ Successfully initialized Gemini client.")
 
 except Exception as e:

@@ -1,0 +1,152 @@
+/* PersonalizeButton.css */
+
+.personalize-button-container {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lightest) 0%, var(--ifm-background-surface-color) 100%);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.personalize-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.personalize-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.personalize-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.personalize-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.personalize-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.personalize-button.active {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 2px 8px rgba(17, 153, 142, 0.3);
+}
+
+.personalize-button.active:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
+}
+
+.personalize-settings-button {
+  padding: 0.625rem;
+  font-size: 1.2rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.personalize-settings-button:hover {
+  background: var(--ifm-color-emphasis-100);
+  transform: rotate(90deg);
+}
+
+.personalize-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.personalize-text {
+  line-height: 1;
+}
+
+.personalize-error {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--ifm-color-danger);
+}
+
+/* Personalized mode styles */
+.personalized-mode {
+  position: relative;
+}
+
+.personalization-banner {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+}
+
+.personalization-banner p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.beginner-tip {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .beginner-tip {
+  background: #332701;
+  color: #ffc107;
+}
+
+.beginner-tip p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .personalize-button-container {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-background-surface-color) 100%);
+}
+
+[data-theme='dark'] .personalization-banner {
+  background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .personalize-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .personalize-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .personalize-settings-button {
+    width: 100%;
+  }
+}

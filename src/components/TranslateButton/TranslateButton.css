@@ -1,70 +1,102 @@
-/* TranslateButton.css */
+/* TranslateButton.css - Professional Design */
 
 .translate-button-container {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: var(--ifm-background-surface-color);
-  border-radius: 8px;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .translate-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--ifm-color-primary-contrast-foreground);
-  background: var(--ifm-color-primary);
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2), 0 1px 2px rgba(37, 99, 235, 0.12);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.translate-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.translate-button:hover::before {
+  left: 100%;
 }
 
 .translate-button:hover:not(:disabled) {
-  background: var(--ifm-color-primary-dark);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25), 0 2px 4px rgba(37, 99, 235, 0.15);
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .translate-button:active:not(:disabled) {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
 }
 
 .translate-button:disabled {
-  opacity: 0.6;
+  opacity: 0.65;
   cursor: not-allowed;
+  transform: none;
 }
 
 .translate-button.active {
-  background: var(--ifm-color-success);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 1px 3px rgba(5, 150, 105, 0.2), 0 1px 2px rgba(5, 150, 105, 0.12);
 }
 
 .translate-button.active:hover:not(:disabled) {
-  background: var(--ifm-color-success-dark);
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  box-shadow: 0 4px 6px rgba(5, 150, 105, 0.25), 0 2px 4px rgba(5, 150, 105, 0.15);
 }
 
 .translate-icon {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .translate-text {
   line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 .translate-error {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
-  background: var(--ifm-color-danger-contrast-background);
-  color: var(--ifm-color-danger);
-  border-radius: 4px;
-  font-size: 0.9rem;
-  border-left: 3px solid var(--ifm-color-danger);
+  padding: 0.875rem 1rem;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  border-left: 4px solid #dc2626;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.5;
+}
+
+.translate-error::before {
+  content: '⚠️';
+  flex-shrink: 0;
 }
 
 /* Urdu mode styles */
@@ -109,7 +141,6 @@
   line-height: 1.5 !important;
 }
 
-/* Adjust lists for RTL */
 .urdu-mode ul,
 .urdu-mode ol {
   padding-right: 2rem;
@@ -120,7 +151,6 @@
   text-align: right;
 }
 
-/* Adjust tables for RTL */
 .urdu-mode table {
   direction: rtl;
 }
@@ -130,7 +160,6 @@
   text-align: right;
 }
 
-/* Adjust blockquotes for RTL */
 .urdu-mode blockquote {
   border-right: 4px solid var(--ifm-color-primary);
   border-left: none;
@@ -138,20 +167,23 @@
   padding-left: 0;
 }
 
-/* Dark mode adjustments */
-[data-theme='dark'] .translate-button-container {
-  background: var(--ifm-background-surface-color);
-  border-color: var(--ifm-color-emphasis-300);
+/* Dark mode */
+[data-theme='dark'] .translate-error {
+  background: #450a0a;
+  color: #fca5a5;
+  border-left-color: #dc2626;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .translate-button {
-    width: 100%;
-    justify-content: center;
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
   }
-  
-  .translate-button-container {
-    padding: 0.75rem;
+  50% {
+    opacity: 0.7;
   }
+}
+
+.translate-button:disabled .translate-icon {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

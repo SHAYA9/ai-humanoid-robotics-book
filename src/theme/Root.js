@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { AuthProvider } from '../contexts/AuthContext';
 import Chatbot from '../components/Chatbot/Chatbot';
+import WelcomePopup from '../components/WelcomePopup/WelcomePopup';
 
 // Default implementation, that you can customize
 export default function Root({children}) {
@@ -106,6 +107,7 @@ export default function Root({children}) {
         }} />
       )}
       {children}
+      <WelcomePopup />
       <Chatbot />
       
       {/* Urdu language detection script */}

@@ -43,10 +43,18 @@ try:
 
     genai.configure(api_key=GEMINI_API_KEY)
 
-    # Using stable Gemini 1.5 Flash (lower quota usage)
+    # Model selection based on availability
+    # Try gemini-1.5-flash first (better free tier), fallback to gemini-2.0-flash-exp
     embedding_model = "models/text-embedding-004"
-    generative_model = genai.GenerativeModel("gemini-2.0-flash")
-    print("✓ Successfully initialized Gemini client.")
+    
+    # You can change this to one of:
+    # - "gemini-1.5-flash" (stable, better free tier limits)
+    # - "gemini-1.5-flash-8b" (faster, lower cost)
+    # - "gemini-2.0-flash-exp" (experimental, may have stricter limits)
+    model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+    
+    generative_model = genai.GenerativeModel(model_name)
+    print(f"✓ Successfully initialized Gemini client with {model_name}")
 
 except Exception as e:
     print(f"✗ Error initializing Gemini client: {e}")

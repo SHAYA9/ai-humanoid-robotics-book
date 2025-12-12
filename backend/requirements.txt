@@ -7,8 +7,8 @@ pydantic>=2.0.0
 # Qdrant vector database client
 qdrant-client>=1.7.0
 
-# Google Gemini API
-google-generativeai>=0.8.0
+# Google Gemini API (latest version for gemini-1.5-flash and gemini-2.0-flash support)
+google-generativeai>=0.8.3
 
 # HTTP client for async requests
 aiohttp>=3.9.0

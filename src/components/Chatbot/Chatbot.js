@@ -4,10 +4,20 @@ import './styles.css';
 
 // --- Configuration ---
 const getApiUrl = () => {
-  // Access environment variable at runtime
-  if (typeof window !== 'undefined' && window.__ENV__?.VITE_API_URL) {
-    return window.__ENV__.VITE_API_URL;
+  // For production, use live API URL
+  if (typeof window !== 'undefined') {
+    // Check environment variable first
+    if (window.__ENV__?.VITE_API_URL) {
+      return window.__ENV__.VITE_API_URL;
+    }
+    
+    // Use live API for GitHub Pages (production)
+    if (window.location.hostname === 'shaya9.github.io') {
+      return 'https://ai-robotics-rag-api.onrender.com'; // Replace with your deployed URL
+    }
   }
+  
+  // Default to localhost for development
   return 'http://localhost:8000';
 };
 

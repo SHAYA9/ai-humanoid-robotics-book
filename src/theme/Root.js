@@ -12,6 +12,13 @@ export default function Root({children}) {
     // Check if current page is in /docs path
     const pathname = window.location.pathname;
     setIsDocumentation(pathname.includes('/docs'));
+    
+    // Check for Urdu preference
+    const preferUrdu = localStorage.getItem('preferUrdu') === 'true';
+    if (preferUrdu) {
+      // Apply Urdu styles globally when component mounts
+      applyUrduGlobalStyles();
+    }
   }, []);
 
   useEffect(() => {
@@ -26,8 +33,66 @@ export default function Root({children}) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const applyUrduGlobalStyles = () => {
+    // Create a style element for Urdu typography
+    const style = document.createElement('style');
+    style.textContent = `
+      .urdu-mode {
+        font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Segoe UI', serif !important;
+        direction: rtl !important;
+        text-align: right !important;
+      }
+      
+      .urdu-mode h1, 
+      .urdu-mode h2, 
+      .urdu-mode h3, 
+      .urdu-mode h4, 
+      .urdu-mode h5, 
+      .urdu-mode h6,
+      .urdu-mode p,
+      .urdu-mode li {
+        font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif !important;
+        direction: rtl !important;
+        text-align: right !important;
+        line-height: 1.8 !important;
+      }
+      
+      /* Preserve code blocks */
+      .urdu-mode pre,
+      .urdu-mode code,
+      .urdu-mode .prism-code {
+        font-family: 'Courier New', monospace !important;
+        direction: ltr !important;
+        text-align: left !important;
+      }
+      
+      /* Adjust tables for RTL */
+      .urdu-mode table {
+        direction: rtl;
+      }
+      
+      .urdu-mode th,
+      .urdu-mode td {
+        text-align: right;
+      }
+    `;
+    document.head.appendChild(style);
+  };
+
   return (
     <AuthProvider>
+      {/* Load Urdu font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      
+      {/* Optional: Load additional Urdu font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap"
+        rel="stylesheet"
+      />
+      
       {isDocumentation && (
         <div style={{
           position: 'fixed',
@@ -37,10 +102,48 @@ export default function Root({children}) {
           width: `${scrollProgress}%`,
           backgroundColor: 'var(--ifm-color-primary)',
           zIndex: 9999,
+          transition: 'width 0.2s ease',
         }} />
       )}
       {children}
       <Chatbot />
+      
+      {/* Urdu language detection script */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          // Check for Urdu preference on page load
+          (function() {
+            const preferUrdu = localStorage.getItem('preferUrdu') === 'true';
+            const currentPath = window.location.pathname;
+            
+            // Only apply to documentation pages
+            if (preferUrdu && currentPath.includes('/docs')) {
+              // Add slight delay to ensure DOM is ready
+              setTimeout(() => {
+                const mainContent = document.querySelector('.theme-doc-markdown, article, .markdown');
+                if (mainContent) {
+                  mainContent.classList.add('urdu-mode');
+                }
+              }, 100);
+            }
+            
+            // Listen for Urdu translation events
+            window.addEventListener('urduTranslationEnabled', function() {
+              const mainContent = document.querySelector('.theme-doc-markdown, article, .markdown');
+              if (mainContent) {
+                mainContent.classList.add('urdu-mode');
+              }
+            });
+            
+            window.addEventListener('urduTranslationDisabled', function() {
+              const mainContent = document.querySelector('.theme-doc-markdown, article, .markdown');
+              if (mainContent) {
+                mainContent.classList.remove('urdu-mode');
+              }
+            });
+          })();
+        `
+      }} />
     </AuthProvider>
   );
 }

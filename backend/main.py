@@ -31,11 +31,14 @@ ALLOWED_ORIGINS = [
     "http://localhost:3001",
     "http://localhost:8000",
     "https://shaya9.github.io",
+    "https://shaya9.github.io/ai-humanoid-robotics-book",
     os.getenv("FRONTEND_URL", "").strip() or None
 ]
 
 # Remove None if FRONTEND_URL is empty
 ALLOWED_ORIGINS = [origin for origin in ALLOWED_ORIGINS if origin]
+
+print(f"CORS Allowed Origins: {ALLOWED_ORIGINS}")
 
 app.add_middleware(
     CORSMiddleware,

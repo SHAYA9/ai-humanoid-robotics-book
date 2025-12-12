@@ -150,7 +150,7 @@
 
 .feature-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(255, 253, 253, 0.08);
   border-color: var(--ifm-color-primary-light);
 }
 
@@ -250,48 +250,60 @@
   transform: translateY(0);
 }
 
-/* Dark mode */
+/* Dark mode - Optimized for better readability */
+[data-theme='dark'] .welcome-popup-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 [data-theme='dark'] .welcome-message {
-  color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .welcome-message strong {
+  color: var(--ifm-color-primary-light);
 }
 
 [data-theme='dark'] .feature-item {
-  background: var(--ifm-color-emphasis-100);
-  border-color: var(--ifm-color-emphasis-300);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme='dark'] .feature-item:hover {
+  background: rgba(255, 255, 255, 0.08);
   border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
 }
 
 [data-theme='dark'] .feature-content h3 {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
 }
 
 [data-theme='dark'] .feature-content p {
-  color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
 }
 
 [data-theme='dark'] .popup-note {
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-  border-left-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border-left-color: #60a5fa;
 }
 
 [data-theme='dark'] .popup-note p {
-  color: #bfdbfe;
+  color: #93c5fd;
 }
 
 [data-theme='dark'] .welcome-popup-actions {
-  background: var(--ifm-color-emphasis-100);
+  background: rgba(255, 255, 255, 0.03);
+  border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme='dark'] .btn-continue {
-  background: var(--ifm-color-emphasis-300);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--ifm-color-emphasis-900);
 }
 
 [data-theme='dark'] .btn-continue:hover {
-  background: var(--ifm-color-emphasis-400);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive */

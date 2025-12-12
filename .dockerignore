@@ -1,0 +1,30 @@
+# Ignore everything except backend
+*
+!backend/
+
+# But ignore these in backend
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/.env.local
+
+# Node modules and frontend files
+node_modules/
+.docusaurus/
+build/
+static/
+src/
+docs/
+blog/
+package.json
+package-lock.json
+
+# Git and IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Documentation
+*.md
+!backend/README.md

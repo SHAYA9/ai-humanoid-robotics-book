@@ -70,6 +70,13 @@ class ChatResponse(BaseModel):
     answer: str
     sources: str
 
+class TranslateRequest(BaseModel):
+    content: str
+    target_language: str = "urdu"
+
+class TranslateResponse(BaseModel):
+    translated_content: str
+
 # -----------------------------------------------------------------------
 # API Endpoints
 # -----------------------------------------------------------------------
@@ -164,6 +171,41 @@ Answer:
     except Exception as e:
         print(f"Error in /api/chat/selected: {e}")
         raise HTTPException(status_code=500, detail=f"Error processing selected text: {str(e)}")
+
+
+@app.post("/api/translate", response_model=TranslateResponse)
+async def translate_content(request: TranslateRequest):
+    """Translate HTML content to target language while preserving structure."""
+    try:
+        prompt = f"""You are a professional translator. Translate the following HTML content from English to {request.target_language.title()}. 
+
+IMPORTANT RULES:
+1. Preserve ALL HTML tags exactly as they are (do not translate tag names or attributes)
+2. Preserve ALL code blocks (anything inside <pre>, <code> tags) - do not translate code
+3. Preserve ALL technical terms, variable names, function names, and programming keywords
+4. Only translate the readable text content between HTML tags
+5. Maintain the exact same HTML structure
+6. For headings and titles, provide natural {request.target_language.title()} translations
+7. Use proper {request.target_language.title()} grammar and sentence structure
+8. Keep URLs, links, and file paths unchanged
+9. Preserve any data-* attributes or special markers
+10. Return ONLY the translated HTML without any explanations or markdown code blocks
+
+HTML Content to translate:
+{request.content}
+
+Translated HTML (return only the HTML, no explanations):"""
+
+        translated = await gc.generate_answer(prompt, "")
+        
+        # Clean up any markdown code blocks that might be added
+        translated = translated.replace('```html\n', '').replace('```html', '').replace('```\n', '').replace('```', '')
+        
+        return TranslateResponse(translated_content=translated.strip())
+
+    except Exception as e:
+        print(f"Error in /api/translate: {e}")
+        raise HTTPException(status_code=500, detail=f"Translation failed: {str(e)}")
 
 
 # -----------------------------------------------------------------------

@@ -1,11 +1,13 @@
 import os
-import qdrant_client
+from qdrant_client import QdrantClient
 from dotenv import load_dotenv
-import gemini_client
 
 load_dotenv()
 
 # --- Qdrant Client Initialization ---
+qdrant = None
+QDRANT_COLLECTION_NAME = None
+
 try:
     QDRANT_URL = os.getenv("QDRANT_URL")
     QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
@@ -14,11 +16,11 @@ try:
     if not QDRANT_URL or not QDRANT_API_KEY:
         raise ValueError("QDRANT_URL or QDRANT_API_KEY not found in environment variables.")
 
-    qdrant = qdrant_client.QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
-    print("Successfully initialized Qdrant client.")
+    qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    print("✓ Successfully initialized Qdrant client.")
 
 except Exception as e:
-    print(f"Error initializing Qdrant client: {e}")
+    print(f"✗ Error initializing Qdrant client: {e}")
     qdrant = None
 
 async def search_similar_passages(text: str, limit: int = 3):
@@ -29,7 +31,10 @@ async def search_similar_passages(text: str, limit: int = 3):
         raise RuntimeError("Qdrant client is not initialized.")
 
     try:
-        query_vector = await gemini_client.get_embedding(text)
+        # Import here to avoid circular dependency
+        from gemini_client import get_embedding
+        
+        query_vector = await get_embedding(text)
         if not query_vector:
             raise ValueError("Failed to generate query vector from Gemini.")
 

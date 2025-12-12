@@ -9,8 +9,8 @@ import asyncio
 load_dotenv()
 
 # Import backend modules
-import qdrant_client as qc
-import gemini_client as gc
+from . import qdrant_client as qc
+from . import gemini_client as gc
 
 # -----------------------------------------------------------------------
 # FastAPI App Initialization
@@ -69,7 +69,8 @@ def read_root():
     return {
         "status": "ok",
         "message": "Welcome to the RAG Chatbot API!",
-        "version": "1.0.0"
+        "version": "1.0.1",
+        "qdrant_status": "initialized" if qc.qdrant else "not_initialized"
     }
 
 @app.get("/health")

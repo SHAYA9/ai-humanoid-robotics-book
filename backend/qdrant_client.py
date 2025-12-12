@@ -9,7 +9,7 @@ load_dotenv()
 try:
     QDRANT_URL = os.getenv("QDRANT_URL")
     QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-    QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLlection_NAME", "ai-humanoid-robotics-book")
+    QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "ai-humanoid-robotics-book")
 
     if not QDRANT_URL or not QDRANT_API_KEY:
         raise ValueError("QDRANT_URL or QDRANT_API_KEY not found in environment variables.")

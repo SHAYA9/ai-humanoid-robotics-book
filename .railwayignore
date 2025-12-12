@@ -1,0 +1,16 @@
+# Ignore frontend files - Railway should only deploy backend
+node_modules/
+.docusaurus/
+build/
+static/
+src/
+docs/
+blog/
+package.json
+package-lock.json
+tsconfig.json
+sidebars.ts
+docusaurus.config.ts
+
+# Keep only backend files
+!backend/

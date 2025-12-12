@@ -13,7 +13,7 @@ const getApiUrl = () => {
     
     // Use live API for GitHub Pages (production)
     if (window.location.hostname === 'shaya9.github.io') {
-      return 'https://ai-robotics-rag-api.onrender.com'; // Replace with your deployed URL
+      return 'https://your-app.railway.app'; // TODO: Update with your Railway URL after deployment
     }
   }
   

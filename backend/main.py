@@ -9,7 +9,8 @@ import asyncio
 load_dotenv()
 
 # Import backend modules
-from . import qdrant_client as qc, gemini_client as gc
+import qdrant_client as qc
+import gemini_client as gc
 
 # -----------------------------------------------------------------------
 # FastAPI App Initialization

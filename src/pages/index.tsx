@@ -7,6 +7,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { useAuth } from '@site/src/contexts/AuthContext';
 
 import styles from './index.module.css';
 
@@ -146,6 +147,7 @@ function TypingAnimation({ texts, speed = 100 }: { texts: string[]; speed?: numb
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const { user } = useAuth();
   const [scrollY, setScrollY] = useState(0);
   
   useEffect(() => {
@@ -194,6 +196,15 @@ function HomepageHeader() {
           <Link 
             className={clsx("button button--primary button--lg", styles.primaryButton)}
             to="/docs/intro"
+            onClick={() => {
+              // Clear session storage flags when logged out user clicks Start Reading
+              // This ensures the welcome popup will show on the docs page
+              if (!user) {
+                console.log('🧹 Clearing session storage for Start Reading click');
+                sessionStorage.removeItem('has_visited_docs');
+                sessionStorage.removeItem('welcome_popup_seen');
+              }
+            }}
           >
             <span className={styles.buttonContent}>
               <span className={styles.buttonIcon}>📘</span>

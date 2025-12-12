@@ -1,18 +1,23 @@
 // src/theme/Root.js
 import React, { useEffect, useState } from 'react';
+import { useLocation } from '@docusaurus/router';
 import { AuthProvider } from '../contexts/AuthContext';
 import Chatbot from '../components/Chatbot/Chatbot';
 import WelcomePopup from '../components/WelcomePopup/WelcomePopup';
 
 // Default implementation, that you can customize
 export default function Root({children}) {
+  const location = useLocation();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isDocumentation, setIsDocumentation] = useState(false);
 
   useEffect(() => {
-    // Check if current page is in /docs path
-    const pathname = window.location.pathname;
-    setIsDocumentation(pathname.includes('/docs'));
+    // Check if current page is in /docs path - runs on every route change
+    const pathname = location.pathname;
+    const isDocsPage = pathname.includes('/docs');
+    setIsDocumentation(isDocsPage);
+    
+    console.log('📍 Root: Route changed to', pathname, '- isDocsPage:', isDocsPage);
     
     // Check for Urdu preference
     const preferUrdu = localStorage.getItem('preferUrdu') === 'true';
@@ -20,7 +25,7 @@ export default function Root({children}) {
       // Apply Urdu styles globally when component mounts
       applyUrduGlobalStyles();
     }
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -44,14 +44,16 @@ try:
     genai.configure(api_key=GEMINI_API_KEY)
 
     # Model selection based on availability
-    # Try gemini-1.5-flash first (better free tier), fallback to gemini-2.0-flash-exp
+    # Embedding model needs the "models/" prefix
     embedding_model = "models/text-embedding-004"
     
     # You can change this to one of:
-    # - "gemini-1.5-flash" (stable, better free tier limits)
-    # - "gemini-1.5-flash-8b" (faster, lower cost)
-    # - "gemini-2.0-flash-exp" (experimental, may have stricter limits)
-    model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+    # - "gemini-1.5-flash-latest" (stable, recommended)
+    # - "gemini-1.5-flash-8b-latest" (faster, lower cost)
+    # - "gemini-1.5-pro-latest" (more capable)
+    # - "gemini-2.0-flash-exp" (experimental)
+    # Note: Use -latest suffix for stable versions
+    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flaash")
     
     generative_model = genai.GenerativeModel(model_name)
     print(f"✓ Successfully initialized Gemini client with {model_name}")

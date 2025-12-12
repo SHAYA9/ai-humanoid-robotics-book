@@ -1,62 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@site/src/contexts/AuthContext';
-import { useHistory } from '@docusaurus/router';
+import { useHistory, useLocation } from '@docusaurus/router';
 import './WelcomePopup.css';
 
 export default function WelcomePopup() {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const history = useHistory();
+  const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    // Function to check and show popup
-    const checkAndShowPopup = () => {
-      const pathname = window.location.pathname;
-      const isDocPage = pathname.includes('/docs/');
+    // Don't check until auth loading is complete
+    if (loading) {
+      console.log('⏳ WelcomePopup: Auth still loading, waiting...');
+      return;
+    }
+
+    const pathname = location.pathname;
+    const isDocPage = pathname.includes('/docs');
+    
+    // Check if this is the first docs page visit in this session
+    const hasVisitedDocs = sessionStorage.getItem('has_visited_docs');
+    const hasSeenPopup = sessionStorage.getItem('welcome_popup_seen');
+    
+    console.log('🔍 WelcomePopup Check:', { 
+      user: user ? 'logged in' : 'not logged in', 
+      loading,
+      isDocPage, 
+      pathname,
+      hasVisitedDocs,
+      hasSeenPopup,
+      timestamp: new Date().toISOString()
+    });
+    
+    // Show popup if: not logged in, on docs page, first visit, and hasn't dismissed it
+    if (!user && isDocPage && !hasVisitedDocs && !hasSeenPopup) {
+      console.log('✅ All conditions met - will show popup in 1.5s');
       
-      // Check if this is the first docs page visit in this session
-      const hasVisitedDocs = sessionStorage.getItem('has_visited_docs');
-      const hasSeenPopup = sessionStorage.getItem('welcome_popup_seen');
+      // Show popup after a short delay
+      const timer = setTimeout(() => {
+        console.log('🎉 Showing welcome popup NOW');
+        setShowPopup(true);
+        // Mark as visited only AFTER showing the popup
+        sessionStorage.setItem('has_visited_docs', 'true');
+      }, 1500);
       
-      console.log('WelcomePopup Check:', { 
-        user: user ? 'logged in' : 'not logged in', 
-        isDocPage, 
-        pathname,
-        hasVisitedDocs,
-        hasSeenPopup
+      return () => {
+        console.log('🧹 Cleaning up popup timer');
+        clearTimeout(timer);
+      };
+    } else {
+      console.log('❌ Not showing popup. Reasons:', {
+        'user logged in': !!user,
+        'not on docs page': !isDocPage,
+        'already visited docs': !!hasVisitedDocs,
+        'already dismissed': !!hasSeenPopup
       });
       
-      // Mark that user has visited docs
-      if (isDocPage && !hasVisitedDocs) {
+      // Mark as visited if user is logged in or already dismissed
+      if (isDocPage && !hasVisitedDocs && (user || hasSeenPopup)) {
         sessionStorage.setItem('has_visited_docs', 'true');
       }
-      
-      // Show popup if: not logged in, on docs page, first visit, and hasn't dismissed it
-      if (!user && isDocPage && !hasVisitedDocs && !hasSeenPopup) {
-        console.log('✅ First docs visit - will show popup in 1.5s');
-        // Show popup after a short delay
-        const timer = setTimeout(() => {
-          console.log('🎉 Showing welcome popup NOW');
-          setShowPopup(true);
-        }, 1500);
-        
-        return () => clearTimeout(timer);
-      } else {
-        console.log('❌ Not showing popup because:', {
-          'user logged in': !!user,
-          'not on docs page': !isDocPage,
-          'already visited docs': !!hasVisitedDocs,
-          'already dismissed': !!hasSeenPopup
-        });
-      }
-    };
-    
-    // Check immediately
-    const cleanup = checkAndShowPopup();
-    
-    // Return cleanup function if exists
-    return cleanup;
-  }, [user]);
+    }
+  }, [user, loading, location.pathname]);
 
   const handleLogin = () => {
     sessionStorage.setItem('welcome_popup_seen', 'true');
@@ -72,9 +78,13 @@ export default function WelcomePopup() {
     setShowPopup(false);
   };
 
-  if (!showPopup || user) {
+  // Don't render if loading, user is logged in, or popup shouldn't show
+  if (loading || user || !showPopup) {
+    console.log('🚫 WelcomePopup: Not rendering. loading:', loading, 'user:', !!user, 'showPopup:', showPopup);
     return null;
   }
+
+  console.log('✨ WelcomePopup: Rendering popup!');
 
   return (
     <div className="welcome-popup-overlay" onClick={handleContinue}>

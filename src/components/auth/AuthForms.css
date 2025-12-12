@@ -71,6 +71,17 @@
   text-align: center;
 }
 
+.auth-success {
+  background-color: var(--ifm-alert-success-background-color);
+  color: var(--ifm-alert-success-color);
+  border: 1px solid var(--ifm-alert-success-border-color);
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
 .auth-switch-link {
   text-align: center;
   margin-top: 2rem;

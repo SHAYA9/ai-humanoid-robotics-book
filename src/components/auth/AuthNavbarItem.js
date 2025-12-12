@@ -11,13 +11,21 @@ export default function AuthNavbarItem() {
 
   async function handleLogout() {
     try {
+      console.log('Logging out...');
+      
+      // Sign out from Supabase (using local scope to avoid 403)
       await signOut();
-      // Redirect to home page immediately after logout
-      setTimeout(() => {
-        history.push('/');
-      }, 100);
+      
+      console.log('Successfully logged out');
+      
+      // Force a hard redirect to clear all state
+      // Using replace instead of href to prevent back button issues
+      window.location.replace('/ai-humanoid-robotics-book/');
+      
     } catch (error) {
       console.error('Error logging out:', error);
+      // Even if there's an error, redirect to clear the session
+      window.location.replace('/ai-humanoid-robotics-book/');
     }
   }
 
@@ -38,7 +46,7 @@ export default function AuthNavbarItem() {
     <div className="auth-navbar-items">
       <Link to="/login" className="navbar__item navbar__link">Login</Link>
       <Link to="/signup" className="navbar__item navbar__link signup-link">Sign Up</Link>
-      <a href="https://github.com/SHAYA9/ai-human-robotics-book" className="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a>
+      <a href="https://github.com/SHAYA9/ai-humanoid-robotics-book/" className="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a>
     </div>
   );
 }

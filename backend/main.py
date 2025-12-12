@@ -10,8 +10,8 @@ load_dotenv()
 
 # Import backend modules with error handling
 try:
-    import qdrant_client as qc
-    import gemini_client as gc
+    import qdrant_service as qc
+    import gemini_service as gc
     print("✓ Successfully imported backend modules")
 except ImportError as e:
     print(f"✗ Error importing backend modules: {e}")

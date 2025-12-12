@@ -56,7 +56,7 @@ async def search_similar_passages(text: str, limit: int = 3):
 
     try:
         # Import here to avoid circular dependency
-        from gemini_client import get_embedding
+        from gemini_service import get_embedding
         
         query_vector = await get_embedding(text)
         if not query_vector:

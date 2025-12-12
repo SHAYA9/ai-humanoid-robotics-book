@@ -53,7 +53,7 @@ try:
     # - "gemini-1.5-pro-latest" (more capable)
     # - "gemini-2.0-flash-exp" (experimental)
     # Note: Use -latest suffix for stable versions
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flaash")
+    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
     
     generative_model = genai.GenerativeModel(model_name)
     print(f"✓ Successfully initialized Gemini client with {model_name}")

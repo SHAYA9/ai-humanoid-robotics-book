@@ -37,7 +37,7 @@ export default function AuthNavbarItem() {
         <button onClick={handleLogout} className="navbar__item navbar__link auth-button logout-button">
           Logout
         </button>
-        <a href="https://github.com/SHAYA9/ai-human-robotics-book" className="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a>
+        <a href="https://github.com/SHAYA9/ai-humananoid-robotics-book" className="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a>
       </div>
     );
   }

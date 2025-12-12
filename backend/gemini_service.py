@@ -45,7 +45,7 @@ try:
 
     # Using stable Gemini 1.5 Flash (lower quota usage)
     embedding_model = "models/text-embedding-004"
-    generative_model = genai.GenerativeModel("gemini-1.5-flash")
+    generative_model = genai.GenerativeModel("gemini-2.0-flash")
     print("✓ Successfully initialized Gemini client.")
 
 except Exception as e:

@@ -49,7 +49,6 @@ try:
     # - "qwen-turbo" (fast, cost-effective)
     # - "qwen-plus" (balanced performance)
     # - "qwen-max" (most capable)
-    # - "qwen-vl-plus" (vision + language)
     qwen_model = os.getenv("QWEN_MODEL", "qwen-turbo")
     
     # Embedding model
@@ -105,6 +104,7 @@ async def get_embedding(text: str):
 async def generate_answer(context: str, question: str) -> str:
     """
     Generates an answer based on the given context and question using Qwen.
+    Uses DashScope API format.
     """
     if not qwen_initialized:
         raise RuntimeError("Qwen client is not initialized.")
@@ -112,25 +112,29 @@ async def generate_answer(context: str, question: str) -> str:
     try:
         await rate_limiter.wait_if_needed()
         
+        # Use DashScope text generation endpoint
         url = f"{QWEN_API_BASE}/services/aigc/text-generation/generation"
         headers = {
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
         }
         
+        # Format messages according to DashScope API
+        messages = [
+            {
+                "role": "system",
+                "content": "You are a helpful AI assistant for the AI Humanoid Robotics Book."
+            },
+            {
+                "role": "user",
+                "content": context
+            }
+        ]
+        
         payload = {
             "model": qwen_model,
             "input": {
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": "You are a helpful AI assistant for the AI Humanoid Robotics Book."
-                    },
-                    {
-                        "role": "user",
-                        "content": context
-                    }
-                ]
+                "messages": messages
             },
             "parameters": {
                 "result_format": "message"
@@ -141,6 +145,7 @@ async def generate_answer(context: str, question: str) -> str:
             async with session.post(url, headers=headers, json=payload) as response:
                 if response.status == 200:
                     result = await response.json()
+                    # Extract answer from DashScope response format
                     if result.get("output") and result["output"].get("choices"):
                         return result["output"]["choices"][0]["message"]["content"]
                     else:

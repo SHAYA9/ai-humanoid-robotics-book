@@ -39,8 +39,8 @@ rate_limiter = RateLimiter(max_requests_per_minute=15)
 # --- Qwen Client Initialization ---
 try:
     QWEN_API_KEY = os.getenv("QWEN_API_KEY")
-    # ModelStudio Console provides OpenAI-compatible endpoint
-    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope.aliyuncs.com/compatible-mode/v1")
+    # ModelStudio Console provides OpenAI-compatible endpoint (Singapore/International region)
+    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
     
     if not QWEN_API_KEY:
         raise ValueError("QWEN_API_KEY not found in environment variables.")

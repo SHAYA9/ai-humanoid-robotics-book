@@ -11,8 +11,9 @@ load_dotenv()
 # Import backend modules with error handling
 try:
     import qdrant_service as qc
-    import gemini_service as gc
+    import ai_service as ai
     print("✓ Successfully imported backend modules")
+    print(f"✓ Active AI Provider: {ai.get_current_provider()}")
 except ImportError as e:
     print(f"✗ Error importing backend modules: {e}")
     import traceback
@@ -90,9 +91,10 @@ def read_root():
     return {
         "status": "ok",
         "message": "Welcome to the RAG Chatbot API!",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "qdrant_status": "initialized" if qc.qdrant else "not_initialized",
-        "gemini_status": "initialized" if gc.generative_model else "not_initialized"
+        "ai_provider": ai.get_current_provider(),
+        "ai_status": "initialized"
     }
 
 @app.get("/health")
@@ -110,7 +112,7 @@ Question: {request.question}
 
 Provide a clear and accurate answer based on your knowledge of AI and robotics.
 """
-        answer = await gc.generate_answer(prompt, request.question)
+        answer = await ai.generate_answer(prompt, request.question)
         return ChatResponse(answer=answer, sources="General Knowledge")
 
     except Exception as e:
@@ -163,7 +165,7 @@ Question: {request.question}
 Answer:
 """
 
-        answer = await gc.generate_answer(prompt, request.question)
+        answer = await ai.generate_answer(prompt, request.question)
 
         sources_str = ", ".join(list(citations)) if citations else "From selected text"
         return ChatResponse(answer=answer, sources=sources_str)
@@ -196,7 +198,7 @@ HTML Content to translate:
 
 Translated HTML (return only the HTML, no explanations):"""
 
-        translated = await gc.generate_answer(prompt, "")
+        translated = await ai.generate_answer(prompt, "")
         
         # Clean up any markdown code blocks that might be added
         translated = translated.replace('```html\n', '').replace('```html', '').replace('```\n', '').replace('```', '')

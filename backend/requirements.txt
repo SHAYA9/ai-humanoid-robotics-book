@@ -10,5 +10,5 @@ qdrant-client>=1.7.0
 # Google Gemini API (latest version for gemini-1.5-flash and gemini-2.0-flash support)
 google-generativeai>=0.8.3
 
-# HTTP client for async requests
+# HTTP client for async requests (required for Qwen API)
 aiohttp>=3.9.0

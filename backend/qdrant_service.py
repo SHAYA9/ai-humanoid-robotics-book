@@ -56,11 +56,11 @@ async def search_similar_passages(text: str, limit: int = 3):
 
     try:
         # Import here to avoid circular dependency
-        from gemini_service import get_embedding
+        from ai_service import get_embedding
         
         query_vector = await get_embedding(text)
         if not query_vector:
-            raise ValueError("Failed to generate query vector from Gemini.")
+            raise ValueError("Failed to generate query vector from AI service.")
 
         search_results = qdrant.search(
             collection_name=QDRANT_COLLECTION_NAME,

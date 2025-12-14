@@ -25,11 +25,11 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "C:\\Users\\SHAYAN\\Desktop\\New folder\\ai-humanoid-robotics-book\\sidebars.ts",
+          "sidebarPath": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\sidebars.ts",
           "routeBasePath": "/docs"
         },
         "theme": {
-          "customCss": "C:\\Users\\SHAYAN\\Desktop\\New folder\\ai-humanoid-robotics-book\\src\\css\\custom.css"
+          "customCss": "C:\\Users\\SHAYAN\\Desktop\\hackathon\\ai-humanoid-robotics-book\\src\\css\\custom.css"
         }
       }
     ]

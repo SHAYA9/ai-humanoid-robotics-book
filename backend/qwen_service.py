@@ -39,24 +39,26 @@ rate_limiter = RateLimiter(max_requests_per_minute=15)
 # --- Qwen Client Initialization ---
 try:
     QWEN_API_KEY = os.getenv("QWEN_API_KEY")
-    # For free ModelStudio API, use the base URL without /api/v1
+    # ModelStudio Console provides OpenAI-compatible endpoint
     QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope.aliyuncs.com/compatible-mode/v1")
     
     if not QWEN_API_KEY:
         raise ValueError("QWEN_API_KEY not found in environment variables.")
     
     # Model selection for free API
-    # Free tier models:
-    # - "qwen-turbo" (fast, free tier available)
-    # - "qwen-plus" (may require credits)
-    # - "qwen-max" (premium)
+    # Free tier models from ModelStudio:
+    # - "qwen-turbo" 
+    # - "qwen-plus"
+    # - "qwen-max"
+    # - "qwen-long" (for longer contexts)
     qwen_model = os.getenv("QWEN_MODEL", "qwen-turbo")
     
-    # Embedding model for free tier
+    # Embedding model
     qwen_embedding_model = os.getenv("QWEN_EMBEDDING_MODEL", "text-embedding-v2")
     
-    print(f"✓ Successfully initialized Qwen FREE API client with {qwen_model}")
-    print(f"✓ Using API base: {QWEN_API_BASE}")
+    print(f"✓ Successfully initialized Qwen FREE API client")
+    print(f"✓ Model: {qwen_model}")
+    print(f"✓ API Base: {QWEN_API_BASE}")
     qwen_initialized = True
 
 except Exception as e:
@@ -114,14 +116,14 @@ async def generate_answer(context: str, question: str) -> str:
     try:
         await rate_limiter.wait_if_needed()
         
-        # Free API uses OpenAI-compatible chat completions endpoint
+        # OpenAI-compatible chat completions endpoint
         url = f"{QWEN_API_BASE}/chat/completions"
         headers = {
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
         }
         
-        # OpenAI-compatible message format for free API
+        # OpenAI-compatible message format
         messages = [
             {
                 "role": "system",
@@ -139,32 +141,39 @@ async def generate_answer(context: str, question: str) -> str:
             "messages": messages,
             "max_tokens": 1500,
             "temperature": 0.7,
-            "top_p": 0.8,
-            "stream": False
+            "top_p": 0.8
         }
+        
+        print(f"🔍 Calling Qwen API: {url}")
+        print(f"🔍 Using model: {qwen_model}")
         
         async with aiohttp.ClientSession() as session:
             async with session.post(url, headers=headers, json=payload) as response:
+                response_text = await response.text()
+                print(f"📥 Response status: {response.status}")
+                print(f"📥 Response body: {response_text[:500]}...")  # Log first 500 chars
+                
                 if response.status == 200:
-                    result = await response.json()
+                    result = json.loads(response_text)
                     # OpenAI format returns choices array
                     if result.get("choices") and len(result["choices"]) > 0:
                         return result["choices"][0]["message"]["content"]
                     else:
                         return "I couldn't generate a response. Please try again."
                 else:
-                    error_text = await response.text()
-                    print(f"Error generating answer: {response.status} - {error_text}")
+                    print(f"❌ Error generating answer: {response.status} - {response_text}")
                     
                     # Handle quota errors gracefully
                     if response.status == 429:
                         return "I'm currently experiencing high demand. Please try again in a few moments."
+                    elif response.status == 404:
+                        return "API endpoint not found. Please check your QWEN_API_BASE configuration."
                     
                     return f"Sorry, I encountered an error while generating a response."
                     
     except Exception as e:
         error_msg = str(e)
-        print(f"Error generating answer: {error_msg}")
+        print(f"❌ Exception in generate_answer: {error_msg}")
         
         # Handle quota errors gracefully
         if "429" in error_msg or "quota" in error_msg.lower():

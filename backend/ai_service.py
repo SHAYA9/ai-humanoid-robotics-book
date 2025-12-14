@@ -10,21 +10,21 @@ AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").lower()
 if AI_PROVIDER == "qwen":
     print("🔧 Using Qwen AI service")
     try:
-        from backend import qwen_service as ai_service
+        import qwen_service as ai_service
         print("✓ Qwen service loaded successfully")
     except ImportError:
         print("✗ Failed to import Qwen service, falling back to Gemini")
-        from backend import gemini_service as ai_service
+        import gemini_service as ai_service
         AI_PROVIDER = "gemini"
 else:
     print("🔧 Using Gemini AI service")
     try:
-        from backend import gemini_service as ai_service
+        import gemini_service as ai_service
         print("✓ Gemini service loaded successfully")
     except ImportError:
         print("✗ Failed to import Gemini service, trying Qwen")
         try:
-            from backend import qwen_service as ai_service
+            import qwen_service as ai_service
             AI_PROVIDER = "qwen"
             print("✓ Qwen service loaded as fallback")
         except ImportError:

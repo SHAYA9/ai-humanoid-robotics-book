@@ -39,22 +39,24 @@ rate_limiter = RateLimiter(max_requests_per_minute=15)
 # --- Qwen Client Initialization ---
 try:
     QWEN_API_KEY = os.getenv("QWEN_API_KEY")
-    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope.aliyuncs.com/api/v1")
+    # For free ModelStudio API, use the base URL without /api/v1
+    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope.aliyuncs.com/compatible-mode/v1")
     
     if not QWEN_API_KEY:
         raise ValueError("QWEN_API_KEY not found in environment variables.")
     
-    # Model selection
-    # Available models:
-    # - "qwen-turbo" (fast, cost-effective)
-    # - "qwen-plus" (balanced performance)
-    # - "qwen-max" (most capable)
+    # Model selection for free API
+    # Free tier models:
+    # - "qwen-turbo" (fast, free tier available)
+    # - "qwen-plus" (may require credits)
+    # - "qwen-max" (premium)
     qwen_model = os.getenv("QWEN_MODEL", "qwen-turbo")
     
-    # Embedding model
+    # Embedding model for free tier
     qwen_embedding_model = os.getenv("QWEN_EMBEDDING_MODEL", "text-embedding-v2")
     
-    print(f"✓ Successfully initialized Qwen client with {qwen_model}")
+    print(f"✓ Successfully initialized Qwen FREE API client with {qwen_model}")
+    print(f"✓ Using API base: {QWEN_API_BASE}")
     qwen_initialized = True
 
 except Exception as e:
@@ -64,7 +66,7 @@ except Exception as e:
 
 async def get_embedding(text: str):
     """
-    Generates an embedding for the given text using Qwen.
+    Generates an embedding for the given text using Qwen FREE API (OpenAI-compatible format).
     """
     if not qwen_initialized:
         raise RuntimeError("Qwen client is not initialized.")
@@ -72,25 +74,26 @@ async def get_embedding(text: str):
     try:
         await rate_limiter.wait_if_needed()
         
-        url = f"{QWEN_API_BASE}/services/embeddings/text-embedding/text-embedding"
+        # Free API uses OpenAI-compatible endpoint
+        url = f"{QWEN_API_BASE}/embeddings"
         headers = {
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
         }
         
+        # OpenAI-compatible format for free API
         payload = {
             "model": qwen_embedding_model,
-            "input": {
-                "texts": [text]
-            }
+            "input": text
         }
         
         async with aiohttp.ClientSession() as session:
             async with session.post(url, headers=headers, json=payload) as response:
                 if response.status == 200:
                     result = await response.json()
-                    if result.get("output") and result["output"].get("embeddings"):
-                        return result["output"]["embeddings"][0]["embedding"]
+                    # OpenAI format returns data array with embedding
+                    if result.get("data") and len(result["data"]) > 0:
+                        return result["data"][0]["embedding"]
                 else:
                     error_text = await response.text()
                     print(f"Error generating embedding: {response.status} - {error_text}")
@@ -103,8 +106,7 @@ async def get_embedding(text: str):
 
 async def generate_answer(context: str, question: str) -> str:
     """
-    Generates an answer based on the given context and question using Qwen.
-    Uses DashScope API format.
+    Generates an answer using Qwen FREE API (OpenAI-compatible format).
     """
     if not qwen_initialized:
         raise RuntimeError("Qwen client is not initialized.")
@@ -112,42 +114,42 @@ async def generate_answer(context: str, question: str) -> str:
     try:
         await rate_limiter.wait_if_needed()
         
-        # Use DashScope text generation endpoint
-        url = f"{QWEN_API_BASE}/services/aigc/text-generation/generation"
+        # Free API uses OpenAI-compatible chat completions endpoint
+        url = f"{QWEN_API_BASE}/chat/completions"
         headers = {
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
         }
         
-        # Format messages according to DashScope API
+        # OpenAI-compatible message format for free API
         messages = [
             {
                 "role": "system",
-                "content": "You are a helpful AI assistant for the AI Humanoid Robotics Book."
+                "content": "You are a helpful AI assistant for the AI Humanoid Robotics Book. Provide accurate, detailed answers based on the context provided."
             },
             {
                 "role": "user",
-                "content": context
+                "content": f"{context}\n\nQuestion: {question}"
             }
         ]
         
+        # OpenAI-compatible payload
         payload = {
             "model": qwen_model,
-            "input": {
-                "messages": messages
-            },
-            "parameters": {
-                "result_format": "message"
-            }
+            "messages": messages,
+            "max_tokens": 1500,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "stream": False
         }
         
         async with aiohttp.ClientSession() as session:
             async with session.post(url, headers=headers, json=payload) as response:
                 if response.status == 200:
                     result = await response.json()
-                    # Extract answer from DashScope response format
-                    if result.get("output") and result["output"].get("choices"):
-                        return result["output"]["choices"][0]["message"]["content"]
+                    # OpenAI format returns choices array
+                    if result.get("choices") and len(result["choices"]) > 0:
+                        return result["choices"][0]["message"]["content"]
                     else:
                         return "I couldn't generate a response. Please try again."
                 else:

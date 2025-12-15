@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend code
 COPY backend/ .
 
+# Copy documentation files (needed for Qdrant ingestion)
+COPY docs/ ./docs/
+
 # Make start script executable
 RUN chmod +x start.sh
 

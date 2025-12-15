@@ -1,6 +1,7 @@
-# Ignore everything except backend
+# Ignore everything except backend and docs
 *
 !backend/
+!docs/
 
 # But ignore these in backend
 backend/__pycache__/
@@ -14,7 +15,6 @@ node_modules/
 build/
 static/
 src/
-docs/
 blog/
 package.json
 package-lock.json

@@ -51,9 +51,13 @@ try:
         raise ValueError("QWEN_API_KEY not found in environment variables.")
     
     # Model selection
-    # OpenRouter free models: qwen/qwen-2.5-7b-instruct:free, qwen/qwen-2-7b-instruct:free
+    # OpenRouter free models (as of Dec 2024):
+    # - meta-llama/llama-3.2-3b-instruct:free
+    # - google/gemma-2-9b-it:free
+    # - microsoft/phi-3-mini-128k-instruct:free
+    # - qwen/qwen-2-7b-instruct:free (if available)
     # DashScope models: qwen-turbo, qwen-plus, qwen-max
-    qwen_model = os.getenv("QWEN_MODEL", "qwen/qwen-2.5-7b-instruct:free")
+    qwen_model = os.getenv("QWEN_MODEL", "meta-llama/llama-3.2-3b-instruct:free")
     
     # Embedding model (not used with OpenRouter)
     qwen_embedding_model = os.getenv("QWEN_EMBEDDING_MODEL", "text-embedding-v3")

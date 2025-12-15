@@ -210,6 +210,71 @@ Translated HTML (return only the HTML, no explanations):"""
         raise HTTPException(status_code=500, detail=f"Translation failed: {str(e)}")
 
 
+@app.post("/api/admin/ingest-docs")
+async def ingest_documents():
+    """
+    Admin endpoint to populate Qdrant with documentation embeddings.
+    This should be called once after deployment to populate the vector database.
+    
+    ⚠️ WARNING: This recreates the collection and can take several minutes.
+    """
+    try:
+        from ingest_endpoint import ingest_documents_to_qdrant
+        
+        print("Starting document ingestion via API endpoint...")
+        result = await ingest_documents_to_qdrant()
+        
+        if result["success"]:
+            return {
+                "status": "success",
+                "message": "Documents successfully ingested into Qdrant",
+                "details": result
+            }
+        else:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Ingestion failed: {result.get('error', 'Unknown error')}"
+            )
+    
+    except ImportError as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to import ingestion module: {str(e)}"
+        )
+    except Exception as e:
+        print(f"Error in /api/admin/ingest-docs: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Ingestion failed: {str(e)}"
+        )
+
+
+@app.get("/api/admin/qdrant-status")
+def qdrant_status():
+    """Check the status of Qdrant collection."""
+    try:
+        if not qc.qdrant:
+            return {
+                "status": "not_initialized",
+                "message": "Qdrant client is not initialized"
+            }
+        
+        collection_info = qc.qdrant.get_collection(qc.QDRANT_COLLECTION_NAME)
+        
+        return {
+            "status": "initialized",
+            "collection_name": qc.QDRANT_COLLECTION_NAME,
+            "points_count": collection_info.points_count,
+            "vector_size": collection_info.config.params.vectors.size,
+            "distance": collection_info.config.params.vectors.distance.name
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "error": str(e)
+        }
+
+
 # -----------------------------------------------------------------------
 # ASGI to WSGI Adapter (required for PythonAnywhere)
 # -----------------------------------------------------------------------

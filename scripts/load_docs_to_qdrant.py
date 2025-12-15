@@ -5,19 +5,24 @@ import google.generativeai as genai
 from qdrant_client import QdrantClient, models
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='../backend/.env')
+load_dotenv()  # Load from current directory or parent
 
 # --- Load Environment Variables ---
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME")
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "ai-humanoid-robotics-book")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # Changed from GOOGLE_API_KEY
 
-if not all([QDRANT_URL, QDRANT_API_KEY, QDRANT_COLLECTION_NAME, GOOGLE_API_KEY]):
+if not all([QDRANT_URL, QDRANT_API_KEY, QDRANT_COLLECTION_NAME, GEMINI_API_KEY]):
     raise ValueError("One or more required environment variables are missing.")
 
+print(f"Configuration:")
+print(f"  Qdrant URL: {QDRANT_URL}")
+print(f"  Collection: {QDRANT_COLLECTION_NAME}")
+print(f"  Gemini API Key: {'*' * 20}{GEMINI_API_KEY[-4:]}")
+
 # --- Initialize Clients ---
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
 qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 # --- Configuration ---
@@ -71,13 +76,20 @@ def main():
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        path_parts = path.split(os.sep)
+        path_parts = path.replace('\\', '/').split('/')
         module = path_parts[-2] if len(path_parts) > 2 else 'general'
         page = os.path.basename(path).replace('.md', '')
+        source = f"{module}/{page}"
 
         chunks = chunk_text(content)
-        all_chunks.extend(chunks)
-        all_metadata.extend([{"module": module, "page": page, "content": chunk}] * len(chunks))
+        for chunk in chunks:
+            all_chunks.append(chunk)
+            all_metadata.append({
+                "text": chunk,
+                "source": source,
+                "module": module,
+                "page": page
+            })
 
     print(f"Created {len(all_chunks)} text chunks.")
 

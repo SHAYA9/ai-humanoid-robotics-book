@@ -62,14 +62,26 @@ async def search_similar_passages(text: str, limit: int = 3):
         if not query_vector:
             raise ValueError("Failed to generate query vector from AI service.")
 
-        # Use query() method for newer qdrant-client versions (>=1.7.0)
+        print(f"🔍 Searching Qdrant with vector of length: {len(query_vector)}")
+        
+        # Use query_points() method for newer qdrant-client versions (>=1.7.0)
         search_results = qdrant.query_points(
             collection_name=QDRANT_COLLECTION_NAME,
             query=query_vector,
             limit=limit,
             with_payload=True,
         )
-        return search_results.points if hasattr(search_results, 'points') else search_results
+        
+        # Extract points from the response
+        points = search_results.points if hasattr(search_results, 'points') else search_results
+        
+        print(f"✓ Found {len(points)} similar passages")
+        if points:
+            print(f"  First result score: {points[0].score if hasattr(points[0], 'score') else 'N/A'}")
+        
+        return points
     except Exception as e:
-        print(f"Error searching Qdrant: {e}")
+        print(f"❌ Error searching Qdrant: {e}")
+        import traceback
+        traceback.print_exc()
         return []

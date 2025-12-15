@@ -11,7 +11,7 @@ load_dotenv()  # Load from current directory or parent
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "ai-humanoid-robotics-book")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # Changed from GOOGLE_API_KEY
+GEMINI_API_KEY = "AIzaSyDAJI_dgfszylvZDqe58kcadkMQ2YWl2qE"  # Changed from GOOGLE_API_KEY
 
 if not all([QDRANT_URL, QDRANT_API_KEY, QDRANT_COLLECTION_NAME, GEMINI_API_KEY]):
     raise ValueError("One or more required environment variables are missing.")

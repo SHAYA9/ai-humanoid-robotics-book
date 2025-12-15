@@ -134,18 +134,24 @@ async def chat_selected_text(request: ChatRequest):
             raise ValueError("Context (selected text) is required for RAG chat")
 
         # Search for similar passages in Qdrant
+        print(f"📝 Searching for passages related to: {request.context[:100]}...")
         similar_passages = await qc.search_similar_passages(request.context)
+        print(f"📊 Retrieved {len(similar_passages) if similar_passages else 0} passages")
 
         # Build context
         context_for_llm = f"Selected Text:\n{request.context}\n\n"
         citations = set()
 
-        if similar_passages:
+        if similar_passages and len(similar_passages) > 0:
             context_for_llm += "Related Passages:\n---\n"
-            for passage in similar_passages:
-                context_for_llm += passage.payload.get('text', '') + "\n"
+            for idx, passage in enumerate(similar_passages):
+                passage_text = passage.payload.get('text', '')
+                print(f"  Passage {idx+1}: {passage_text[:100]}...")
+                context_for_llm += passage_text + "\n\n"
                 if 'source' in passage.payload:
                     citations.add(passage.payload['source'])
+        else:
+            print("⚠️ No similar passages found in Qdrant")
 
         # RAG Prompt
         prompt = f"""

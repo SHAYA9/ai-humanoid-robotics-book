@@ -39,24 +39,24 @@ rate_limiter = RateLimiter(max_requests_per_minute=15)
 # --- Qwen Client Initialization ---
 try:
     QWEN_API_KEY = os.getenv("QWEN_API_KEY")
-    # ModelStudio Console provides OpenAI-compatible endpoint (Singapore/International region)
-    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
+    # OpenRouter or DashScope endpoint (both are OpenAI-compatible)
+    QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://openrouter.ai/api/v1")
     
     if not QWEN_API_KEY:
         raise ValueError("QWEN_API_KEY not found in environment variables.")
     
-    # Model selection for free API
-    # Free tier models from ModelStudio:
-    # - "qwen-turbo" 
-    # - "qwen-plus"
-    # - "qwen-max"
-    # - "qwen-long" (for longer contexts)
-    qwen_model = os.getenv("QWEN_MODEL", "qwen-turbo")
+    # Model selection
+    # OpenRouter free models: qwen/qwen-2.5-7b-instruct:free, qwen/qwen-2-7b-instruct:free
+    # DashScope models: qwen-turbo, qwen-plus, qwen-max
+    qwen_model = os.getenv("QWEN_MODEL", "qwen/qwen-2.5-7b-instruct:free")
     
-    # Embedding model
-    qwen_embedding_model = os.getenv("QWEN_EMBEDDING_MODEL", "text-embedding-v2")
+    # Embedding model (not used with OpenRouter)
+    qwen_embedding_model = os.getenv("QWEN_EMBEDDING_MODEL", "text-embedding-v3")
     
-    print(f"✓ Successfully initialized Qwen FREE API client")
+    # Detect provider from API base
+    provider = "OpenRouter" if "openrouter.ai" in QWEN_API_BASE else "DashScope"
+    
+    print(f"✓ Successfully initialized Qwen API client via {provider}")
     print(f"✓ Model: {qwen_model}")
     print(f"✓ API Base: {QWEN_API_BASE}")
     qwen_initialized = True
@@ -122,6 +122,11 @@ async def generate_answer(context: str, question: str) -> str:
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
         }
+        
+        # Add OpenRouter-specific headers if using OpenRouter
+        if "openrouter.ai" in QWEN_API_BASE:
+            headers["HTTP-Referer"] = "https://shaya9.github.io/ai-humanoid-robotics-book"
+            headers["X-Title"] = "AI Humanoid Robotics Book"
         
         # OpenAI-compatible message format
         messages = [

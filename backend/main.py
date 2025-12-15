@@ -210,13 +210,15 @@ Translated HTML (return only the HTML, no explanations):"""
         raise HTTPException(status_code=500, detail=f"Translation failed: {str(e)}")
 
 
-@app.post("/api/admin/ingest-docs")
+@app.api_route("/api/admin/ingest-docs", methods=["GET", "POST"])
 async def ingest_documents():
     """
     Admin endpoint to populate Qdrant with documentation embeddings.
     This should be called once after deployment to populate the vector database.
     
     ⚠️ WARNING: This recreates the collection and can take several minutes.
+    
+    Can be accessed via GET (browser) or POST (API calls).
     """
     try:
         from ingest_endpoint import ingest_documents_to_qdrant

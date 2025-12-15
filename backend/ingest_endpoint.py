@@ -11,7 +11,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuration
-DOCS_PATH = "docs/**/*.md"
+# Try multiple possible paths for docs folder
+POSSIBLE_DOCS_PATHS = [
+    "docs/**/*.md",           # If running from project root
+    "../docs/**/*.md",        # If running from backend folder
+    "/app/docs/**/*.md",      # Docker absolute path
+]
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 150
 
@@ -63,17 +68,37 @@ async def ingest_documents_to_qdrant():
         
         # Step 2: Find markdown files
         print("Step 2/5: Finding markdown files...")
-        file_paths = glob.glob(DOCS_PATH, recursive=True)
+        
+        # Try different paths
+        file_paths = []
+        tried_paths = []
+        
+        for docs_path in POSSIBLE_DOCS_PATHS:
+            tried_paths.append(docs_path)
+            found = glob.glob(docs_path, recursive=True)
+            if found:
+                file_paths = found
+                print(f"✓ Found {len(file_paths)} markdown files in: {docs_path}")
+                break
+            else:
+                print(f"  No files found in: {docs_path}")
         
         if not file_paths:
+            # Debug: List current directory contents
+            import os
+            cwd = os.getcwd()
+            dir_contents = os.listdir(cwd)
+            
             return {
                 "success": False,
                 "error": "No markdown files found",
-                "details": f"Searched in: {DOCS_PATH}",
+                "details": {
+                    "tried_paths": tried_paths,
+                    "current_directory": cwd,
+                    "directory_contents": dir_contents[:20]  # First 20 items
+                },
                 "step": 2
             }
-        
-        print(f"✓ Found {len(file_paths)} markdown files")
         
         # Step 3: Create chunks
         print("Step 3/5: Creating text chunks...")

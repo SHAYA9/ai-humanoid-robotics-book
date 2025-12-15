@@ -277,6 +277,55 @@ def qdrant_status():
         }
 
 
+@app.get("/api/admin/filesystem-debug")
+def filesystem_debug():
+    """Debug endpoint to check filesystem contents on Railway."""
+    import os
+    import glob
+    
+    cwd = os.getcwd()
+    
+    # Check for docs folder in various locations
+    checks = {
+        "current_directory": cwd,
+        "current_dir_contents": os.listdir(cwd)[:30],
+        "docs_exists": os.path.exists("docs"),
+        "docs_exists_parent": os.path.exists("../docs"),
+        "docs_exists_absolute": os.path.exists("/app/docs"),
+    }
+    
+    # Try to find markdown files
+    patterns = [
+        "docs/**/*.md",
+        "../docs/**/*.md",
+        "/app/docs/**/*.md",
+        "**/*.md"
+    ]
+    
+    found_files = {}
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        found_files[pattern] = {
+            "count": len(files),
+            "sample": files[:5] if files else []
+        }
+    
+    # Check if docs folder exists and list its contents
+    docs_contents = {}
+    for path in ["docs", "../docs", "/app/docs"]:
+        if os.path.exists(path) and os.path.isdir(path):
+            try:
+                docs_contents[path] = os.listdir(path)[:20]
+            except Exception as e:
+                docs_contents[path] = f"Error: {str(e)}"
+    
+    return {
+        "filesystem_checks": checks,
+        "markdown_search": found_files,
+        "docs_folder_contents": docs_contents
+    }
+
+
 # -----------------------------------------------------------------------
 # ASGI to WSGI Adapter (required for PythonAnywhere)
 # -----------------------------------------------------------------------

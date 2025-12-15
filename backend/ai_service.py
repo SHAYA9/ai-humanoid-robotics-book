@@ -4,10 +4,22 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Determine which AI service to use based on environment variable
-AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini").lower()
+AI_PROVIDER = os.getenv("AI_PROVIDER", "hybrid").lower()
 
 # Import the appropriate service
-if AI_PROVIDER == "qwen":
+if AI_PROVIDER == "hybrid":
+    print("🔧 Using Hybrid AI service (Gemini embeddings + Qwen text generation)")
+    try:
+        import hybrid_service as ai_service
+        print("✓ Hybrid service loaded successfully")
+        print("  - Embeddings: Gemini (matches ingestion)")
+        print("  - Text Generation: Qwen/OpenRouter (avoids quota)")
+    except ImportError as e:
+        print(f"✗ Failed to import Hybrid service: {e}")
+        print("✗ Falling back to Gemini")
+        import gemini_service as ai_service
+        AI_PROVIDER = "gemini"
+elif AI_PROVIDER == "qwen":
     print("🔧 Using Qwen AI service")
     try:
         import qwen_service as ai_service

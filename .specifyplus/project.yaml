@@ -1,0 +1,146 @@
+---
+project:
+  name: "AI Humanoid Robotics Book"
+  version: "1.0.0"
+  type: "educational-platform"
+  framework: "docusaurus"
+  
+  metadata:
+    author: "SHAYAN"
+    description: "Physical AI & Humanoid Robotics: Embodied Intelligence - A comprehensive course on building autonomous humanoid robots"
+    license: "MIT"
+    repository: "https://github.com/SHAYA9/ai-humanoid-robotics-book"
+    
+  tech_stack:
+    frontend:
+      framework: "Docusaurus 3.9.2"
+      language: "TypeScript"
+      ui_library: "React 19.0.0"
+      styling: "CSS Modules"
+      math_rendering: "KaTeX"
+      
+    backend:
+      runtime: "Python 3.11"
+      framework: "FastAPI"
+      ai_providers:
+        - name: "Google Gemini"
+          purpose: "Embeddings generation"
+          model: "text-embedding-004"
+        - name: "OpenRouter"
+          purpose: "Text generation"
+          model: "arcee-ai/trinity-mini:free"
+      vector_db: "Qdrant"
+      
+    deployment:
+      platform: "Railway"
+      frontend_hosting: "GitHub Pages"
+      ci_cd: "GitHub Actions"
+      
+  modules:
+    - id: "module-1"
+      name: "ROS 2 - The Robotic Nervous System"
+      path: "docs/module-1-ros2"
+      topics:
+        - "ROS 2 Architecture"
+        - "Nodes, Topics, Services"
+        - "rclpy Python Agents"
+        - "URDF for Humanoids"
+        
+    - id: "module-2"
+      name: "Simulation - The Digital Twin"
+      path: "docs/module-2-simulation"
+      topics:
+        - "Gazebo Physics Simulation"
+        - "Unity High-Fidelity Rendering"
+        - "Sensor Simulation"
+        - "Environment Building"
+        
+    - id: "module-3"
+      name: "NVIDIA Isaac - The AI-Robot Brain"
+      path: "docs/module-3-isaac"
+      topics:
+        - "Isaac Sim"
+        - "Isaac ROS Perception"
+        - "VSLAM Navigation"
+        - "Nav2 for Bipedal Robots"
+        
+    - id: "module-4"
+      name: "VLA - Vision-Language-Action"
+      path: "docs/module-4-vla"
+      topics:
+        - "OpenAI Whisper Voice Input"
+        - "LLM Task Planning"
+        - "Multimodal Integration"
+        - "Autonomous Humanoid Control"
+        
+  features:
+    chatbot:
+      type: "RAG-powered"
+      description: "AI assistant for course content"
+      technologies:
+        - "Qdrant vector search"
+        - "Gemini embeddings"
+        - "OpenRouter LLM"
+      endpoints:
+        - "/api/chat/general"
+        - "/api/chat/selected"
+        
+    authentication:
+      provider: "Supabase"
+      features:
+        - "User registration"
+        - "Login/Logout"
+        - "Protected routes"
+        
+    assessments:
+      type: "Interactive quizzes"
+      location: "docs/resources/assessments"
+      
+    cloud_lab:
+      description: "Cloud-based robotics development environment"
+      status: "planned"
+      
+  architecture:
+    layers:
+      - name: "Presentation Layer"
+        components:
+          - "Docusaurus frontend"
+          - "React components"
+          - "Custom CSS"
+          
+      - name: "Application Layer"
+        components:
+          - "FastAPI backend"
+          - "AI service (hybrid)"
+          - "Qdrant service"
+          
+      - name: "Data Layer"
+        components:
+          - "Qdrant vector database"
+          - "Supabase authentication"
+          - "Document embeddings"
+          
+  quality_standards:
+    code_style:
+      python: "PEP 8"
+      typescript: "ESLint + Prettier"
+      
+    testing:
+      unit_tests: "pytest (Python), Jest (TypeScript)"
+      integration_tests: "Required for all modules"
+      coverage_target: "80%"
+      
+    documentation:
+      format: "Markdown"
+      structure: "Modular by course module"
+      api_docs: "OpenAPI/Swagger"
+      
+  development_workflow:
+    branching_strategy: "Git Flow"
+    commit_convention: "Conventional Commits"
+    review_process: "Pull Request + Review"
+    ci_checks:
+      - "Linting"
+      - "Type checking"
+      - "Tests"
+      - "Build verification"

@@ -1,0 +1,311 @@
+---
+specification:
+  name: "RAG-Powered Chatbot"
+  version: "1.0.0"
+  status: "implemented"
+  
+  overview:
+    description: |
+      An intelligent chatbot that uses Retrieval-Augmented Generation (RAG) to answer
+      questions about the AI Humanoid Robotics course content. Combines vector search
+      with LLM generation for accurate, context-aware responses.
+      
+    key_features:
+      - "Hybrid AI approach (Gemini embeddings + OpenRouter LLM)"
+      - "Vector-based semantic search"
+      - "Two chat modes: general and selected text"
+      - "Source citation for transparency"
+      - "Conversation history"
+      
+  functional_requirements:
+    FR1:
+      id: "FR1"
+      title: "Query Processing"
+      description: "System shall accept user queries and process them through RAG pipeline"
+      acceptance_criteria:
+        - "Accept text queries up to 2000 characters"
+        - "Support both general and selected-text modes"
+        - "Validate input before processing"
+        
+    FR2:
+      id: "FR2"
+      title: "Embedding Generation"
+      description: "System shall generate embeddings for user queries"
+      acceptance_criteria:
+        - "Use Gemini text-embedding-004 model"
+        - "Generate 768-dimensional vectors"
+        - "Handle rate limiting gracefully"
+        - "Match ingestion embedding model"
+        
+    FR3:
+      id: "FR3"
+      title: "Vector Search"
+      description: "System shall search for relevant document chunks"
+      acceptance_criteria:
+        - "Search Qdrant vector database"
+        - "Return top 3 most similar chunks"
+        - "Include similarity scores"
+        - "Retrieve chunk metadata (source, module, page)"
+        
+    FR4:
+      id: "FR4"
+      title: "Answer Generation"
+      description: "System shall generate accurate answers using LLM"
+      acceptance_criteria:
+        - "Use OpenRouter with free model"
+        - "Include retrieved context in prompt"
+        - "Generate answers within 10 seconds"
+        - "Cite sources in response"
+        
+    FR5:
+      id: "FR5"
+      title: "Response Formatting"
+      description: "System shall format and display responses to user"
+      acceptance_criteria:
+        - "Display answer with proper formatting"
+        - "Show source citations"
+        - "Handle markdown in responses"
+        - "Display error messages for failures"
+        
+  non_functional_requirements:
+    NFR1:
+      id: "NFR1"
+      title: "Performance"
+      requirements:
+        - "Embedding generation: < 2 seconds"
+        - "Vector search: < 500ms"
+        - "LLM generation: < 8 seconds"
+        - "Total response time: < 10 seconds"
+        
+    NFR2:
+      id: "NFR2"
+      title: "Scalability"
+      requirements:
+        - "Support 10+ concurrent users"
+        - "Handle 1000+ queries per day"
+        - "Scale horizontally on Railway"
+        
+    NFR3:
+      id: "NFR3"
+      title: "Reliability"
+      requirements:
+        - "99% uptime target"
+        - "Graceful degradation on API failures"
+        - "Retry logic for transient errors"
+        - "Fallback responses for quota limits"
+        
+    NFR4:
+      id: "NFR4"
+      title: "Security"
+      requirements:
+        - "API keys stored in environment variables"
+        - "CORS properly configured"
+        - "No sensitive data in logs"
+        - "Rate limiting on endpoints"
+        
+  technical_design:
+    components:
+      - name: "Frontend Chatbot UI"
+        technology: "React + TypeScript"
+        responsibilities:
+          - "Render chat interface"
+          - "Manage conversation state"
+          - "Handle user input"
+          - "Display responses"
+          
+      - name: "Backend API"
+        technology: "FastAPI + Python"
+        responsibilities:
+          - "Receive and validate requests"
+          - "Orchestrate RAG pipeline"
+          - "Return formatted responses"
+          
+      - name: "Hybrid AI Service"
+        technology: "Python"
+        responsibilities:
+          - "Generate embeddings via Gemini"
+          - "Generate text via OpenRouter"
+          - "Handle rate limiting"
+          
+      - name: "Qdrant Service"
+        technology: "Python + qdrant-client"
+        responsibilities:
+          - "Perform vector searches"
+          - "Return relevant chunks"
+          
+    data_models:
+      ChatRequest:
+        fields:
+          - name: "question"
+            type: "string"
+            required: true
+            max_length: 2000
+          - name: "context"
+            type: "string"
+            required: false
+            description: "Selected text for context-aware chat"
+            
+      ChatResponse:
+        fields:
+          - name: "answer"
+            type: "string"
+            description: "Generated answer"
+          - name: "sources"
+            type: "string"
+            description: "Comma-separated source citations"
+            
+      VectorPoint:
+        fields:
+          - name: "id"
+            type: "integer"
+          - name: "vector"
+            type: "array[float]"
+            length: 768
+          - name: "payload"
+            type: "object"
+            fields:
+              - "text: string"
+              - "source: string"
+              - "module: string"
+              - "page: string"
+              
+    algorithms:
+      rag_pipeline:
+        input: "User query (string)"
+        output: "Generated answer (string) + sources (string)"
+        steps:
+          - step: "Validate input"
+            validation:
+              - "Check query length"
+              - "Sanitize input"
+              
+          - step: "Generate query embedding"
+            process:
+              - "Call Gemini API"
+              - "Get 768-dim vector"
+              - "Handle rate limits"
+              
+          - step: "Search vector database"
+            process:
+              - "Query Qdrant with embedding"
+              - "Retrieve top 3 chunks"
+              - "Extract metadata"
+              
+          - step: "Build context"
+            process:
+              - "Combine retrieved chunks"
+              - "Add user query"
+              - "Format prompt"
+              
+          - step: "Generate answer"
+            process:
+              - "Call OpenRouter API"
+              - "Parse response"
+              - "Extract answer"
+              
+          - step: "Format response"
+            process:
+              - "Add source citations"
+              - "Format markdown"
+              - "Return to user"
+              
+  api_specification:
+    endpoints:
+      - path: "/api/chat/general"
+        method: "POST"
+        description: "General chat without context"
+        request_body:
+          type: "ChatRequest"
+          example:
+            question: "What is ROS 2?"
+        response:
+          type: "ChatResponse"
+          example:
+            answer: "ROS 2 is the open-source standard for robotics middleware..."
+            sources: "module-1-ros2/overview"
+            
+      - path: "/api/chat/selected"
+        method: "POST"
+        description: "Chat with selected text context"
+        request_body:
+          type: "ChatRequest"
+          example:
+            question: "Explain this concept"
+            context: "ROS 2 uses a distributed architecture..."
+        response:
+          type: "ChatResponse"
+          example:
+            answer: "The distributed architecture in ROS 2 means..."
+            sources: "From selected text, module-1-ros2/architecture"
+            
+  testing_strategy:
+    unit_tests:
+      - "Test embedding generation"
+      - "Test vector search"
+      - "Test answer generation"
+      - "Test error handling"
+      
+    integration_tests:
+      - "Test full RAG pipeline"
+      - "Test API endpoints"
+      - "Test with real Qdrant instance"
+      
+    performance_tests:
+      - "Load test with 50 concurrent users"
+      - "Measure response times"
+      - "Test rate limiting"
+      
+  deployment:
+    environment_variables:
+      - name: "AI_PROVIDER"
+        value: "hybrid"
+        description: "Use hybrid AI service"
+        
+      - name: "GEMINI_API_KEY"
+        required: true
+        description: "Google Gemini API key for embeddings"
+        
+      - name: "QWEN_API_KEY"
+        required: true
+        description: "OpenRouter API key for text generation"
+        
+      - name: "QDRANT_URL"
+        required: true
+        description: "Qdrant cloud instance URL"
+        
+      - name: "QDRANT_API_KEY"
+        required: true
+        description: "Qdrant API key"
+        
+      - name: "QDRANT_COLLECTION_NAME"
+        value: "ai-humanoid-robotics-book"
+        description: "Vector collection name"
+        
+    deployment_steps:
+      - "Set environment variables in Railway"
+      - "Deploy backend to Railway"
+      - "Build frontend with Docusaurus"
+      - "Deploy frontend to GitHub Pages"
+      - "Verify chatbot functionality"
+      
+  monitoring:
+    metrics:
+      - "Request count per endpoint"
+      - "Average response time"
+      - "Error rate"
+      - "API quota usage (Gemini, OpenRouter)"
+      - "Vector search performance"
+      
+    alerts:
+      - "API quota near limit"
+      - "High error rate (> 5%)"
+      - "Slow response times (> 15s)"
+      - "Service downtime"
+      
+  future_enhancements:
+    - "Add conversation memory"
+    - "Implement feedback mechanism"
+    - "Add multi-language support"
+    - "Improve context window size"
+    - "Add streaming responses"
+    - "Implement caching for common queries"

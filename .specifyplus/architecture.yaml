@@ -1,0 +1,195 @@
+---
+architecture:
+  name: "AI Humanoid Robotics Book Platform"
+  type: "Full-Stack Educational Platform with RAG Chatbot"
+  
+  system_context:
+    description: |
+      A comprehensive educational platform for teaching Physical AI and Humanoid Robotics.
+      Combines static documentation with an intelligent RAG-powered chatbot for interactive learning.
+    
+    users:
+      - type: "Students"
+        needs: ["Course content", "Interactive learning", "Assessments", "Code examples"]
+      - type: "Instructors"
+        needs: ["Content management", "Student progress tracking", "Assessment creation"]
+      - type: "Researchers"
+        needs: ["Technical references", "API documentation", "Research resources"]
+        
+  containers:
+    - name: "Frontend Application"
+      technology: "Docusaurus + React + TypeScript"
+      responsibility: "Serve course content, handle user interactions, display chatbot UI"
+      interactions:
+        - target: "Backend API"
+          protocol: "HTTPS/REST"
+          data: "User queries, authentication tokens"
+          
+    - name: "Backend API"
+      technology: "FastAPI + Python"
+      responsibility: "Process chatbot queries, manage RAG pipeline, handle authentication"
+      interactions:
+        - target: "Qdrant Vector DB"
+          protocol: "gRPC"
+          data: "Vector embeddings, search queries"
+        - target: "Gemini API"
+          protocol: "HTTPS/REST"
+          data: "Text for embedding generation"
+        - target: "OpenRouter API"
+          protocol: "HTTPS/REST"
+          data: "Context + question for answer generation"
+          
+    - name: "Qdrant Vector Database"
+      technology: "Qdrant Cloud"
+      responsibility: "Store and search document embeddings"
+      data_stored:
+        - "196 document chunks"
+        - "768-dimensional embeddings"
+        - "Metadata (source, module, page)"
+        
+    - name: "Supabase Authentication"
+      technology: "Supabase"
+      responsibility: "User authentication and session management"
+      
+  components:
+    frontend:
+      - name: "Documentation Pages"
+        path: "src/pages/"
+        responsibility: "Render course content from markdown"
+        
+      - name: "Chatbot Component"
+        path: "src/components/Chatbot/"
+        responsibility: "Interactive AI assistant UI"
+        features:
+          - "General chat mode"
+          - "Selected text mode"
+          - "Conversation history"
+          - "Source citations"
+          
+      - name: "Authentication Components"
+        path: "src/components/Auth/"
+        responsibility: "Login, signup, user profile"
+        
+      - name: "Dashboard"
+        path: "src/pages/dashboard.js"
+        responsibility: "User progress tracking and personalized content"
+        
+    backend:
+      - name: "AI Service (Hybrid)"
+        path: "backend/hybrid_service.py"
+        responsibility: "Coordinate Gemini embeddings + OpenRouter text generation"
+        
+      - name: "Qdrant Service"
+        path: "backend/qdrant_service.py"
+        responsibility: "Vector search and retrieval"
+        
+      - name: "Main API"
+        path: "backend/main.py"
+        responsibility: "FastAPI endpoints and request handling"
+        endpoints:
+          - "POST /api/chat/general"
+          - "POST /api/chat/selected"
+          - "POST /api/translate"
+          
+    scripts:
+      - name: "Document Ingestion"
+        path: "scripts/load_docs_to_qdrant.py"
+        responsibility: "Process markdown files and create embeddings"
+        
+  data_flow:
+    rag_pipeline:
+      steps:
+        - step: 1
+          name: "User Query"
+          actor: "User"
+          action: "Submits question via chatbot"
+          
+        - step: 2
+          name: "Embedding Generation"
+          actor: "Backend (Gemini)"
+          action: "Convert query to 768-dim vector"
+          
+        - step: 3
+          name: "Vector Search"
+          actor: "Qdrant"
+          action: "Find top 3 similar document chunks"
+          
+        - step: 4
+          name: "Context Assembly"
+          actor: "Backend"
+          action: "Combine retrieved chunks with query"
+          
+        - step: 5
+          name: "Answer Generation"
+          actor: "Backend (OpenRouter)"
+          action: "Generate answer using LLM"
+          
+        - step: 6
+          name: "Response Display"
+          actor: "Frontend"
+          action: "Show answer with source citations"
+          
+  deployment_architecture:
+    production:
+      frontend:
+        platform: "GitHub Pages"
+        url: "https://shaya9.github.io/ai-humanoid-robotics-book"
+        build_process: "GitHub Actions"
+        
+      backend:
+        platform: "Railway"
+        url: "https://ai-humanoid-robotics-book-production.up.railway.app"
+        auto_deploy: true
+        environment_variables:
+          - "GEMINI_API_KEY"
+          - "QWEN_API_KEY"
+          - "QDRANT_URL"
+          - "QDRANT_API_KEY"
+          - "AI_PROVIDER=hybrid"
+          
+    development:
+      frontend:
+        command: "npm start"
+        port: 3000
+        
+      backend:
+        command: "python backend/main.py"
+        port: 8080
+        
+  security:
+    authentication:
+      method: "Supabase Auth"
+      token_type: "JWT"
+      
+    api_security:
+      - "CORS configuration"
+      - "Rate limiting"
+      - "API key protection (environment variables)"
+      
+    data_protection:
+      - "No PII in vector database"
+      - "Secure API key storage"
+      - "HTTPS only"
+      
+  scalability:
+    current_capacity:
+      documents: "51 markdown files"
+      embeddings: "196 chunks"
+      concurrent_users: "Moderate (Railway free tier)"
+      
+    scaling_strategy:
+      - "Horizontal scaling via Railway"
+      - "Qdrant Cloud auto-scaling"
+      - "CDN for static assets (GitHub Pages)"
+      
+  monitoring:
+    logging:
+      - "FastAPI request logs"
+      - "AI service performance logs"
+      - "Error tracking"
+      
+    metrics:
+      - "API response times"
+      - "Embedding generation time"
+      - "Vector search latency"
+      - "LLM response time"

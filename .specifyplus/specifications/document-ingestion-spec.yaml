@@ -1,0 +1,233 @@
+---
+specification:
+  name: "Document Ingestion Pipeline"
+  version: "1.0.0"
+  status: "implemented"
+  
+  overview:
+    description: |
+      Automated pipeline to process course markdown files, generate embeddings,
+      and store them in Qdrant vector database for RAG-powered search.
+      
+    purpose: "Enable semantic search over course content"
+    
+  functional_requirements:
+    FR1:
+      title: "Markdown File Discovery"
+      description: "System shall discover all markdown files in docs directory"
+      acceptance_criteria:
+        - "Recursively search docs/**/*.md"
+        - "Find all 51 markdown files"
+        - "Handle different directory structures"
+        
+    FR2:
+      title: "Text Chunking"
+      description: "System shall split documents into manageable chunks"
+      acceptance_criteria:
+        - "Chunk size: 1000 characters"
+        - "Overlap: 150 characters"
+        - "Preserve context across chunks"
+        - "Generate 196 total chunks from 51 files"
+        
+    FR3:
+      title: "Embedding Generation"
+      description: "System shall generate embeddings for all chunks"
+      acceptance_criteria:
+        - "Use Gemini text-embedding-004"
+        - "Generate 768-dimensional vectors"
+        - "Process in batches of 100"
+        - "Handle rate limiting"
+        
+    FR4:
+      title: "Metadata Extraction"
+      description: "System shall extract metadata from each chunk"
+      acceptance_criteria:
+        - "Extract source file path"
+        - "Identify module name"
+        - "Extract page name"
+        - "Store original text"
+        
+    FR5:
+      title: "Vector Database Storage"
+      description: "System shall store embeddings in Qdrant"
+      acceptance_criteria:
+        - "Create/recreate collection"
+        - "Set vector dimension to 768"
+        - "Use cosine distance metric"
+        - "Upsert all 196 points"
+        
+  technical_design:
+    script: "scripts/load_docs_to_qdrant.py"
+    
+    configuration:
+      CHUNK_SIZE: 1000
+      CHUNK_OVERLAP: 150
+      BATCH_SIZE: 100
+      EMBEDDING_MODEL: "models/text-embedding-004"
+      VECTOR_DIMENSION: 768
+      DISTANCE_METRIC: "COSINE"
+      
+    data_flow:
+      - step: 1
+        name: "File Discovery"
+        input: "docs/**/*.md pattern"
+        output: "List of 51 file paths"
+        
+      - step: 2
+        name: "Text Extraction"
+        input: "File paths"
+        output: "Raw text content"
+        process: "Read files with UTF-8 encoding"
+        
+      - step: 3
+        name: "Chunking"
+        input: "Raw text"
+        output: "196 text chunks"
+        process: "Split with overlap"
+        
+      - step: 4
+        name: "Metadata Creation"
+        input: "Chunks + file paths"
+        output: "Chunk metadata"
+        process:
+          - "Extract module from path"
+          - "Extract page name"
+          - "Create source reference"
+          
+      - step: 5
+        name: "Batch Embedding"
+        input: "Text chunks"
+        output: "768-dim vectors"
+        process:
+          - "Group into batches of 100"
+          - "Call Gemini API"
+          - "Handle rate limits (20s retry)"
+          
+      - step: 6
+        name: "Point Creation"
+        input: "Vectors + metadata"
+        output: "Qdrant points"
+        process: "Combine vector with payload"
+        
+      - step: 7
+        name: "Database Upsert"
+        input: "Qdrant points"
+        output: "Stored vectors"
+        process: "Upsert to collection"
+        
+    error_handling:
+      - scenario: "API quota exceeded"
+        action: "Wait 20 seconds and retry"
+        
+      - scenario: "File not found"
+        action: "Log error and continue"
+        
+      - scenario: "Invalid UTF-8"
+        action: "Skip file and log warning"
+        
+      - scenario: "Qdrant connection failure"
+        action: "Raise exception and stop"
+        
+  data_models:
+    ChunkMetadata:
+      fields:
+        - name: "text"
+          type: "string"
+          description: "Original chunk text"
+          
+        - name: "source"
+          type: "string"
+          description: "module/page format"
+          example: "module-1-ros2/overview"
+          
+        - name: "module"
+          type: "string"
+          description: "Course module name"
+          example: "module-1-ros2"
+          
+        - name: "page"
+          type: "string"
+          description: "Page/file name"
+          example: "overview"
+          
+    QdrantPoint:
+      fields:
+        - name: "id"
+          type: "integer"
+          description: "Sequential ID (0-195)"
+          
+        - name: "vector"
+          type: "array[float]"
+          length: 768
+          description: "Embedding vector"
+          
+        - name: "payload"
+          type: "ChunkMetadata"
+          description: "Associated metadata"
+          
+  execution:
+    prerequisites:
+      - "Python 3.11+"
+      - "google-generativeai library"
+      - "qdrant-client library"
+      - "python-dotenv library"
+      
+    environment_variables:
+      - "GEMINI_API_KEY"
+      - "QDRANT_URL"
+      - "QDRANT_API_KEY"
+      - "QDRANT_COLLECTION_NAME"
+      
+    command:
+      ```bash
+      cd scripts
+      python load_docs_to_qdrant.py
+      ```
+      
+    expected_output:
+      ```
+      Configuration:
+        Qdrant URL: https://...
+        Collection: ai-humanoid-robotics-book
+        Gemini API Key: ********************
+      
+      --- Starting Document Ingestion ---
+      Recreating Qdrant collection: 'ai-humanoid-robotics-book'
+      ✓ Found 51 markdown files
+      Created 196 text chunks.
+      Generating embeddings for all text chunks...
+      Embedded batch 1...
+      Embedded batch 2...
+      Upserting 196 points to Qdrant...
+      --- Document Ingestion Complete ---
+      Total points in collection: 196
+      ```
+      
+  performance:
+    metrics:
+      - "File discovery: < 1 second"
+      - "Chunking: < 2 seconds"
+      - "Embedding generation: ~2-3 minutes (with rate limiting)"
+      - "Qdrant upsert: < 5 seconds"
+      - "Total time: ~3-4 minutes"
+      
+  maintenance:
+    when_to_run:
+      - "After adding new course content"
+      - "After updating existing content"
+      - "When changing embedding model"
+      - "When recreating vector database"
+      
+    best_practices:
+      - "Run during low-traffic periods"
+      - "Backup existing collection before recreating"
+      - "Monitor API quota usage"
+      - "Verify point count after ingestion"
+      
+  future_improvements:
+    - "Incremental updates (only changed files)"
+    - "Parallel embedding generation"
+    - "Progress bar for long operations"
+    - "Automatic scheduling (cron job)"
+    - "Support for other document formats (PDF, HTML)"
+    - "Semantic chunking (preserve paragraphs)"

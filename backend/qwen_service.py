@@ -42,6 +42,11 @@ try:
     # OpenRouter or DashScope endpoint (both are OpenAI-compatible)
     QWEN_API_BASE = os.getenv("QWEN_API_BASE", "https://openrouter.ai/api/v1")
     
+    # Remove trailing slashes and any accidental /chat/completions suffix
+    QWEN_API_BASE = QWEN_API_BASE.rstrip('/')
+    if QWEN_API_BASE.endswith('/chat/completions'):
+        QWEN_API_BASE = QWEN_API_BASE.replace('/chat/completions', '')
+    
     if not QWEN_API_KEY:
         raise ValueError("QWEN_API_KEY not found in environment variables.")
     
@@ -58,7 +63,7 @@ try:
     
     print(f"✓ Successfully initialized Qwen API client via {provider}")
     print(f"✓ Model: {qwen_model}")
-    print(f"✓ API Base: {QWEN_API_BASE}")
+    print(f"✓ API Base (cleaned): {QWEN_API_BASE}")
     qwen_initialized = True
 
 except Exception as e:
@@ -118,6 +123,11 @@ async def generate_answer(context: str, question: str) -> str:
         
         # OpenAI-compatible chat completions endpoint
         url = f"{QWEN_API_BASE}/chat/completions"
+        
+        # Debug: Verify URL construction
+        print(f"🔍 Constructed URL: {url}")
+        print(f"🔍 API Base used: {QWEN_API_BASE}")
+        
         headers = {
             "Authorization": f"Bearer {QWEN_API_KEY}",
             "Content-Type": "application/json"
@@ -149,7 +159,7 @@ async def generate_answer(context: str, question: str) -> str:
             "top_p": 0.8
         }
         
-        print(f"🔍 Calling Qwen API: {url}")
+        print(f"🔍 Final API call to: {url}")
         print(f"🔍 Using model: {qwen_model}")
         
         async with aiohttp.ClientSession() as session:

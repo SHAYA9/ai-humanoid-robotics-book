@@ -26,7 +26,18 @@ genai.configure(api_key=GEMINI_API_KEY)
 qdrant = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 # --- Configuration ---
-DOCS_PATH = "../docs/**/*.md"
+# Handle both running from project root and from scripts folder
+import sys
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+
+# Try multiple possible paths
+POSSIBLE_DOCS_PATHS = [
+    os.path.join(project_root, "docs/**/*.md"),  # From scripts folder
+    "docs/**/*.md",                               # From project root
+    "../docs/**/*.md",                            # Alternative
+]
+
 CHUNK_SIZE = 1000  # characters
 CHUNK_OVERLAP = 150 # characters
 BATCH_SIZE = 100 # number of points to upsert at once
@@ -66,8 +77,27 @@ def main():
 
     # 2. Find and process all markdown files
     points = []
-    file_paths = glob.glob(DOCS_PATH, recursive=True)
-    print(f"Found {len(file_paths)} markdown files to process.")
+    file_paths = []
+    
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Script directory: {script_dir}")
+    print(f"Project root: {project_root}")
+    print(f"\nSearching for markdown files...")
+    
+    for docs_path in POSSIBLE_DOCS_PATHS:
+        found = glob.glob(docs_path, recursive=True)
+        if found:
+            file_paths = found
+            print(f"✓ Found {len(file_paths)} markdown files using path: {docs_path}")
+            break
+        else:
+            print(f"  No files found with path: {docs_path}")
+    
+    if not file_paths:
+        print("\n❌ ERROR: No markdown files found!")
+        print("Please ensure you're running from the project root or scripts directory.")
+        print(f"Tried paths: {POSSIBLE_DOCS_PATHS}")
+        return
 
     all_chunks = []
     all_metadata = []

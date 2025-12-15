@@ -84,8 +84,7 @@ async def ingest_documents_to_qdrant():
                 print(f"  No files found in: {docs_path}")
         
         if not file_paths:
-            # Debug: List current directory contents
-            import os
+        # Debug: List current directory contents
             cwd = os.getcwd()
             dir_contents = os.listdir(cwd)
             
@@ -110,7 +109,7 @@ async def ingest_documents_to_qdrant():
                 with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                # Extract metadata
+                # Extract metadata (os is already imported at module level)
                 path_parts = path.replace('\\', '/').split('/')
                 module = path_parts[-2] if len(path_parts) > 2 else 'general'
                 page = os.path.basename(path).replace('.md', '')

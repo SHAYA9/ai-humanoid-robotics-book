@@ -3,41 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug', 'a0b'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/config',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/config', 'f0a'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/content',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/content', '46a'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/globalData',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/globalData', '13c'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/metadata',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/metadata', '276'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/registry',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/registry', '0c6'),
-    exact: true
-  },
-  {
-    path: '/ai-humanoid-robotics-book/__docusaurus/debug/routes',
-    component: ComponentCreator('/ai-humanoid-robotics-book/__docusaurus/debug/routes', '29e'),
-    exact: true
-  },
-  {
     path: '/ai-humanoid-robotics-book/background-assessment',
     component: ComponentCreator('/ai-humanoid-robotics-book/background-assessment', '699'),
     exact: true
@@ -144,11 +109,11 @@ export default [
   },
   {
     path: '/ai-humanoid-robotics-book/docs',
-    component: ComponentCreator('/ai-humanoid-robotics-book/docs', '3c3'),
+    component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'd33'),
     routes: [
       {
         path: '/ai-humanoid-robotics-book/docs',
-        component: ComponentCreator('/ai-humanoid-robotics-book/docs', '551'),
+        component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'be2'),
         routes: [
           {
             path: '/ai-humanoid-robotics-book/docs/tags',
@@ -196,6 +161,11 @@ export default [
             exact: true
           },
           {
+            path: '/ai-humanoid-robotics-book/docs/tags/career',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/career', 'b6d'),
+            exact: true
+          },
+          {
             path: '/ai-humanoid-robotics-book/docs/tags/cloud',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/cloud', '28b'),
             exact: true
@@ -208,6 +178,11 @@ export default [
           {
             path: '/ai-humanoid-robotics-book/docs/tags/evaluation',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/evaluation', 'cc6'),
+            exact: true
+          },
+          {
+            path: '/ai-humanoid-robotics-book/docs/tags/examples',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/examples', 'fdd'),
             exact: true
           },
           {
@@ -233,6 +208,11 @@ export default [
           {
             path: '/ai-humanoid-robotics-book/docs/tags/guide',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/guide', 'ef2'),
+            exact: true
+          },
+          {
+            path: '/ai-humanoid-robotics-book/docs/tags/hands-on',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/hands-on', 'f0b'),
             exact: true
           },
           {
@@ -266,6 +246,11 @@ export default [
             exact: true
           },
           {
+            path: '/ai-humanoid-robotics-book/docs/tags/learning-paths',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/learning-paths', 'c9e'),
+            exact: true
+          },
+          {
             path: '/ai-humanoid-robotics-book/docs/tags/nvidia',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/nvidia', '661'),
             exact: true
@@ -273,6 +258,11 @@ export default [
           {
             path: '/ai-humanoid-robotics-book/docs/tags/papers',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/papers', '754'),
+            exact: true
+          },
+          {
+            path: '/ai-humanoid-robotics-book/docs/tags/personalization',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/personalization', 'c1c'),
             exact: true
           },
           {
@@ -303,6 +293,11 @@ export default [
           {
             path: '/ai-humanoid-robotics-book/docs/tags/research',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/research', '58a'),
+            exact: true
+          },
+          {
+            path: '/ai-humanoid-robotics-book/docs/tags/roadmap',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/roadmap', 'dd6'),
             exact: true
           },
           {
@@ -341,13 +336,18 @@ export default [
             exact: true
           },
           {
+            path: '/ai-humanoid-robotics-book/docs/tags/tutorials',
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/tutorials', 'ae9'),
+            exact: true
+          },
+          {
             path: '/ai-humanoid-robotics-book/docs/tags/vla',
             component: ComponentCreator('/ai-humanoid-robotics-book/docs/tags/vla', 'c9b'),
             exact: true
           },
           {
             path: '/ai-humanoid-robotics-book/docs',
-            component: ComponentCreator('/ai-humanoid-robotics-book/docs', '06d'),
+            component: ComponentCreator('/ai-humanoid-robotics-book/docs', 'bb8'),
             routes: [
               {
                 path: '/ai-humanoid-robotics-book/docs/hardware-guide',
@@ -548,10 +548,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/ai-humanoid-robotics-book/docs/resources/learning-paths',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/resources/learning-paths', '886'),
+                exact: true
+              },
+              {
                 path: '/ai-humanoid-robotics-book/docs/resources/references',
                 component: ComponentCreator('/ai-humanoid-robotics-book/docs/resources/references', 'd25'),
                 exact: true,
                 sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/resources/tutorials',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/resources/tutorials', 'd5e'),
+                exact: true
               },
               {
                 path: '/ai-humanoid-robotics-book/docs/specifyplus/api/authentication',
@@ -571,6 +581,11 @@ export default [
               {
                 path: '/ai-humanoid-robotics-book/docs/specifyplus/architecture',
                 component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/architecture', '7d4'),
+                exact: true
+              },
+              {
+                path: '/ai-humanoid-robotics-book/docs/specifyplus/COMMANDS',
+                component: ComponentCreator('/ai-humanoid-robotics-book/docs/specifyplus/COMMANDS', '9ca'),
                 exact: true
               },
               {

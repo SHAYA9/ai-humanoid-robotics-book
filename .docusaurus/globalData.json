@@ -176,9 +176,17 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "resources/learning-paths",
+              "path": "/ai-humanoid-robotics-book/docs/resources/learning-paths"
+            },
+            {
               "id": "resources/references",
               "path": "/ai-humanoid-robotics-book/docs/resources/references",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "resources/tutorials",
+              "path": "/ai-humanoid-robotics-book/docs/resources/tutorials"
             },
             {
               "id": "specifyplus/api/authentication",
@@ -195,6 +203,10 @@
             {
               "id": "specifyplus/architecture",
               "path": "/ai-humanoid-robotics-book/docs/specifyplus/architecture"
+            },
+            {
+              "id": "specifyplus/COMMANDS",
+              "path": "/ai-humanoid-robotics-book/docs/specifyplus/COMMANDS"
             },
             {
               "id": "specifyplus/deployment/cloud-deployment",

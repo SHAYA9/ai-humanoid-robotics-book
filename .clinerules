@@ -1,0 +1,127 @@
+# AI Coding Assistant Rules for AI Humanoid Robotics Book Project
+
+## Project Context
+This is a professionally architected educational platform for AI and Humanoid Robotics, NOT a "vibe coding" project. All code follows established patterns, documentation standards, and architectural decisions documented in this file.
+
+## Project Overview
+- **Name:** AI Humanoid Robotics Book - Embodied Intelligence Platform
+- **Type:** Educational Documentation Platform with RAG-powered AI Chatbot
+- **Frontend:** Docusaurus 3.9.2 (React 19.0.0 + TypeScript 5.6.2)
+- **Backend:** FastAPI (Python 3.11)
+- **AI:** Google Gemini 2.0 Flash / Qwen Turbo
+- **Vector DB:** Qdrant
+- **Database:** Supabase (PostgreSQL)
+
+## Architecture Decisions
+
+### Frontend Architecture
+- **Framework Choice:** Docusaurus (React-based SSG)
+  - Reason: Optimized for documentation, built-in features (search, versioning, i18n)
+  - Alternative considered: Next.js (rejected: overkill for static docs)
+  
+- **Styling:** Vanilla CSS with CSS Modules
+  - Reason: Simple, no additional dependencies, Docusaurus native support
+  - Alternative considered: Tailwind CSS (rejected: adds complexity)
+
+- **State Management:** React Hooks (useState, useEffect, useContext)
+  - Reason: Sufficient for current needs, no global state complexity
+  - Alternative considered: Redux (rejected: unnecessary overhead)
+
+### Backend Architecture
+- **Framework Choice:** FastAPI
+  - Reason: Async support, automatic API docs, Python ecosystem
+  - Alternative considered: Express.js (rejected: team expertise in Python)
+
+- **AI Provider Strategy:** Dual provider (Gemini primary, Qwen fallback)
+  - Reason: Redundancy, cost optimization, rate limit mitigation
+  - Implementation: Abstract service layer for easy switching
+
+- **Vector Database:** Qdrant
+  - Reason: Performance, cloud hosting, easy integration
+  - Alternative considered: Pinecone (rejected: cost), Weaviate (rejected: complexity)
+
+## Code Standards
+
+### TypeScript/React
+```typescript
+// Component structure
+interface ComponentProps {
+  title: string;
+  description?: string;
+}
+
+export default function Component({ title, description }: ComponentProps): JSX.Element {
+  return <div className="component">{title}</div>;
+}
+```
+
+### Python/FastAPI
+```python
+# Endpoint structure
+@app.post("/api/endpoint", response_model=ResponseModel)
+async def endpoint_handler(request: RequestModel):
+    """Docstring with description, args, returns, raises."""
+    try:
+        result = await process_request(request)
+        return ResponseModel(data=result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+```
+
+### CSS
+```css
+/* Use CSS Modules, BEM naming */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container__title {
+  color: var(--ifm-color-primary);
+}
+```
+
+## File Organization
+- `/docs` - Markdown documentation (4 modules + resources)
+- `/src/pages` - Custom React pages (landing, dashboard, auth)
+- `/src/css` - Global styles
+- `/backend` - FastAPI application
+- `/scripts` - Utility scripts (document ingestion)
+- `/static` - Static assets (images, icons)
+
+## Development Workflow
+1. Feature planning → Document in SPECIFY.md
+2. Implementation → Follow code standards
+3. Testing → Unit + integration tests
+4. Documentation → Update relevant docs
+5. Deployment → CI/CD via GitHub Actions
+
+## Security Guidelines
+- Never commit API keys (use .env)
+- Validate all inputs (Pydantic models)
+- Implement rate limiting (15 req/min)
+- Use HTTPS/TLS for all communications
+- Sanitize user inputs (XSS prevention)
+
+## Performance Requirements
+- Page load: < 3s
+- API response: < 5s (chat), < 10s (translation)
+- Uptime: 99.5%
+- Support: 100+ concurrent users
+
+## AI Assistant Instructions
+When working on this project:
+1. Review existing patterns before suggesting changes
+2. Follow established code standards
+3. Add comprehensive error handling
+4. Include docstrings/comments
+5. Consider security implications
+6. Optimize for performance
+7. Update documentation
+8. No "vibe coding" - plan and document everything
+
+## Resources
+- API Spec: `api-specification.yaml`
+- Technical Spec: `SPECIFY.md`
+- Project History: `.clinerules-history` (this file)
+- Backend Docs: `backend/README.md`
